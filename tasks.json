@@ -1,0 +1,26 @@
+[
+  {
+    "id": "task-001",
+    "title": "Research daily iron supplementation protocols for ferritin recovery",
+    "priority": "high",
+    "status": "pending",
+    "assignee": null,
+    "created": "2026-04-12T12:00:00Z",
+    "started": null,
+    "completed": null,
+    "result": null,
+    "tags": ["research", "health"]
+  },
+  {
+    "id": "task-002",
+    "title": "Find 10 pre-seed stealth founders from MIT/Stanford this week",
+    "priority": "medium",
+    "status": "pending",
+    "assignee": null,
+    "created": "2026-04-12T12:00:00Z",
+    "started": null,
+    "completed": null,
+    "result": null,
+    "tags": ["deals", "sourcing"]
+  }
+]

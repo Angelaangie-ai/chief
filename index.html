@@ -64,8 +64,19 @@ tailwind.config = {
 <!-- ─── MAIN ───────────────────────────────────────────────── -->
 <main class="flex flex-col lg:flex-row gap-0 min-h-[calc(100vh-120px)]">
 
-  <!-- Agent Cards -->
-  <section class="flex-1 p-6">
+  <!-- Left column: Tasks + Agents -->
+  <section class="flex-1 p-6 overflow-y-auto">
+    <!-- ─── TASK QUEUE ─────────────────────────────────────── -->
+    <div class="mb-8">
+      <div class="flex items-center justify-between mb-3">
+        <h2 class="font-serif text-lg font-semibold text-white tracking-wide">Task Queue</h2>
+        <span id="taskCount" class="text-[10px] uppercase tracking-widest text-neutral-500"></span>
+      </div>
+      <div id="tasks" class="space-y-2 mb-2"></div>
+      <p class="text-[10px] text-neutral-600 mt-2">Add tasks via Telegram → Smartypants, or edit <a href="https://github.com/Angelaangie-ai/chief/edit/main/tasks.json" target="_blank" class="underline hover:text-gold-400 transition-colors">tasks.json on GitHub</a></p>
+    </div>
+
+    <!-- ─── AGENTS ─────────────────────────────────────────── -->
     <div class="flex items-center justify-between mb-4">
       <h2 class="font-serif text-lg font-semibold text-white tracking-wide">Agents</h2>
       <div class="flex gap-2" id="filters">
@@ -90,6 +101,19 @@ tailwind.config = {
 <script>
 let DATA = null;
 let currentFilter = "all";
+
+const TASK_STATUS = {
+  pending:       { dot: "bg-amber-400", label: "Pending", text: "text-amber-400" },
+  "in-progress": { dot: "bg-emerald-400 status-pulse", label: "In Progress", text: "text-emerald-400" },
+  done:          { dot: "bg-gold-400", label: "Done", text: "text-gold-400" },
+  failed:        { dot: "bg-red-500", label: "Failed", text: "text-red-400" },
+};
+
+const PRIORITY_BADGE = {
+  high:   "border-red-500/40 text-red-400",
+  medium: "border-amber-500/40 text-amber-400",
+  low:    "border-neutral-500/40 text-neutral-500",
+};
 
 const STATUS = {
   running: { dot: "bg-emerald-400 status-pulse", label: "Running", text: "text-emerald-400" },
@@ -189,15 +213,64 @@ function filter(f) {
   if (DATA) renderAgents(DATA.agents);
 }
 
+function renderTasks(tasks) {
+  const el = document.getElementById("tasks");
+  const countEl = document.getElementById("taskCount");
+  if (!tasks || tasks.length === 0) {
+    el.innerHTML = `<div class="text-neutral-600 text-xs py-4 text-center">No tasks queued</div>`;
+    countEl.textContent = "";
+    return;
+  }
+  const pending = tasks.filter(t => t.status === "pending").length;
+  const active = tasks.filter(t => t.status === "in-progress").length;
+  countEl.textContent = `${pending} pending · ${active} active · ${tasks.length} total`;
+
+  // Sort: in-progress first, then pending, then done/failed
+  const order = { "in-progress": 0, pending: 1, done: 2, failed: 3 };
+  const sorted = [...tasks].sort((a, b) => (order[a.status] ?? 9) - (order[b.status] ?? 9));
+
+  el.innerHTML = sorted.map(t => {
+    const ts = TASK_STATUS[t.status] || TASK_STATUS.pending;
+    const pb = PRIORITY_BADGE[t.priority] || PRIORITY_BADGE.medium;
+    const tags = (t.tags || []).map(tag => `<span class="text-[9px] px-1.5 py-0.5 border border-surface-4 text-neutral-500">${tag}</span>`).join("");
+    return `
+    <div class="card bg-surface-1 p-3 flex items-start gap-3">
+      <div class="mt-1.5 flex-shrink-0">
+        <span class="w-2 h-2 rounded-full ${ts.dot} inline-block"></span>
+      </div>
+      <div class="flex-1 min-w-0">
+        <div class="flex items-center gap-2 mb-1">
+          <span class="text-xs text-white font-medium leading-tight">${t.title}</span>
+        </div>
+        <div class="flex items-center gap-2 flex-wrap">
+          <span class="text-[9px] px-1.5 py-0.5 border ${pb} uppercase tracking-wider">${t.priority}</span>
+          <span class="text-[9px] ${ts.text} uppercase tracking-wider">${ts.label}</span>
+          ${tags}
+          ${t.assignee ? `<span class="text-[9px] text-neutral-600">→ ${t.assignee}</span>` : ""}
+          ${t.completed ? `<span class="text-[9px] text-neutral-600">✓ ${relTime(t.completed)}</span>` : ""}
+        </div>
+        ${t.result ? `<div class="text-[10px] text-neutral-500 mt-1 italic truncate">${t.result}</div>` : ""}
+      </div>
+    </div>`;
+  }).join("");
+}
+
 async function loadData() {
   try {
-    const r = await fetch("data.json?t=" + Date.now());
-    DATA = await r.json();
+    const [dataRes, tasksRes] = await Promise.all([
+      fetch("data.json?t=" + Date.now()),
+      fetch("tasks.json?t=" + Date.now()),
+    ]);
+    DATA = await dataRes.json();
     renderStats(DATA.system);
     renderAgents(DATA.agents);
     renderFeed(DATA.feed);
+    try {
+      const tasks = await tasksRes.json();
+      renderTasks(tasks);
+    } catch { renderTasks([]); }
   } catch (e) {
-    console.error("Failed to load data.json", e);
+    console.error("Failed to load data", e);
   }
 }
 
