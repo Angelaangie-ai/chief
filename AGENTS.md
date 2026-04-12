@@ -2,7 +2,7 @@
 
 ## On Every Task
 
-1. Call `mcp__openclaw__get_tasks` with `assignee="codex"` and `status="pending"`
+1. Call `mcp__openclaw__get_codex_tasks` — this returns ONLY your pending tasks
 2. If no pending tasks, say "No codex tasks in queue" and stop
 3. For each pending task (highest priority first):
    - Call `mcp__openclaw__claim_task` with the `task_id` and `agent="codex"`

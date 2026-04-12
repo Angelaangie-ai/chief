@@ -118,6 +118,11 @@ function registerTools(s) {
     return { content: [{ type: "text", text: `Written: results/${safe} (${content.length} bytes)` }] };
   });
 
+  s.tool("get_codex_tasks", "Get pending tasks assigned to codex. Codex should use this.", {}, async () => {
+    const tasks = loadTasks().filter(t => t.assignee === "codex" && t.status === "pending");
+    return { content: [{ type: "text", text: tasks.length === 0 ? "No pending codex tasks." : JSON.stringify(tasks, null, 2) }] };
+  });
+
   s.tool("list_agents", "List available agents and what they handle.", {}, async () => {
     return { content: [{ type: "text", text: JSON.stringify([
       { name: "smartypants", role: "Core Assistant", handles: "orchestration, research, data, ops" },

@@ -19,8 +19,8 @@
     "assignee": "founder-sourcing-agent",
     "created": "2026-04-12T12:00:00Z",
     "started": "2026-04-12T13:44:00Z",
-    "completed": "2026-04-12T13:45:00Z",
-    "result": "Blocked — no Brave Search API key configured and web scraping blocked by CAPTCHAs. Needs: openclaw configure --section web",
+    "completed": "2026-04-12T13:45:30Z",
+    "result": "Blocked — no Brave Search API key configured and web scraping blocked by CAPTCHAs. Needs: openclaw configure --section web. Recommended: Brave Search API, LinkedIn Sales Navigator, Crunchbase Pro, Harmonic.ai, MIT delta v / StartX cohorts.",
     "tags": ["deals", "sourcing"]
   }
 ]
