@@ -1,13 +1,13 @@
 {
-  "generated": "2026-04-12T12:48:49.964Z",
+  "generated": "2026-04-12T12:53:50.048Z",
   "system": {
     "totalAgents": 5,
     "running": 0,
     "idle": 5,
     "errored": 0,
     "completed": 0,
-    "totalCost": 0.23252355,
-    "totalTokens": 290013
+    "totalCost": 0.15576679999999998,
+    "totalTokens": 145197
   },
   "agents": [
     {
@@ -18,17 +18,17 @@
       "icon": "🤖",
       "task": "telegram:g-agent-main-cron-ed5cbdbd-1c30-4c0c-a22a-2baa3e9f75cd",
       "model": "claude-opus-4-6",
-      "started": "2026-04-12T12:48:49.539Z",
-      "lastMessage": "NO_REPLY",
+      "started": "2026-04-12T12:53:48.505Z",
+      "lastMessage": "A subagent task \"founder-sourcing-agent\" just completed successfully.  Findings: Unfortunately, I'm hitting a wall here.",
       "tokens": {
-        "input": 144849,
-        "output": 7
+        "input": 0,
+        "output": 0
       },
-      "cost": 0.07735674999999999,
+      "cost": 0,
       "sessionKey": "agent:main:cron:ed5cbdbd-1c30-4c0c-a22a-2baa3e9f75cd",
       "kind": "other",
       "channel": "telegram",
-      "contextWindow": 200000
+      "contextWindow": 0
     },
     {
       "id": "agent:main:cron:ae997ae6-5216-4681-925b-b83042a1de6d",
@@ -38,13 +38,13 @@
       "icon": "🤖",
       "task": "Cron: CHIEF Dashboard Refresh",
       "model": "claude-opus-4-6",
-      "started": "2026-04-12T12:48:46.743Z",
+      "started": "2026-04-12T12:53:46.746Z",
       "lastMessage": null,
       "tokens": {
         "input": 14971,
-        "output": 156
+        "output": 196
       },
-      "cost": 0.008380799999999999,
+      "cost": 0.008980799999999999,
       "sessionKey": "agent:main:cron:ae997ae6-5216-4681-925b-b83042a1de6d",
       "kind": "other",
       "channel": "unknown",
@@ -113,13 +113,13 @@
   ],
   "feed": [
     {
-      "time": 1775998127876,
+      "time": 1775998428532,
       "agent": "Cron: CHIEF Task Dispatcher",
       "icon": "🤖",
-      "event": "NO_REPLY"
+      "event": "A subagent task \"founder-sourcing-agent\" just completed successfully.  Findings: Unfortunately, I'm "
     },
     {
-      "time": 1775998126762,
+      "time": 1775998426768,
       "agent": "Cron: CHIEF Dashboard Refresh",
       "icon": "🤖",
       "event": "Activity"
