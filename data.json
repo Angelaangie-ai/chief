@@ -1,15 +1,35 @@
 {
-  "generated": "2026-04-12T12:43:50.024Z",
+  "generated": "2026-04-12T12:48:49.964Z",
   "system": {
-    "totalAgents": 3,
+    "totalAgents": 5,
     "running": 0,
-    "idle": 3,
+    "idle": 5,
     "errored": 0,
     "completed": 0,
-    "totalCost": 0.0082908,
-    "totalTokens": 106737
+    "totalCost": 0.23252355,
+    "totalTokens": 290013
   },
   "agents": [
+    {
+      "id": "agent:main:cron:ed5cbdbd-1c30-4c0c-a22a-2baa3e9f75cd",
+      "name": "Cron: CHIEF Task Dispatcher",
+      "role": "Sub-Agent",
+      "status": "idle",
+      "icon": "🤖",
+      "task": "telegram:g-agent-main-cron-ed5cbdbd-1c30-4c0c-a22a-2baa3e9f75cd",
+      "model": "claude-opus-4-6",
+      "started": "2026-04-12T12:48:49.539Z",
+      "lastMessage": "NO_REPLY",
+      "tokens": {
+        "input": 144849,
+        "output": 7
+      },
+      "cost": 0.07735674999999999,
+      "sessionKey": "agent:main:cron:ed5cbdbd-1c30-4c0c-a22a-2baa3e9f75cd",
+      "kind": "other",
+      "channel": "telegram",
+      "contextWindow": 200000
+    },
     {
       "id": "agent:main:cron:ae997ae6-5216-4681-925b-b83042a1de6d",
       "name": "Cron: CHIEF Dashboard Refresh",
@@ -18,13 +38,13 @@
       "icon": "🤖",
       "task": "Cron: CHIEF Dashboard Refresh",
       "model": "claude-opus-4-6",
-      "started": "2026-04-12T12:43:46.750Z",
+      "started": "2026-04-12T12:48:46.743Z",
       "lastMessage": null,
       "tokens": {
         "input": 14971,
-        "output": 150
+        "output": 156
       },
-      "cost": 0.0082908,
+      "cost": 0.008380799999999999,
       "sessionKey": "agent:main:cron:ae997ae6-5216-4681-925b-b83042a1de6d",
       "kind": "other",
       "channel": "unknown",
@@ -38,51 +58,89 @@
       "icon": "😏",
       "task": "telegram:g-agent-main-main",
       "model": "claude-opus-4-6",
-      "started": "2026-04-12T12:41:30.325Z",
-      "lastMessage": null,
+      "started": "2026-04-12T12:46:27.701Z",
+      "lastMessage": "All built. Here's the setup:  **CHIEF MCP Server** — running permanently on port 8899  **Tools available to any MCP clie",
       "tokens": {
-        "input": 76105,
-        "output": 0
+        "input": 95815,
+        "output": 309
       },
-      "cost": 0,
+      "cost": 0.057632249999999996,
       "sessionKey": "agent:main:main",
       "kind": "other",
       "channel": "telegram",
       "contextWindow": 200000
     },
     {
-      "id": "agent:main:cron:ed5cbdbd-1c30-4c0c-a22a-2baa3e9f75cd",
-      "name": "Cron: CHIEF Task Dispatcher",
+      "id": "agent:main:subagent:01923430-d18f-426d-9e3c-cc7b24355704",
+      "name": "DeepDive",
+      "role": "Research Agent",
+      "status": "idle",
+      "icon": "🔬",
+      "task": "telegram:g-agent-main-subagent-01923430-d18f-426d-9e3c-cc7b24355704",
+      "model": "claude-opus-4-6",
+      "started": "2026-04-12T12:45:44.924Z",
+      "lastMessage": "Here is the completed research on iron supplementation protocols for ferritin recovery:  ---  # Iron Supplementation Pro",
+      "tokens": {
+        "input": 14167,
+        "output": 1397
+      },
+      "cost": 0.05670425,
+      "sessionKey": "agent:main:subagent:01923430-d18f-426d-9e3c-cc7b24355704",
+      "kind": "other",
+      "channel": "telegram",
+      "contextWindow": 200000
+    },
+    {
+      "id": "agent:main:subagent:80456709-eb7e-4406-81dd-9e8eda1ad743",
+      "name": "founder-sourcing-agent",
       "role": "Sub-Agent",
       "status": "idle",
       "icon": "🤖",
-      "task": "Cron: CHIEF Task Dispatcher",
+      "task": "telegram:g-agent-main-subagent-80456709-eb7e-4406-81dd-9e8eda1ad743",
       "model": "claude-opus-4-6",
-      "started": "2026-04-12T12:29:13.595Z",
-      "lastMessage": null,
+      "started": "2026-04-12T12:45:27.033Z",
+      "lastMessage": "Unfortunately, I'm hitting a wall here. The Brave Search API key isn't configured, the browser isn't available, and most",
       "tokens": {
-        "input": 15511,
-        "output": 0
+        "input": 17776,
+        "output": 566
       },
-      "cost": 0,
-      "sessionKey": "agent:main:cron:ed5cbdbd-1c30-4c0c-a22a-2baa3e9f75cd",
+      "cost": 0.0324495,
+      "sessionKey": "agent:main:subagent:80456709-eb7e-4406-81dd-9e8eda1ad743",
       "kind": "other",
-      "channel": "unknown",
+      "channel": "telegram",
       "contextWindow": 200000
     }
   ],
   "feed": [
     {
-      "time": 1775997826774,
+      "time": 1775998127876,
+      "agent": "Cron: CHIEF Task Dispatcher",
+      "icon": "🤖",
+      "event": "NO_REPLY"
+    },
+    {
+      "time": 1775998126762,
       "agent": "Cron: CHIEF Dashboard Refresh",
       "icon": "🤖",
       "event": "Activity"
     },
     {
-      "time": 1775996986512,
-      "agent": "Cron: CHIEF Task Dispatcher",
+      "time": 1775997978565,
+      "agent": "Smartypants",
+      "icon": "😏",
+      "event": "All built. Here's the setup:  **CHIEF MCP Server** — running permanently on port 8899  **Tools avail"
+    },
+    {
+      "time": 1775997908803,
+      "agent": "founder-sourcing-agent",
       "icon": "🤖",
-      "event": "Activity"
+      "event": "Unfortunately, I'm hitting a wall here. The Brave Search API key isn't configured, the browser isn't"
+    },
+    {
+      "time": 1775997877464,
+      "agent": "DeepDive",
+      "icon": "🔬",
+      "event": "Here is the completed research on iron supplementation protocols for ferritin recovery:  ---  # Iron"
     }
   ]
 }
