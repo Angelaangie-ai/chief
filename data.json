@@ -1,24 +1,24 @@
 {
-  "generated": "2026-04-12T20:39:52.082Z",
+  "generated": "2026-04-12T20:44:53.118Z",
   "system": {
     "totalAgents": 3,
     "running": 0,
     "idle": 3,
     "errored": 0,
     "completed": 0,
-    "totalCost": 0.08297659999999998,
-    "totalTokens": 152643,
+    "totalCost": 0.20298085,
+    "totalTokens": 127076,
     "mainContext": {
-      "used": 137000,
-      "max": 200000,
-      "percent": 68,
+      "used": 111000,
+      "max": 272000,
+      "percent": 41,
       "compactions": 2,
       "model": "google-gemini-cli/gemini-2.0-flash",
-      "tokensIn": "4",
-      "tokensOut": "238"
+      "tokensIn": "111k",
+      "tokensOut": "29"
     },
-    "contextMax": 400000,
-    "contextUsed": 152340
+    "contextMax": 472000,
+    "contextUsed": 126893
   },
   "agents": [
     {
@@ -29,17 +29,17 @@
       "icon": "😏",
       "task": "telegram:g-agent-main-main",
       "model": "gemini-2.0-flash",
-      "started": "2026-04-12T20:22:07.886Z",
-      "lastMessage": "That's the file. You'd add a Google or OpenAI key here. But you need an **API key** — the free CLI subscriptions don't g",
+      "started": "2026-04-12T20:44:34.307Z",
+      "lastMessage": "Hey Angela — I’m here.   Want me to switch us back to the working cheap model (Sonnet) now?",
       "tokens": {
-        "input": 136726,
-        "output": 149
+        "input": 111279,
+        "output": 29
       },
-      "cost": 0.07513999999999998,
+      "cost": 0.19514425,
       "sessionKey": "agent:main:main",
       "kind": "other",
       "channel": "telegram",
-      "contextWindow": 200000
+      "contextWindow": 272000
     },
     {
       "id": "agent:main:cron:ed5cbdbd-1c30-4c0c-a22a-2baa3e9f75cd",
@@ -48,7 +48,7 @@
       "status": "idle",
       "icon": "🤖",
       "task": "telegram:g-agent-main-cron-ed5cbdbd-1c30-4c0c-a22a-2baa3e9f75cd",
-      "model": "claude-opus-4-6",
+      "model": "gpt-5.3-codex",
       "started": "2026-04-12T17:32:26.686Z",
       "lastMessage": null,
       "tokens": {
@@ -68,7 +68,7 @@
       "status": "idle",
       "icon": "🤖",
       "task": "Cron: CHIEF Dashboard Refresh",
-      "model": "claude-opus-4-6",
+      "model": "gpt-5.3-codex",
       "started": "2026-04-12T13:08:46.747Z",
       "lastMessage": "✅ CHIEF data refreshed → /Users/angelabusheska/.openclaw/workspace/chief/data.json    5 sessions | 0 running | $0.16 tot",
       "tokens": {
@@ -84,10 +84,10 @@
   ],
   "feed": [
     {
-      "time": 1776025320901,
+      "time": 1776026667650,
       "agent": "Smartypants",
       "icon": "😏",
-      "event": "That's the file. You'd add a Google or OpenAI key here. But you need an **API key** — the free CLI s"
+      "event": "Hey Angela — I’m here.   Want me to switch us back to the working cheap model (Sonnet) now?"
     },
     {
       "time": 1776015146910,
