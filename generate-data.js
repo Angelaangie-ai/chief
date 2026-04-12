@@ -217,7 +217,24 @@ async function main() {
   );
 }
 
-main().catch((e) => {
+main().then(() => {
+  // Auto-push to GitHub so Vercel deploys fresh data
+  const { execSync } = require("child_process");
+  try {
+    const status = execSync("git status --porcelain data.json", { cwd: __dirname }).toString().trim();
+    if (status) {
+      execSync('git add data.json && git commit -m "chore: refresh data" && git push', {
+        cwd: __dirname,
+        stdio: "pipe",
+      });
+      console.log("   📤 Pushed to GitHub → Vercel redeploy");
+    } else {
+      console.log("   (no data changes)");
+    }
+  } catch (e) {
+    console.log("   ⚠️  Git push skipped:", e.message?.split("\n")[0]);
+  }
+}).catch((e) => {
   console.error("❌ CHIEF generate failed:", e.message);
   process.exit(1);
 });
