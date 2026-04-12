@@ -1,46 +1,26 @@
 {
-  "generated": "2026-04-12T15:03:41.969Z",
+  "generated": "2026-04-12T20:09:45.672Z",
   "system": {
     "totalAgents": 3,
     "running": 0,
     "idle": 3,
     "errored": 0,
     "completed": 0,
-    "totalCost": 0.0733756,
-    "totalTokens": 297007,
+    "totalCost": 0.007836599999999999,
+    "totalTokens": 140540,
     "mainContext": {
-      "used": 117000,
+      "used": 125000,
       "max": 200000,
-      "percent": 59,
+      "percent": 62,
       "compactions": 2,
       "model": "anthropic/claude-opus-4-6",
       "tokensIn": "3",
-      "tokensOut": "20"
+      "tokensOut": "184"
     },
-    "contextMax": 600000,
-    "contextUsed": 296676
+    "contextMax": 400000,
+    "contextUsed": 140386
   },
   "agents": [
-    {
-      "id": "agent:main:cron:ed5cbdbd-1c30-4c0c-a22a-2baa3e9f75cd",
-      "name": "Cron: CHIEF Task Dispatcher",
-      "role": "Sub-Agent",
-      "status": "idle",
-      "icon": "🤖",
-      "task": "telegram:g-agent-main-cron-ed5cbdbd-1c30-4c0c-a22a-2baa3e9f75cd",
-      "model": "claude-opus-4-6",
-      "started": "2026-04-12T15:03:25.484Z",
-      "lastMessage": "A subagent task \"founder-sourcing-agent\" just completed successfully.  Findings: Unfortunately, I'm hitting a wall here.",
-      "tokens": {
-        "input": 163797,
-        "output": 0
-      },
-      "cost": 0,
-      "sessionKey": "agent:main:cron:ed5cbdbd-1c30-4c0c-a22a-2baa3e9f75cd",
-      "kind": "other",
-      "channel": "telegram",
-      "contextWindow": 200000
-    },
     {
       "id": "agent:main:main",
       "name": "Smartypants",
@@ -49,17 +29,37 @@
       "icon": "😏",
       "task": "telegram:g-agent-main-main",
       "model": "claude-opus-4-6",
-      "started": "2026-04-12T14:59:50.099Z",
+      "started": "2026-04-12T20:08:19.533Z",
       "lastMessage": null,
       "tokens": {
-        "input": 117265,
-        "output": 177
+        "input": 124772,
+        "output": 0
       },
-      "cost": 0.065539,
+      "cost": 0,
       "sessionKey": "agent:main:main",
       "kind": "other",
       "channel": "telegram",
       "contextWindow": 200000
+    },
+    {
+      "id": "agent:main:cron:ed5cbdbd-1c30-4c0c-a22a-2baa3e9f75cd",
+      "name": "Cron: CHIEF Task Dispatcher",
+      "role": "Sub-Agent",
+      "status": "idle",
+      "icon": "🤖",
+      "task": "telegram:g-agent-main-cron-ed5cbdbd-1c30-4c0c-a22a-2baa3e9f75cd",
+      "model": "claude-opus-4-6",
+      "started": "2026-04-12T17:32:26.686Z",
+      "lastMessage": null,
+      "tokens": {
+        "input": 0,
+        "output": 0
+      },
+      "cost": 0,
+      "sessionKey": "agent:main:cron:ed5cbdbd-1c30-4c0c-a22a-2baa3e9f75cd",
+      "kind": "other",
+      "channel": "telegram",
+      "contextWindow": 0
     },
     {
       "id": "agent:main:cron:ae997ae6-5216-4681-925b-b83042a1de6d",
@@ -84,16 +84,10 @@
   ],
   "feed": [
     {
-      "time": 1776006214549,
-      "agent": "Smartypants",
-      "icon": "😏",
-      "event": "Activity"
-    },
-    {
-      "time": 1776006205554,
+      "time": 1776015146910,
       "agent": "Cron: CHIEF Task Dispatcher",
       "icon": "🤖",
-      "event": "A subagent task \"founder-sourcing-agent\" just completed successfully.  Findings: Unfortunately, I'm "
+      "event": "Activity"
     },
     {
       "time": 1775999331569,
@@ -121,6 +115,22 @@
       "tasksClaimed": 0,
       "tasksCompleted": 0,
       "history": []
+    },
+    "unknown": {
+      "calls": 2,
+      "lastCall": "2026-04-12T15:25:23.031Z",
+      "tasksClaimed": 0,
+      "tasksCompleted": 0,
+      "history": [
+        {
+          "tool": "get_tasks",
+          "time": "2026-04-12T15:06:14.479Z"
+        },
+        {
+          "tool": "get_tasks",
+          "time": "2026-04-12T15:25:23.031Z"
+        }
+      ]
     }
   }
 }
