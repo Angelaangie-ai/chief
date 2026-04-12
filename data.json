@@ -1,13 +1,13 @@
 {
-  "generated": "2026-04-12T12:13:49.621Z",
+  "generated": "2026-04-12T12:18:49.767Z",
   "system": {
     "totalAgents": 2,
     "running": 0,
     "idle": 2,
     "errored": 0,
     "completed": 0,
-    "totalCost": 0.0085308,
-    "totalTokens": 63754
+    "totalCost": 0.05336555,
+    "totalTokens": 87418
   },
   "agents": [
     {
@@ -18,13 +18,13 @@
       "icon": "🤖",
       "task": "Cron: CHIEF Dashboard Refresh",
       "model": "claude-opus-4-6",
-      "started": "2026-04-12T12:13:46.751Z",
+      "started": "2026-04-12T12:18:46.749Z",
       "lastMessage": null,
       "tokens": {
         "input": 14971,
-        "output": 166
+        "output": 148
       },
-      "cost": 0.0085308,
+      "cost": 0.0082608,
       "sessionKey": "agent:main:cron:ae997ae6-5216-4681-925b-b83042a1de6d",
       "kind": "other",
       "channel": "unknown",
@@ -38,13 +38,13 @@
       "icon": "😏",
       "task": "telegram:g-agent-main-main",
       "model": "claude-opus-4-6",
-      "started": "2026-04-12T12:12:24.389Z",
-      "lastMessage": null,
+      "started": "2026-04-12T12:17:45.298Z",
+      "lastMessage": "Done. Go here: **https://angelaangie-ai.github.io/chief/**  **What you'll see:** - **\"+ Add Task\"** button at the top — ",
       "tokens": {
-        "input": 48617,
-        "output": 0
+        "input": 72009,
+        "output": 290
       },
-      "cost": 0,
+      "cost": 0.04510475,
       "sessionKey": "agent:main:main",
       "kind": "other",
       "channel": "telegram",
@@ -53,10 +53,16 @@
   ],
   "feed": [
     {
-      "time": 1775996026774,
+      "time": 1775996326771,
       "agent": "Cron: CHIEF Dashboard Refresh",
       "icon": "🤖",
       "event": "Activity"
+    },
+    {
+      "time": 1775996257110,
+      "agent": "Smartypants",
+      "icon": "😏",
+      "event": "Done. Go here: **https://angelaangie-ai.github.io/chief/**  **What you'll see:** - **\"+ Add Task\"** "
     }
   ]
 }
