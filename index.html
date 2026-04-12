@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>CHIEF — Command Center</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  darkMode: "class",
+  theme: {
+    extend: {
+      fontFamily: {
+        serif: ["Cormorant Garamond", "Georgia", "serif"],
+        sans: ["Inter", "system-ui", "sans-serif"],
+      },
+      colors: {
+        gold: { 400: "#d4a853", 500: "#c9952c", 600: "#b8860b" },
+        surface: { 0: "#000000", 1: "#0a0a0a", 2: "#111111", 3: "#1a1a1a", 4: "#222222" },
+      },
+    },
+  },
+};
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+<style>
+  body { background: #000; color: #e5e5e5; font-family: Inter, system-ui, sans-serif; }
+  .status-pulse { animation: pulse 2s ease-in-out infinite; }
+  @keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.4; }
+  }
+  .card { border: 1px solid #222; transition: border-color 0.2s, transform 0.15s; }
+  .card:hover { border-color: #d4a853; transform: translateY(-1px); }
+  .feed-line { border-left: 1px solid #222; }
+  .stat-glow { text-shadow: 0 0 20px rgba(212, 168, 83, 0.3); }
+  ::-webkit-scrollbar { width: 4px; }
+  ::-webkit-scrollbar-track { background: #0a0a0a; }
+  ::-webkit-scrollbar-thumb { background: #333; border-radius: 2px; }
+</style>
+</head>
+<body class="min-h-screen">
+
+<!-- ─── HEADER ─────────────────────────────────────────────── -->
+<header class="border-b border-surface-3 px-6 py-4 flex items-center justify-between">
+  <div class="flex items-center gap-3">
+    <span class="text-2xl">⚡</span>
+    <h1 class="font-serif text-2xl font-bold tracking-wide text-white">CHIEF</h1>
+    <span class="text-xs text-neutral-500 mt-1 tracking-widest uppercase">Command Center</span>
+  </div>
+  <div class="flex items-center gap-4">
+    <span id="clock" class="text-xs text-neutral-400 font-mono"></span>
+    <button onclick="loadData()" class="text-xs border border-surface-4 px-3 py-1.5 hover:border-gold-400 hover:text-gold-400 transition-colors">
+      ↻ Refresh
+    </button>
+  </div>
+</header>
+
+<!-- ─── STATS BAR ──────────────────────────────────────────── -->
+<div id="stats" class="grid grid-cols-2 md:grid-cols-6 border-b border-surface-3">
+</div>
+
+<!-- ─── MAIN ───────────────────────────────────────────────── -->
+<main class="flex flex-col lg:flex-row gap-0 min-h-[calc(100vh-120px)]">
+
+  <!-- Agent Cards -->
+  <section class="flex-1 p-6">
+    <div class="flex items-center justify-between mb-4">
+      <h2 class="font-serif text-lg font-semibold text-white tracking-wide">Agents</h2>
+      <div class="flex gap-2" id="filters">
+        <button onclick="filter('all')" data-f="all" class="filter-btn active text-xs px-2.5 py-1 border border-surface-4 hover:border-gold-400 transition-colors">All</button>
+        <button onclick="filter('running')" data-f="running" class="filter-btn text-xs px-2.5 py-1 border border-surface-4 hover:border-gold-400 transition-colors">Running</button>
+        <button onclick="filter('idle')" data-f="idle" class="filter-btn text-xs px-2.5 py-1 border border-surface-4 hover:border-gold-400 transition-colors">Idle</button>
+        <button onclick="filter('done')" data-f="done" class="filter-btn text-xs px-2.5 py-1 border border-surface-4 hover:border-gold-400 transition-colors">Done</button>
+        <button onclick="filter('error')" data-f="error" class="filter-btn text-xs px-2.5 py-1 border border-surface-4 hover:border-gold-400 transition-colors">Error</button>
+      </div>
+    </div>
+    <div id="agents" class="grid gap-3 md:grid-cols-2 xl:grid-cols-3"></div>
+  </section>
+
+  <!-- Activity Feed -->
+  <aside class="w-full lg:w-80 border-l border-surface-3 p-6 bg-surface-1">
+    <h2 class="font-serif text-lg font-semibold text-white tracking-wide mb-4">Activity</h2>
+    <div id="feed" class="space-y-0"></div>
+  </aside>
+
+</main>
+
+<script>
+let DATA = null;
+let currentFilter = "all";
+
+const STATUS = {
+  running: { dot: "bg-emerald-400 status-pulse", label: "Running", text: "text-emerald-400" },
+  idle:    { dot: "bg-neutral-500", label: "Idle", text: "text-neutral-400" },
+  done:    { dot: "bg-gold-400", label: "Done", text: "text-gold-400" },
+  error:   { dot: "bg-red-500 status-pulse", label: "Error", text: "text-red-400" },
+};
+
+function fmt(n) {
+  if (n >= 1_000_000) return (n / 1_000_000).toFixed(1) + "M";
+  if (n >= 1_000) return (n / 1_000).toFixed(1) + "k";
+  return n.toString();
+}
+
+function relTime(iso) {
+  if (!iso) return "—";
+  const diff = Date.now() - new Date(iso).getTime();
+  const m = Math.floor(diff / 60_000);
+  if (m < 1) return "just now";
+  if (m < 60) return m + "m ago";
+  const h = Math.floor(m / 60);
+  if (h < 24) return h + "h ago";
+  return Math.floor(h / 24) + "d ago";
+}
+
+function renderStats(s) {
+  const items = [
+    { label: "Total Agents", value: s.totalAgents, color: "text-white" },
+    { label: "Running", value: s.running, color: "text-emerald-400" },
+    { label: "Idle", value: s.idle, color: "text-neutral-400" },
+    { label: "Errors", value: s.errored, color: s.errored > 0 ? "text-red-400" : "text-neutral-500" },
+    { label: "Tokens", value: fmt(s.totalTokens), color: "text-white" },
+    { label: "Cost", value: "$" + s.totalCost.toFixed(2), color: "text-gold-400" },
+  ];
+  document.getElementById("stats").innerHTML = items.map(i => `
+    <div class="px-6 py-3 border-r border-surface-3 last:border-r-0">
+      <div class="text-[10px] uppercase tracking-widest text-neutral-500 mb-0.5">${i.label}</div>
+      <div class="text-xl font-semibold ${i.color} stat-glow">${i.value}</div>
+    </div>
+  `).join("");
+}
+
+function renderAgents(agents) {
+  const filtered = currentFilter === "all" ? agents : agents.filter(a => a.status === currentFilter);
+  document.getElementById("agents").innerHTML = filtered.length === 0
+    ? `<div class="col-span-full text-center text-neutral-500 py-12">No ${currentFilter} agents</div>`
+    : filtered.map(a => {
+    const st = STATUS[a.status] || STATUS.idle;
+    const tk = (a.tokens?.input || 0) + (a.tokens?.output || 0);
+    return `
+    <div class="card bg-surface-1 p-4 flex flex-col gap-3" data-status="${a.status}">
+      <div class="flex items-start justify-between">
+        <div class="flex items-center gap-2.5">
+          <span class="text-2xl">${a.icon}</span>
+          <div>
+            <div class="text-white font-semibold text-sm">${a.name}</div>
+            <div class="text-[10px] uppercase tracking-widest text-neutral-500">${a.role}</div>
+          </div>
+        </div>
+        <div class="flex items-center gap-1.5">
+          <span class="w-2 h-2 rounded-full ${st.dot}"></span>
+          <span class="text-[10px] uppercase tracking-wider ${st.text}">${st.label}</span>
+        </div>
+      </div>
+      <div class="text-xs text-neutral-400 leading-relaxed">${a.task}</div>
+      <div class="text-xs text-neutral-500 border-t border-surface-3 pt-2 mt-auto flex justify-between">
+        <span>${a.model || "—"}</span>
+        <span>${tk > 0 ? fmt(tk) + " tok" : "—"}</span>
+        <span>${a.cost > 0 ? "$" + a.cost.toFixed(2) : "—"}</span>
+      </div>
+      ${a.lastMessage ? `<div class="text-[11px] text-neutral-500 italic truncate">"${a.lastMessage}"</div>` : ""}
+      ${a.started ? `<div class="text-[10px] text-neutral-600">Started ${relTime(a.started)}</div>` : ""}
+    </div>`;
+  }).join("");
+}
+
+function renderFeed(feed) {
+  document.getElementById("feed").innerHTML = feed.map(f => `
+    <div class="feed-line pl-4 pb-4 relative">
+      <span class="absolute left-0 top-1.5 w-1.5 h-1.5 rounded-full bg-surface-4 -translate-x-[3px]"></span>
+      <div class="text-[10px] text-neutral-600 mb-0.5">${relTime(f.time)}</div>
+      <div class="text-xs">
+        <span>${f.icon}</span>
+        <span class="text-neutral-300 font-medium">${f.agent}</span>
+        <span class="text-neutral-500"> — ${f.event}</span>
+      </div>
+    </div>
+  `).join("");
+}
+
+function filter(f) {
+  currentFilter = f;
+  document.querySelectorAll(".filter-btn").forEach(b => {
+    b.classList.toggle("border-gold-400", b.dataset.f === f);
+    b.classList.toggle("text-gold-400", b.dataset.f === f);
+  });
+  if (DATA) renderAgents(DATA.agents);
+}
+
+async function loadData() {
+  try {
+    const r = await fetch("data.json?t=" + Date.now());
+    DATA = await r.json();
+    renderStats(DATA.system);
+    renderAgents(DATA.agents);
+    renderFeed(DATA.feed);
+  } catch (e) {
+    console.error("Failed to load data.json", e);
+  }
+}
+
+function tick() {
+  const now = new Date();
+  document.getElementById("clock").textContent = now.toLocaleTimeString("en-US", {
+    hour: "2-digit", minute: "2-digit", second: "2-digit", hour12: false
+  });
+}
+
+// ── Init ──
+loadData();
+setInterval(tick, 1000);
+setInterval(loadData, 15_000); // auto-refresh every 15s
+tick();
+</script>
+
+</body>
+</html>
