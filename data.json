@@ -1,24 +1,24 @@
 {
-  "generated": "2026-04-12T14:55:46.092Z",
+  "generated": "2026-04-12T14:57:39.647Z",
   "system": {
     "totalAgents": 3,
     "running": 0,
     "idle": 3,
     "errored": 0,
     "completed": 0,
-    "totalCost": 0.06638585,
-    "totalTokens": 119689,
+    "totalCost": 0.0716831,
+    "totalTokens": 127449,
     "mainContext": {
-      "used": 104000,
+      "used": 112000,
       "max": 200000,
-      "percent": 52,
+      "percent": 56,
       "compactions": 2,
       "model": "anthropic/claude-opus-4-6",
-      "tokensIn": "10",
-      "tokensOut": "1.3k"
+      "tokensIn": "19",
+      "tokensOut": "4.0k"
     },
     "contextMax": 400000,
-    "contextUsed": 119440
+    "contextUsed": 127134
   },
   "agents": [
     {
@@ -29,7 +29,7 @@
       "icon": "🤖",
       "task": "telegram:g-agent-main-cron-ed5cbdbd-1c30-4c0c-a22a-2baa3e9f75cd",
       "model": "claude-opus-4-6",
-      "started": "2026-04-12T14:55:44.648Z",
+      "started": "2026-04-12T14:57:35.618Z",
       "lastMessage": "A subagent task \"founder-sourcing-agent\" just completed successfully.  Findings: Unfortunately, I'm hitting a wall here.",
       "tokens": {
         "input": 0,
@@ -49,13 +49,13 @@
       "icon": "😏",
       "task": "telegram:g-agent-main-main",
       "model": "claude-opus-4-6",
-      "started": "2026-04-12T14:54:29.158Z",
-      "lastMessage": "Good enough — the agent cards already show model + tokens + cost. Now regenerate data and push:",
+      "started": "2026-04-12T14:56:17.102Z",
+      "lastMessage": "Restart MCP server, regenerate data, push:",
       "tokens": {
-        "input": 103826,
-        "output": 95
+        "input": 111520,
+        "output": 161
       },
-      "cost": 0.05854925,
+      "cost": 0.0638465,
       "sessionKey": "agent:main:main",
       "kind": "other",
       "channel": "telegram",
@@ -84,16 +84,16 @@
   ],
   "feed": [
     {
-      "time": 1776005744710,
+      "time": 1776005855674,
       "agent": "Cron: CHIEF Task Dispatcher",
       "icon": "🤖",
       "event": "A subagent task \"founder-sourcing-agent\" just completed successfully.  Findings: Unfortunately, I'm "
     },
     {
-      "time": 1776005742694,
+      "time": 1776005852051,
       "agent": "Smartypants",
       "icon": "😏",
-      "event": "Good enough — the agent cards already show model + tokens + cost. Now regenerate data and push:"
+      "event": "Restart MCP server, regenerate data, push:"
     },
     {
       "time": 1775999331569,
@@ -101,5 +101,6 @@
       "icon": "🤖",
       "event": "✅ CHIEF data refreshed → /Users/angelabusheska/.openclaw/workspace/chief/data.json    5 sessions | 0"
     }
-  ]
+  ],
+  "mcpUsage": {}
 }
