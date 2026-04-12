@@ -3,12 +3,12 @@
     "id": "task-001",
     "title": "Research daily iron supplementation protocols for ferritin recovery",
     "priority": "high",
-    "status": "in-progress",
+    "status": "completed",
     "assignee": "iron-research-agent",
     "created": "2026-04-12T12:00:00Z",
     "started": "2026-04-12T13:44:00Z",
-    "completed": null,
-    "result": null,
+    "completed": "2026-04-12T13:45:00Z",
+    "result": "Full protocol saved to chief/iron-supplementation-protocol.md",
     "tags": ["research", "health"]
   },
   {
