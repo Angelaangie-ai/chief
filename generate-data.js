@@ -238,8 +238,15 @@ async function main() {
     contextUsed: totalContextUsed,
   };
 
+  // ── Load MCP usage stats ────────────────────────────────────
+  let mcpUsage = {};
+  try {
+    const usagePath = path.join(__dirname, "usage.json");
+    if (fs.existsSync(usagePath)) mcpUsage = JSON.parse(fs.readFileSync(usagePath, "utf-8"));
+  } catch {}
+
   // ── Write ──────────────────────────────────────────────────
-  const data = { generated: NOW, system, agents, feed };
+  const data = { generated: NOW, system, agents, feed, mcpUsage };
   fs.writeFileSync(OUT, JSON.stringify(data, null, 2));
   console.log(`✅ CHIEF data refreshed → ${OUT}`);
   console.log(

@@ -156,6 +156,7 @@ const GH_TOKEN = getGHToken();
 let DATA = null;
 let TASKS = [];
 let TASKS_SHA = null; // GitHub file SHA for updates
+let MCP_USAGE = null;
 let currentFilter = "all";
 
 // ── Status maps ──────────────────────────────────────────────
@@ -310,19 +311,49 @@ function renderStats(s) {
     </div>
   `).join("");
 
-  // Context bar under stats
-  if (ctx.max) {
-    const barEl = document.getElementById("contextBar");
-    if (barEl) {
-      barEl.innerHTML = `
+  // Context bar + platform usage under stats
+  const barEl = document.getElementById("contextBar");
+  if (barEl) {
+    let html = "";
+
+    // Anthropic / OpenClaw bar
+    if (ctx.max) {
+      const pct = ctx.percent || 0;
+      const barColor = pct > 80 ? 'bg-red-500' : pct > 50 ? 'bg-amber-500' : 'bg-emerald-500';
+      html += `
         <div class="flex items-center gap-3 px-6 py-1.5">
-          <span class="text-[9px] uppercase tracking-widest text-neutral-600">Main Context</span>
+          <span class="text-[9px] uppercase tracking-widest text-neutral-600 w-20">🟣 Anthropic</span>
           <div class="flex-1 h-1.5 bg-surface-3 overflow-hidden">
-            <div class="h-full ${(ctx.percent||0) > 80 ? 'bg-red-500' : (ctx.percent||0) > 50 ? 'bg-amber-500' : 'bg-emerald-500'} transition-all" style="width:${ctx.percent||0}%"></div>
+            <div class="h-full ${barColor} transition-all" style="width:${pct}%"></div>
           </div>
-          <span class="text-[9px] text-neutral-500">${ctx.percent}% · ${ctx.compactions||0} compactions · ${ctx.model||''}</span>
+          <span class="text-[9px] text-neutral-500">${pct}% · ${Math.round(ctx.used/1000)}k/${Math.round(ctx.max/1000)}k tokens · ${ctx.compactions||0} compactions</span>
         </div>`;
     }
+
+    // Codex / OpenAI bar
+    const codexUsage = MCP_USAGE?.codex;
+    if (codexUsage) {
+      html += `
+        <div class="flex items-center gap-3 px-6 py-1.5">
+          <span class="text-[9px] uppercase tracking-widest text-neutral-600 w-20">🟢 Codex</span>
+          <div class="flex items-center gap-3 flex-1">
+            <span class="text-[9px] text-neutral-400">${codexUsage.calls || 0} MCP calls</span>
+            <span class="text-[9px] text-neutral-500">·</span>
+            <span class="text-[9px] text-neutral-400">${codexUsage.tasksClaimed || 0} claimed</span>
+            <span class="text-[9px] text-neutral-500">·</span>
+            <span class="text-[9px] text-emerald-400">${codexUsage.tasksCompleted || 0} completed</span>
+            ${codexUsage.lastCall ? `<span class="text-[9px] text-neutral-600">· last active ${relTime(codexUsage.lastCall)}</span>` : ""}
+          </div>
+        </div>`;
+    } else {
+      html += `
+        <div class="flex items-center gap-3 px-6 py-1.5">
+          <span class="text-[9px] uppercase tracking-widest text-neutral-600 w-20">🟢 Codex</span>
+          <span class="text-[9px] text-neutral-600">No activity yet</span>
+        </div>`;
+    }
+
+    barEl.innerHTML = html;
   }
 }
 
@@ -452,6 +483,7 @@ async function loadData() {
     // Load agent data from local data.json
     const r = await fetch("data.json?t=" + Date.now());
     DATA = await r.json();
+    MCP_USAGE = DATA.mcpUsage || {};
     renderStats(DATA.system);
     renderAgents(DATA.agents);
     renderFeed(DATA.feed);

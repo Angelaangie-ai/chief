@@ -17,6 +17,7 @@ const TASKS_PATH = path.join(__dirname, "..", "tasks.json");
 const RESULTS_DIR = path.join(__dirname, "..", "results");
 const WORKSPACE = "/Users/angelabusheska/.openclaw/workspace";
 const PORT = parseInt(process.env.PORT || "8899");
+const USAGE_PATH = path.join(__dirname, "..", "usage.json");
 
 // ── Helpers ──────────────────────────────────────────────────
 function loadTasks() {
@@ -31,6 +32,39 @@ function saveTasks(tasks) {
       cwd: path.join(__dirname, ".."), stdio: "pipe", timeout: 15000,
     });
   } catch {}
+}
+
+// ── Usage tracking ───────────────────────────────────────────
+function loadUsage() {
+  if (!fs.existsSync(USAGE_PATH)) return { codex: { calls: 0, lastCall: null, tasksClaimed: 0, tasksCompleted: 0, history: [] }, openclaw: { calls: 0, lastCall: null, tasksClaimed: 0, tasksCompleted: 0, history: [] } };
+  return JSON.parse(fs.readFileSync(USAGE_PATH, "utf-8"));
+}
+
+function trackCall(agent, toolName) {
+  const usage = loadUsage();
+  if (!usage[agent]) usage[agent] = { calls: 0, lastCall: null, tasksClaimed: 0, tasksCompleted: 0, history: [] };
+  usage[agent].calls++;
+  usage[agent].lastCall = new Date().toISOString();
+  usage[agent].history.push({ tool: toolName, time: new Date().toISOString() });
+  // Keep last 100 entries
+  if (usage[agent].history.length > 100) usage[agent].history = usage[agent].history.slice(-100);
+  fs.writeFileSync(USAGE_PATH, JSON.stringify(usage, null, 2));
+  return usage;
+}
+
+function trackTaskEvent(agent, event) {
+  const usage = loadUsage();
+  if (!usage[agent]) usage[agent] = { calls: 0, lastCall: null, tasksClaimed: 0, tasksCompleted: 0, history: [] };
+  if (event === "claim") usage[agent].tasksClaimed++;
+  if (event === "complete") usage[agent].tasksCompleted++;
+  fs.writeFileSync(USAGE_PATH, JSON.stringify(usage, null, 2));
+}
+
+// Detect caller — if session was created by a codex tool call, tag it
+function detectAgent(toolName) {
+  // Codex uses get_codex_tasks; openclaw agents use get_tasks with assignee filter
+  if (toolName === "get_codex_tasks") return "codex";
+  return "openclaw";
 }
 
 function genId() {
@@ -72,6 +106,7 @@ function registerTools(s) {
     if (task.status !== "pending") return { content: [{ type: "text", text: `Already ${task.status}` }] };
     task.status = "in-progress"; task.assignee = agent; task.started = new Date().toISOString();
     saveTasks(tasks);
+    trackCall(agent, "claim_task"); trackTaskEvent(agent, "claim");
     return { content: [{ type: "text", text: `Claimed: "${task.title}" → ${agent}` }] };
   });
 
@@ -84,6 +119,7 @@ function registerTools(s) {
     if (!task) return { content: [{ type: "text", text: `Not found: ${task_id}` }] };
     task.status = "done"; task.completed = new Date().toISOString(); task.result = result;
     saveTasks(tasks);
+    trackCall(task.assignee || "unknown", "complete_task"); trackTaskEvent(task.assignee || "unknown", "complete");
     return { content: [{ type: "text", text: `Done: "${task.title}"` }] };
   });
 
@@ -119,8 +155,14 @@ function registerTools(s) {
   });
 
   s.tool("get_codex_tasks", "Get pending tasks assigned to codex. Codex should use this.", {}, async () => {
+    trackCall("codex", "get_codex_tasks");
     const tasks = loadTasks().filter(t => t.assignee === "codex" && t.status === "pending");
     return { content: [{ type: "text", text: tasks.length === 0 ? "No pending codex tasks." : JSON.stringify(tasks, null, 2) }] };
+  });
+
+  s.tool("get_usage", "Get MCP usage stats for all agents.", {}, async () => {
+    const usage = loadUsage();
+    return { content: [{ type: "text", text: JSON.stringify(usage, null, 2) }] };
   });
 
   s.tool("list_agents", "List available agents and what they handle.", {}, async () => {
