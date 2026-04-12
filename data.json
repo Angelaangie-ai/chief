@@ -1,5 +1,5 @@
 {
-  "generated": "2026-04-12T20:09:45.672Z",
+  "generated": "2026-04-12T20:14:46.903Z",
   "system": {
     "totalAgents": 3,
     "running": 0,
@@ -7,18 +7,18 @@
     "errored": 0,
     "completed": 0,
     "totalCost": 0.007836599999999999,
-    "totalTokens": 140540,
+    "totalTokens": 144126,
     "mainContext": {
-      "used": 125000,
+      "used": 128000,
       "max": 200000,
-      "percent": 62,
+      "percent": 64,
       "compactions": 2,
       "model": "anthropic/claude-opus-4-6",
       "tokensIn": "3",
-      "tokensOut": "184"
+      "tokensOut": "109"
     },
     "contextMax": 400000,
-    "contextUsed": 140386
+    "contextUsed": 143972
   },
   "agents": [
     {
@@ -29,10 +29,10 @@
       "icon": "😏",
       "task": "telegram:g-agent-main-main",
       "model": "claude-opus-4-6",
-      "started": "2026-04-12T20:08:19.533Z",
-      "lastMessage": null,
+      "started": "2026-04-12T20:14:41.830Z",
+      "lastMessage": "Conversation info (untrusted metadata): ```json {   \"conversation_label\": \"Angela Busheska id:7907734285\" } ```  how wil",
       "tokens": {
-        "input": 124772,
+        "input": 128358,
         "output": 0
       },
       "cost": 0,
@@ -83,6 +83,12 @@
     }
   ],
   "feed": [
+    {
+      "time": 1776024882221,
+      "agent": "Smartypants",
+      "icon": "😏",
+      "event": "Conversation info (untrusted metadata): ```json {   \"conversation_label\": \"Angela Busheska id:790773"
+    },
     {
       "time": 1776015146910,
       "agent": "Cron: CHIEF Task Dispatcher",
