@@ -1,0 +1,7 @@
+{
+  "mcpServers": {
+    "chief": {
+      "url": "http://localhost:8899/mcp"
+    }
+  }
+}
