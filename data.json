@@ -1,24 +1,24 @@
 {
-  "generated": "2026-04-12T20:14:46.903Z",
+  "generated": "2026-04-12T20:19:48.065Z",
   "system": {
     "totalAgents": 3,
     "running": 0,
     "idle": 3,
     "errored": 0,
     "completed": 0,
-    "totalCost": 0.007836599999999999,
-    "totalTokens": 144126,
+    "totalCost": 0.09110159999999999,
+    "totalTokens": 151273,
     "mainContext": {
-      "used": 128000,
+      "used": 135000,
       "max": 200000,
-      "percent": 64,
+      "percent": 68,
       "compactions": 2,
-      "model": "anthropic/claude-opus-4-6",
-      "tokensIn": "3",
-      "tokensOut": "109"
+      "model": "openai-codex/gpt-5.1",
+      "tokensIn": "9",
+      "tokensOut": "841"
     },
     "contextMax": 400000,
-    "contextUsed": 143972
+    "contextUsed": 150931
   },
   "agents": [
     {
@@ -28,14 +28,14 @@
       "status": "idle",
       "icon": "😏",
       "task": "telegram:g-agent-main-main",
-      "model": "claude-opus-4-6",
-      "started": "2026-04-12T20:14:41.830Z",
-      "lastMessage": "Conversation info (untrusted metadata): ```json {   \"conversation_label\": \"Angela Busheska id:7907734285\" } ```  how wil",
+      "model": "gpt-5.1",
+      "started": "2026-04-12T20:19:43.941Z",
+      "lastMessage": "There it is:  ``` No API key found for provider \"openai-codex\" ```  **It's NOT working on Codex.** It's erroring out on ",
       "tokens": {
-        "input": 128358,
-        "output": 0
+        "input": 135317,
+        "output": 188
       },
-      "cost": 0,
+      "cost": 0.08326499999999999,
       "sessionKey": "agent:main:main",
       "kind": "other",
       "channel": "telegram",
@@ -84,10 +84,10 @@
   ],
   "feed": [
     {
-      "time": 1776024882221,
+      "time": 1776025175260,
       "agent": "Smartypants",
       "icon": "😏",
-      "event": "Conversation info (untrusted metadata): ```json {   \"conversation_label\": \"Angela Busheska id:790773"
+      "event": "There it is:  ``` No API key found for provider \"openai-codex\" ```  **It's NOT working on Codex.** I"
     },
     {
       "time": 1776015146910,
