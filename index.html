@@ -72,6 +72,7 @@ tailwind.config = {
 
 <!-- ─── STATS BAR ──────────────────────────────────────────── -->
 <div id="stats" class="grid grid-cols-2 md:grid-cols-6 border-b border-surface-3"></div>
+<div id="contextBar" class="border-b border-surface-3"></div>
 
 <!-- ─── MAIN ───────────────────────────────────────────────── -->
 <main class="flex flex-col lg:flex-row gap-0 min-h-[calc(100vh-120px)]">
@@ -290,20 +291,39 @@ async function deleteTask(id) {
 // ── Render: Stats ────────────────────────────────────────────
 function renderStats(s) {
   const tasksPending = TASKS.filter(t => t.status === "pending").length;
+  const ctx = s.mainContext || {};
+  const ctxColor = (ctx.percent || 0) > 80 ? "text-red-400" : (ctx.percent || 0) > 50 ? "text-amber-400" : "text-emerald-400";
+  const ctxValue = ctx.max ? `${Math.round(ctx.used/1000)}k/${Math.round(ctx.max/1000)}k` : "—";
+
   const items = [
     { label: "Agents", value: s.totalAgents, color: "text-white" },
     { label: "Running", value: s.running, color: "text-emerald-400" },
     { label: "Tasks", value: tasksPending + " pending", color: "text-amber-400" },
-    { label: "Errors", value: s.errored, color: s.errored > 0 ? "text-red-400" : "text-neutral-500" },
+    { label: "Context", value: ctxValue, color: ctxColor, sub: ctx.percent ? ctx.percent + "%" : "" },
     { label: "Tokens", value: fmt(s.totalTokens), color: "text-white" },
     { label: "Cost", value: "$" + s.totalCost.toFixed(2), color: "text-gold-400" },
   ];
   document.getElementById("stats").innerHTML = items.map(i => `
     <div class="px-6 py-3 border-r border-surface-3 last:border-r-0">
       <div class="text-[10px] uppercase tracking-widest text-neutral-500 mb-0.5">${i.label}</div>
-      <div class="text-xl font-semibold ${i.color} stat-glow">${i.value}</div>
+      <div class="text-xl font-semibold ${i.color} stat-glow">${i.value}${i.sub ? `<span class="text-xs text-neutral-500 ml-1">${i.sub}</span>` : ""}</div>
     </div>
   `).join("");
+
+  // Context bar under stats
+  if (ctx.max) {
+    const barEl = document.getElementById("contextBar");
+    if (barEl) {
+      barEl.innerHTML = `
+        <div class="flex items-center gap-3 px-6 py-1.5">
+          <span class="text-[9px] uppercase tracking-widest text-neutral-600">Main Context</span>
+          <div class="flex-1 h-1.5 bg-surface-3 overflow-hidden">
+            <div class="h-full ${(ctx.percent||0) > 80 ? 'bg-red-500' : (ctx.percent||0) > 50 ? 'bg-amber-500' : 'bg-emerald-500'} transition-all" style="width:${ctx.percent||0}%"></div>
+          </div>
+          <span class="text-[9px] text-neutral-500">${ctx.percent}% · ${ctx.compactions||0} compactions · ${ctx.model||''}</span>
+        </div>`;
+    }
+  }
 }
 
 // ── Render: Tasks ────────────────────────────────────────────

@@ -194,7 +194,34 @@ async function main() {
   feed.sort((a, b) => new Date(b.time) - new Date(a.time));
   feed = feed.slice(0, 20);
 
+  // ── Pull main session status for context info ──────────────
+  let mainContext = { used: 0, max: 0, percent: 0, compactions: 0, model: "—" };
+  try {
+    const statusResult = await invoke("session_status", {});
+    const details = statusResult?.details || statusResult;
+    // Parse from text output if needed
+    const text = statusResult?.content?.[0]?.text || "";
+    const ctxMatch = text.match(/Context:\s*([\d.]+)k\/([\d.]+)k\s*\((\d+)%\)/);
+    if (ctxMatch) {
+      mainContext.used = Math.round(parseFloat(ctxMatch[1]) * 1000);
+      mainContext.max = Math.round(parseFloat(ctxMatch[2]) * 1000);
+      mainContext.percent = parseInt(ctxMatch[3]);
+    }
+    const compMatch = text.match(/Compactions:\s*(\d+)/);
+    if (compMatch) mainContext.compactions = parseInt(compMatch[1]);
+    const modelMatch = text.match(/Model:\s*(\S+)/);
+    if (modelMatch) mainContext.model = modelMatch[1];
+    const tokenMatch = text.match(/Tokens:\s*([\d.]+[kM]?)\s*in\s*\/\s*([\d.]+[kM]?)\s*out/);
+    if (tokenMatch) {
+      mainContext.tokensIn = tokenMatch[1];
+      mainContext.tokensOut = tokenMatch[2];
+    }
+  } catch {}
+
   // ── System stats ───────────────────────────────────────────
+  const totalContextMax = agents.reduce((s, a) => s + (a.contextWindow || 0), 0);
+  const totalContextUsed = agents.reduce((s, a) => s + (a.tokens?.input || 0), 0);
+
   const system = {
     totalAgents: agents.length,
     running: agents.filter((a) => a.status === "running").length,
@@ -206,6 +233,9 @@ async function main() {
       (s, a) => s + (a.tokens?.input || 0) + (a.tokens?.output || 0),
       0
     ),
+    mainContext,
+    contextMax: totalContextMax,
+    contextUsed: totalContextUsed,
   };
 
   // ── Write ──────────────────────────────────────────────────
