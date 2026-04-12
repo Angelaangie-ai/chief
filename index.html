@@ -27,10 +27,7 @@ tailwind.config = {
 <style>
   body { background: #000; color: #e5e5e5; font-family: Inter, system-ui, sans-serif; }
   .status-pulse { animation: pulse 2s ease-in-out infinite; }
-  @keyframes pulse {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0.4; }
-  }
+  @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.4; } }
   .card { border: 1px solid #222; transition: border-color 0.2s, transform 0.15s; }
   .card:hover { border-color: #d4a853; transform: translateY(-1px); }
   .feed-line { border-left: 1px solid #222; }
@@ -38,11 +35,29 @@ tailwind.config = {
   ::-webkit-scrollbar { width: 4px; }
   ::-webkit-scrollbar-track { background: #0a0a0a; }
   ::-webkit-scrollbar-thumb { background: #333; border-radius: 2px; }
+  select, input, textarea {
+    background: #0a0a0a; border: 1px solid #222; color: #e5e5e5;
+    font-family: Inter, system-ui, sans-serif; outline: none;
+    transition: border-color 0.2s;
+  }
+  select:focus, input:focus, textarea:focus { border-color: #d4a853; }
+  select option { background: #111; }
+  .task-done { opacity: 0.4; }
+  .btn-gold {
+    border: 1px solid #d4a853; color: #d4a853; transition: all 0.2s;
+  }
+  .btn-gold:hover { background: #d4a853; color: #000; }
+  .btn-ghost {
+    border: 1px solid #222; color: #666; transition: all 0.2s;
+  }
+  .btn-ghost:hover { border-color: #444; color: #aaa; }
+  .fade-in { animation: fadeIn 0.2s ease-out; }
+  @keyframes fadeIn { from { opacity: 0; transform: translateY(-4px); } to { opacity: 1; transform: translateY(0); } }
 </style>
 </head>
 <body class="min-h-screen">
 
-<!-- ─── HEADER ─────────────────────────────────────────────── -->
+<!-- ─── HEADER ──────────────────────────────────────────────── -->
 <header class="border-b border-surface-3 px-6 py-4 flex items-center justify-between">
   <div class="flex items-center gap-3">
     <span class="text-2xl">⚡</span>
@@ -51,46 +66,69 @@ tailwind.config = {
   </div>
   <div class="flex items-center gap-4">
     <span id="clock" class="text-xs text-neutral-400 font-mono"></span>
-    <button onclick="loadData()" class="text-xs border border-surface-4 px-3 py-1.5 hover:border-gold-400 hover:text-gold-400 transition-colors">
-      ↻ Refresh
-    </button>
+    <button onclick="loadData()" class="text-xs border border-surface-4 px-3 py-1.5 hover:border-gold-400 hover:text-gold-400 transition-colors">↻ Refresh</button>
   </div>
 </header>
 
 <!-- ─── STATS BAR ──────────────────────────────────────────── -->
-<div id="stats" class="grid grid-cols-2 md:grid-cols-6 border-b border-surface-3">
-</div>
+<div id="stats" class="grid grid-cols-2 md:grid-cols-6 border-b border-surface-3"></div>
 
 <!-- ─── MAIN ───────────────────────────────────────────────── -->
 <main class="flex flex-col lg:flex-row gap-0 min-h-[calc(100vh-120px)]">
 
-  <!-- Left column: Tasks + Agents -->
+  <!-- Left: Tasks + Agents -->
   <section class="flex-1 p-6 overflow-y-auto">
-    <!-- ─── TASK QUEUE ─────────────────────────────────────── -->
+
+    <!-- ── TASK QUEUE ──────────────────────────────────────── -->
     <div class="mb-8">
       <div class="flex items-center justify-between mb-3">
         <h2 class="font-serif text-lg font-semibold text-white tracking-wide">Task Queue</h2>
-        <span id="taskCount" class="text-[10px] uppercase tracking-widest text-neutral-500"></span>
+        <div class="flex items-center gap-3">
+          <span id="taskCount" class="text-[10px] uppercase tracking-widest text-neutral-500"></span>
+          <button onclick="toggleAddTask()" id="addTaskBtn" class="btn-gold text-xs px-3 py-1">+ Add Task</button>
+        </div>
       </div>
-      <div id="tasks" class="space-y-2 mb-2"></div>
-      <p class="text-[10px] text-neutral-600 mt-2">Add tasks via Telegram → Smartypants, or edit <a href="https://github.com/Angelaangie-ai/chief/edit/main/tasks.json" target="_blank" class="underline hover:text-gold-400 transition-colors">tasks.json on GitHub</a></p>
+
+      <!-- Add Task Form (hidden by default) -->
+      <div id="addTaskForm" class="hidden fade-in mb-4">
+        <div class="card bg-surface-1 p-4 space-y-3">
+          <input id="newTaskTitle" type="text" placeholder="What needs to be done?" class="w-full px-3 py-2 text-sm" />
+          <div class="flex gap-3">
+            <select id="newTaskPriority" class="px-3 py-1.5 text-xs flex-1">
+              <option value="high">🔴 High</option>
+              <option value="medium" selected>🟡 Medium</option>
+              <option value="low">⚪ Low</option>
+            </select>
+            <select id="newTaskAgent" class="px-3 py-1.5 text-xs flex-1">
+              <option value="">Agent: Unassigned</option>
+              <!-- Populated dynamically from agents list -->
+            </select>
+            <input id="newTaskTags" type="text" placeholder="Tags (comma-sep)" class="px-3 py-1.5 text-xs flex-1" />
+          </div>
+          <div class="flex gap-2 justify-end">
+            <button onclick="toggleAddTask()" class="btn-ghost text-xs px-3 py-1.5">Cancel</button>
+            <button onclick="addTask()" class="btn-gold text-xs px-3 py-1.5">Add Task</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Task List -->
+      <div id="tasks" class="space-y-2"></div>
     </div>
 
-    <!-- ─── AGENTS ─────────────────────────────────────────── -->
+    <!-- ── AGENTS ──────────────────────────────────────────── -->
     <div class="flex items-center justify-between mb-4">
       <h2 class="font-serif text-lg font-semibold text-white tracking-wide">Agents</h2>
       <div class="flex gap-2" id="filters">
-        <button onclick="filter('all')" data-f="all" class="filter-btn active text-xs px-2.5 py-1 border border-surface-4 hover:border-gold-400 transition-colors">All</button>
+        <button onclick="filter('all')" data-f="all" class="filter-btn text-xs px-2.5 py-1 border border-gold-400 text-gold-400 transition-colors">All</button>
         <button onclick="filter('running')" data-f="running" class="filter-btn text-xs px-2.5 py-1 border border-surface-4 hover:border-gold-400 transition-colors">Running</button>
         <button onclick="filter('idle')" data-f="idle" class="filter-btn text-xs px-2.5 py-1 border border-surface-4 hover:border-gold-400 transition-colors">Idle</button>
-        <button onclick="filter('done')" data-f="done" class="filter-btn text-xs px-2.5 py-1 border border-surface-4 hover:border-gold-400 transition-colors">Done</button>
-        <button onclick="filter('error')" data-f="error" class="filter-btn text-xs px-2.5 py-1 border border-surface-4 hover:border-gold-400 transition-colors">Error</button>
       </div>
     </div>
     <div id="agents" class="grid gap-3 md:grid-cols-2 xl:grid-cols-3"></div>
   </section>
 
-  <!-- Activity Feed -->
+  <!-- Right: Activity Feed -->
   <aside class="w-full lg:w-80 border-l border-surface-3 p-6 bg-surface-1">
     <h2 class="font-serif text-lg font-semibold text-white tracking-wide mb-4">Activity</h2>
     <div id="feed" class="space-y-0"></div>
@@ -99,35 +137,54 @@ tailwind.config = {
 </main>
 
 <script>
+// ── GitHub API for persistence ───────────────────────────────
+const GH_REPO = "Angelaangie-ai/chief";
+const GH_FILE = "tasks.json";
+
+// Token stored in localStorage — set once via console or settings prompt
+function getGHToken() {
+  let t = localStorage.getItem("chief_gh_token");
+  if (!t) {
+    t = prompt("Enter your GitHub token (stored locally, never leaves your browser):");
+    if (t) localStorage.setItem("chief_gh_token", t);
+  }
+  return t;
+}
+const GH_TOKEN = getGHToken();
+
 let DATA = null;
+let TASKS = [];
+let TASKS_SHA = null; // GitHub file SHA for updates
 let currentFilter = "all";
 
+// ── Status maps ──────────────────────────────────────────────
 const TASK_STATUS = {
   pending:       { dot: "bg-amber-400", label: "Pending", text: "text-amber-400" },
   "in-progress": { dot: "bg-emerald-400 status-pulse", label: "In Progress", text: "text-emerald-400" },
   done:          { dot: "bg-gold-400", label: "Done", text: "text-gold-400" },
   failed:        { dot: "bg-red-500", label: "Failed", text: "text-red-400" },
 };
-
 const PRIORITY_BADGE = {
   high:   "border-red-500/40 text-red-400",
   medium: "border-amber-500/40 text-amber-400",
   low:    "border-neutral-500/40 text-neutral-500",
 };
+const PRIORITY_ORDER = { high: 0, medium: 1, low: 2 };
+const STATUS_ORDER = { "in-progress": 0, pending: 1, done: 2, failed: 3 };
 
-const STATUS = {
+const AGENT_STATUS = {
   running: { dot: "bg-emerald-400 status-pulse", label: "Running", text: "text-emerald-400" },
   idle:    { dot: "bg-neutral-500", label: "Idle", text: "text-neutral-400" },
   done:    { dot: "bg-gold-400", label: "Done", text: "text-gold-400" },
   error:   { dot: "bg-red-500 status-pulse", label: "Error", text: "text-red-400" },
 };
 
+// ── Helpers ──────────────────────────────────────────────────
 function fmt(n) {
   if (n >= 1_000_000) return (n / 1_000_000).toFixed(1) + "M";
   if (n >= 1_000) return (n / 1_000).toFixed(1) + "k";
   return n.toString();
 }
-
 function relTime(iso) {
   if (!iso) return "—";
   const diff = Date.now() - new Date(iso).getTime();
@@ -138,12 +195,105 @@ function relTime(iso) {
   if (h < 24) return h + "h ago";
   return Math.floor(h / 24) + "d ago";
 }
+function genId() {
+  return "task-" + Date.now().toString(36) + Math.random().toString(36).slice(2, 5);
+}
 
+// ── GitHub persistence ───────────────────────────────────────
+async function ghFetchTasks() {
+  try {
+    const r = await fetch(`https://api.github.com/repos/${GH_REPO}/contents/${GH_FILE}`, {
+      headers: { Authorization: `token ${GH_TOKEN}` },
+    });
+    if (!r.ok) return [];
+    const data = await r.json();
+    TASKS_SHA = data.sha;
+    return JSON.parse(atob(data.content));
+  } catch { return []; }
+}
+
+async function ghSaveTasks(tasks, message = "update tasks") {
+  const content = btoa(unescape(encodeURIComponent(JSON.stringify(tasks, null, 2))));
+  const body = { message, content, sha: TASKS_SHA };
+  try {
+    const r = await fetch(`https://api.github.com/repos/${GH_REPO}/contents/${GH_FILE}`, {
+      method: "PUT",
+      headers: { Authorization: `token ${GH_TOKEN}`, "Content-Type": "application/json" },
+      body: JSON.stringify(body),
+    });
+    if (r.ok) {
+      const data = await r.json();
+      TASKS_SHA = data.content.sha;
+    }
+  } catch (e) {
+    console.error("Failed to save tasks:", e);
+  }
+}
+
+// ── Task form ────────────────────────────────────────────────
+function toggleAddTask() {
+  const form = document.getElementById("addTaskForm");
+  form.classList.toggle("hidden");
+  if (!form.classList.contains("hidden")) {
+    document.getElementById("newTaskTitle").focus();
+  }
+}
+
+async function addTask() {
+  const title = document.getElementById("newTaskTitle").value.trim();
+  if (!title) return;
+  const priority = document.getElementById("newTaskPriority").value;
+  const agent = document.getElementById("newTaskAgent").value;
+  const tagsStr = document.getElementById("newTaskTags").value.trim();
+  const tags = tagsStr ? tagsStr.split(",").map(t => t.trim()).filter(Boolean) : [];
+
+  const task = {
+    id: genId(),
+    title,
+    priority,
+    status: "pending",
+    assignee: agent || null,
+    created: new Date().toISOString(),
+    started: null,
+    completed: null,
+    result: null,
+    tags,
+  };
+
+  TASKS.unshift(task);
+  renderTasks(TASKS);
+
+  // Clear form
+  document.getElementById("newTaskTitle").value = "";
+  document.getElementById("newTaskTags").value = "";
+  document.getElementById("addTaskForm").classList.add("hidden");
+
+  // Persist to GitHub
+  await ghSaveTasks(TASKS, `add: ${title}`);
+}
+
+async function completeTask(id) {
+  const t = TASKS.find(t => t.id === id);
+  if (!t) return;
+  t.status = t.status === "done" ? "pending" : "done";
+  t.completed = t.status === "done" ? new Date().toISOString() : null;
+  renderTasks(TASKS);
+  await ghSaveTasks(TASKS, `${t.status === "done" ? "done" : "reopen"}: ${t.title}`);
+}
+
+async function deleteTask(id) {
+  TASKS = TASKS.filter(t => t.id !== id);
+  renderTasks(TASKS);
+  await ghSaveTasks(TASKS, "remove task");
+}
+
+// ── Render: Stats ────────────────────────────────────────────
 function renderStats(s) {
+  const tasksPending = TASKS.filter(t => t.status === "pending").length;
   const items = [
-    { label: "Total Agents", value: s.totalAgents, color: "text-white" },
+    { label: "Agents", value: s.totalAgents, color: "text-white" },
     { label: "Running", value: s.running, color: "text-emerald-400" },
-    { label: "Idle", value: s.idle, color: "text-neutral-400" },
+    { label: "Tasks", value: tasksPending + " pending", color: "text-amber-400" },
     { label: "Errors", value: s.errored, color: s.errored > 0 ? "text-red-400" : "text-neutral-500" },
     { label: "Tokens", value: fmt(s.totalTokens), color: "text-white" },
     { label: "Cost", value: "$" + s.totalCost.toFixed(2), color: "text-gold-400" },
@@ -156,12 +306,69 @@ function renderStats(s) {
   `).join("");
 }
 
+// ── Render: Tasks ────────────────────────────────────────────
+function renderTasks(tasks) {
+  const el = document.getElementById("tasks");
+  const countEl = document.getElementById("taskCount");
+  if (!tasks || tasks.length === 0) {
+    el.innerHTML = `<div class="text-neutral-600 text-xs py-6 text-center">No tasks yet — click + Add Task</div>`;
+    countEl.textContent = "";
+    return;
+  }
+  const pending = tasks.filter(t => t.status === "pending").length;
+  const active = tasks.filter(t => t.status === "in-progress").length;
+  const done = tasks.filter(t => t.status === "done").length;
+  countEl.textContent = `${pending} pending · ${active} active · ${done} done`;
+
+  const sorted = [...tasks].sort((a, b) => {
+    const sd = (STATUS_ORDER[a.status] ?? 9) - (STATUS_ORDER[b.status] ?? 9);
+    if (sd !== 0) return sd;
+    return (PRIORITY_ORDER[a.priority] ?? 9) - (PRIORITY_ORDER[b.priority] ?? 9);
+  });
+
+  el.innerHTML = sorted.map(t => {
+    const ts = TASK_STATUS[t.status] || TASK_STATUS.pending;
+    const pb = PRIORITY_BADGE[t.priority] || PRIORITY_BADGE.medium;
+    const isDone = t.status === "done";
+    const tags = (t.tags || []).map(tag =>
+      `<span class="text-[9px] px-1.5 py-0.5 border border-surface-4 text-neutral-500">${tag}</span>`
+    ).join("");
+
+    return `
+    <div class="card bg-surface-1 p-3 flex items-start gap-3 ${isDone ? "task-done" : ""} group">
+      <button onclick="completeTask('${t.id}')" class="mt-0.5 flex-shrink-0 w-4 h-4 border ${isDone ? "border-gold-400 bg-gold-400/20" : "border-neutral-600 hover:border-gold-400"} flex items-center justify-center transition-colors">
+        ${isDone ? `<svg class="w-2.5 h-2.5 text-gold-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg>` : ""}
+      </button>
+      <div class="flex-1 min-w-0">
+        <div class="text-xs text-white font-medium leading-tight ${isDone ? "line-through text-neutral-500" : ""}">${t.title}</div>
+        <div class="flex items-center gap-2 flex-wrap mt-1">
+          <span class="text-[9px] px-1.5 py-0.5 border ${pb} uppercase tracking-wider">${t.priority}</span>
+          ${t.status !== "pending" && t.status !== "done" ? `<span class="text-[9px] ${ts.text} uppercase tracking-wider flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full ${ts.dot} inline-block"></span>${ts.label}</span>` : ""}
+          ${t.assignee ? `<span class="text-[9px] text-neutral-600">→ ${t.assignee}</span>` : ""}
+          ${tags}
+          <span class="text-[9px] text-neutral-700">${relTime(t.created)}</span>
+        </div>
+        ${t.result ? `<div class="text-[10px] text-neutral-500 mt-1 italic">${t.result}</div>` : ""}
+      </div>
+      <button onclick="deleteTask('${t.id}')" class="opacity-0 group-hover:opacity-100 text-neutral-700 hover:text-red-400 transition-all text-xs mt-0.5" title="Delete">✕</button>
+    </div>`;
+  }).join("");
+}
+
+// ── Render: Agents ───────────────────────────────────────────
 function renderAgents(agents) {
+  // Also populate agent dropdown
+  const agentSelect = document.getElementById("newTaskAgent");
+  const current = agentSelect.value;
+  agentSelect.innerHTML = `<option value="">Agent: Unassigned</option>` +
+    agents.map(a => `<option value="${a.name}">${a.icon} ${a.name}</option>`).join("");
+  agentSelect.value = current;
+
   const filtered = currentFilter === "all" ? agents : agents.filter(a => a.status === currentFilter);
   document.getElementById("agents").innerHTML = filtered.length === 0
     ? `<div class="col-span-full text-center text-neutral-500 py-12">No ${currentFilter} agents</div>`
     : filtered.map(a => {
-    const st = STATUS[a.status] || STATUS.idle;
+    const st = AGENT_STATUS[a.status] || AGENT_STATUS.idle;
     const tk = (a.tokens?.input || 0) + (a.tokens?.output || 0);
     return `
     <div class="card bg-surface-1 p-4 flex flex-col gap-3" data-status="${a.status}">
@@ -185,11 +392,11 @@ function renderAgents(agents) {
         <span>${a.cost > 0 ? "$" + a.cost.toFixed(2) : "—"}</span>
       </div>
       ${a.lastMessage ? `<div class="text-[11px] text-neutral-500 italic truncate">"${a.lastMessage}"</div>` : ""}
-      ${a.started ? `<div class="text-[10px] text-neutral-600">Started ${relTime(a.started)}</div>` : ""}
     </div>`;
   }).join("");
 }
 
+// ── Render: Feed ─────────────────────────────────────────────
 function renderFeed(feed) {
   document.getElementById("feed").innerHTML = feed.map(f => `
     <div class="feed-line pl-4 pb-4 relative">
@@ -209,84 +416,62 @@ function filter(f) {
   document.querySelectorAll(".filter-btn").forEach(b => {
     b.classList.toggle("border-gold-400", b.dataset.f === f);
     b.classList.toggle("text-gold-400", b.dataset.f === f);
+    if (b.dataset.f !== f) { b.classList.add("border-surface-4"); }
+    else { b.classList.remove("border-surface-4"); }
   });
   if (DATA) renderAgents(DATA.agents);
 }
 
-function renderTasks(tasks) {
-  const el = document.getElementById("tasks");
-  const countEl = document.getElementById("taskCount");
-  if (!tasks || tasks.length === 0) {
-    el.innerHTML = `<div class="text-neutral-600 text-xs py-4 text-center">No tasks queued</div>`;
-    countEl.textContent = "";
-    return;
-  }
-  const pending = tasks.filter(t => t.status === "pending").length;
-  const active = tasks.filter(t => t.status === "in-progress").length;
-  countEl.textContent = `${pending} pending · ${active} active · ${tasks.length} total`;
-
-  // Sort: in-progress first, then pending, then done/failed
-  const order = { "in-progress": 0, pending: 1, done: 2, failed: 3 };
-  const sorted = [...tasks].sort((a, b) => (order[a.status] ?? 9) - (order[b.status] ?? 9));
-
-  el.innerHTML = sorted.map(t => {
-    const ts = TASK_STATUS[t.status] || TASK_STATUS.pending;
-    const pb = PRIORITY_BADGE[t.priority] || PRIORITY_BADGE.medium;
-    const tags = (t.tags || []).map(tag => `<span class="text-[9px] px-1.5 py-0.5 border border-surface-4 text-neutral-500">${tag}</span>`).join("");
-    return `
-    <div class="card bg-surface-1 p-3 flex items-start gap-3">
-      <div class="mt-1.5 flex-shrink-0">
-        <span class="w-2 h-2 rounded-full ${ts.dot} inline-block"></span>
-      </div>
-      <div class="flex-1 min-w-0">
-        <div class="flex items-center gap-2 mb-1">
-          <span class="text-xs text-white font-medium leading-tight">${t.title}</span>
-        </div>
-        <div class="flex items-center gap-2 flex-wrap">
-          <span class="text-[9px] px-1.5 py-0.5 border ${pb} uppercase tracking-wider">${t.priority}</span>
-          <span class="text-[9px] ${ts.text} uppercase tracking-wider">${ts.label}</span>
-          ${tags}
-          ${t.assignee ? `<span class="text-[9px] text-neutral-600">→ ${t.assignee}</span>` : ""}
-          ${t.completed ? `<span class="text-[9px] text-neutral-600">✓ ${relTime(t.completed)}</span>` : ""}
-        </div>
-        ${t.result ? `<div class="text-[10px] text-neutral-500 mt-1 italic truncate">${t.result}</div>` : ""}
-      </div>
-    </div>`;
-  }).join("");
-}
-
+// ── Data loading ─────────────────────────────────────────────
 async function loadData() {
   try {
-    const [dataRes, tasksRes] = await Promise.all([
-      fetch("data.json?t=" + Date.now()),
-      fetch("tasks.json?t=" + Date.now()),
-    ]);
-    DATA = await dataRes.json();
+    // Load tasks from GitHub (source of truth)
+    TASKS = await ghFetchTasks();
+    renderTasks(TASKS);
+
+    // Load agent data from local data.json
+    const r = await fetch("data.json?t=" + Date.now());
+    DATA = await r.json();
     renderStats(DATA.system);
     renderAgents(DATA.agents);
     renderFeed(DATA.feed);
-    try {
-      const tasks = await tasksRes.json();
-      renderTasks(tasks);
-    } catch { renderTasks([]); }
   } catch (e) {
     console.error("Failed to load data", e);
   }
 }
 
 function tick() {
-  const now = new Date();
-  document.getElementById("clock").textContent = now.toLocaleTimeString("en-US", {
-    hour: "2-digit", minute: "2-digit", second: "2-digit", hour12: false
+  const d = new Date();
+  document.getElementById("clock").textContent = d.toLocaleTimeString("en-US", {
+    hour: "2-digit", minute: "2-digit", second: "2-digit", hour12: false,
   });
 }
 
-// ── Init ──
+// ── Keyboard shortcut ────────────────────────────────────────
+document.addEventListener("keydown", (e) => {
+  if (e.key === "n" && !e.metaKey && !e.ctrlKey && !["INPUT","TEXTAREA","SELECT"].includes(e.target.tagName)) {
+    e.preventDefault();
+    const form = document.getElementById("addTaskForm");
+    if (form.classList.contains("hidden")) toggleAddTask();
+  }
+  if (e.key === "Escape") {
+    const form = document.getElementById("addTaskForm");
+    if (!form.classList.contains("hidden")) toggleAddTask();
+  }
+});
+
+// Also submit on Enter in title field
+document.addEventListener("DOMContentLoaded", () => {
+  document.getElementById("newTaskTitle")?.addEventListener("keydown", (e) => {
+    if (e.key === "Enter") { e.preventDefault(); addTask(); }
+  });
+});
+
+// ── Init ─────────────────────────────────────────────────────
 loadData();
 setInterval(tick, 1000);
-setInterval(loadData, 15_000); // auto-refresh every 15s
+setInterval(loadData, 30_000); // refresh every 30s
 tick();
 </script>
-
 </body>
 </html>
