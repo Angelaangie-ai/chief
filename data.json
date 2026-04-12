@@ -1,13 +1,13 @@
 {
-  "generated": "2026-04-12T12:28:49.702Z",
+  "generated": "2026-04-12T12:33:49.784Z",
   "system": {
-    "totalAgents": 2,
+    "totalAgents": 3,
     "running": 0,
-    "idle": 2,
+    "idle": 3,
     "errored": 0,
     "completed": 0,
-    "totalCost": 0.04832304999999999,
-    "totalTokens": 88311
+    "totalCost": 0.0086058,
+    "totalTokens": 103828
   },
   "agents": [
     {
@@ -18,13 +18,13 @@
       "icon": "🤖",
       "task": "Cron: CHIEF Dashboard Refresh",
       "model": "claude-opus-4-6",
-      "started": "2026-04-12T12:28:46.750Z",
+      "started": "2026-04-12T12:33:46.749Z",
       "lastMessage": null,
       "tokens": {
         "input": 14971,
-        "output": 158
+        "output": 171
       },
-      "cost": 0.0084108,
+      "cost": 0.0086058,
       "sessionKey": "agent:main:cron:ae997ae6-5216-4681-925b-b83042a1de6d",
       "kind": "other",
       "channel": "unknown",
@@ -38,31 +38,57 @@
       "icon": "😏",
       "task": "telegram:g-agent-main-main",
       "model": "claude-opus-4-6",
-      "started": "2026-04-12T12:28:25.819Z",
-      "lastMessage": "NO_REPLY",
+      "started": "2026-04-12T12:30:57.437Z",
+      "lastMessage": "Conversation info (untrusted metadata): ```json {   \"conversation_label\": \"Angela Busheska id:7907734285\" } ```  how to ",
       "tokens": {
         "input": 73175,
-        "output": 7
+        "output": 0
       },
-      "cost": 0.039912249999999996,
+      "cost": 0,
       "sessionKey": "agent:main:main",
       "kind": "other",
       "channel": "telegram",
+      "contextWindow": 200000
+    },
+    {
+      "id": "agent:main:cron:ed5cbdbd-1c30-4c0c-a22a-2baa3e9f75cd",
+      "name": "Cron: CHIEF Task Dispatcher",
+      "role": "Sub-Agent",
+      "status": "idle",
+      "icon": "🤖",
+      "task": "Cron: CHIEF Task Dispatcher",
+      "model": "claude-opus-4-6",
+      "started": "2026-04-12T12:29:13.595Z",
+      "lastMessage": null,
+      "tokens": {
+        "input": 15511,
+        "output": 0
+      },
+      "cost": 0,
+      "sessionKey": "agent:main:cron:ed5cbdbd-1c30-4c0c-a22a-2baa3e9f75cd",
+      "kind": "other",
+      "channel": "unknown",
       "contextWindow": 200000
     }
   ],
   "feed": [
     {
-      "time": 1775996926776,
+      "time": 1775997226772,
       "agent": "Cron: CHIEF Dashboard Refresh",
       "icon": "🤖",
       "event": "Activity"
     },
     {
-      "time": 1775996901438,
+      "time": 1775997057812,
       "agent": "Smartypants",
       "icon": "😏",
-      "event": "NO_REPLY"
+      "event": "Conversation info (untrusted metadata): ```json {   \"conversation_label\": \"Angela Busheska id:790773"
+    },
+    {
+      "time": 1775996986512,
+      "agent": "Cron: CHIEF Task Dispatcher",
+      "icon": "🤖",
+      "event": "Activity"
     }
   ]
 }
