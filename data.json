@@ -1,13 +1,13 @@
 {
-  "generated": "2026-04-12T12:08:49.319Z",
+  "generated": "2026-04-12T12:13:49.621Z",
   "system": {
     "totalAgents": 2,
     "running": 0,
     "idle": 2,
     "errored": 0,
     "completed": 0,
-    "totalCost": 0.007870799999999999,
-    "totalTokens": 59108
+    "totalCost": 0.0085308,
+    "totalTokens": 63754
   },
   "agents": [
     {
@@ -18,13 +18,13 @@
       "icon": "🤖",
       "task": "Cron: CHIEF Dashboard Refresh",
       "model": "claude-opus-4-6",
-      "started": "2026-04-12T12:08:46.750Z",
+      "started": "2026-04-12T12:13:46.751Z",
       "lastMessage": null,
       "tokens": {
         "input": 14971,
-        "output": 122
+        "output": 166
       },
-      "cost": 0.007870799999999999,
+      "cost": 0.0085308,
       "sessionKey": "agent:main:cron:ae997ae6-5216-4681-925b-b83042a1de6d",
       "kind": "other",
       "channel": "unknown",
@@ -38,10 +38,10 @@
       "icon": "😏",
       "task": "telegram:g-agent-main-main",
       "model": "claude-opus-4-6",
-      "started": "2026-04-12T11:59:09.595Z",
-      "lastMessage": "Conversation info (untrusted metadata): ```json {   \"conversation_label\": \"Angela Busheska id:7907734285\" } ```  i cant ",
+      "started": "2026-04-12T12:12:24.389Z",
+      "lastMessage": null,
       "tokens": {
-        "input": 44015,
+        "input": 48617,
         "output": 0
       },
       "cost": 0,
@@ -53,16 +53,10 @@
   ],
   "feed": [
     {
-      "time": 1775995726773,
+      "time": 1775996026774,
       "agent": "Cron: CHIEF Dashboard Refresh",
       "icon": "🤖",
       "event": "Activity"
-    },
-    {
-      "time": 1775995149983,
-      "agent": "Smartypants",
-      "icon": "😏",
-      "event": "Conversation info (untrusted metadata): ```json {   \"conversation_label\": \"Angela Busheska id:790773"
     }
   ]
 }
