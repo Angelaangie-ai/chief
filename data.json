@@ -1,24 +1,24 @@
 {
-  "generated": "2026-04-12T20:44:53.118Z",
+  "generated": "2026-04-12T20:49:54.107Z",
   "system": {
     "totalAgents": 3,
     "running": 0,
     "idle": 3,
     "errored": 0,
     "completed": 0,
-    "totalCost": 0.20298085,
-    "totalTokens": 127076,
+    "totalCost": 0.02829795,
+    "totalTokens": 127233,
     "mainContext": {
       "used": 111000,
       "max": 272000,
       "percent": 41,
       "compactions": 2,
       "model": "google-gemini-cli/gemini-2.0-flash",
-      "tokensIn": "111k",
-      "tokensOut": "29"
+      "tokensIn": "185",
+      "tokensOut": "48"
     },
     "contextMax": 472000,
-    "contextUsed": 126893
+    "contextUsed": 127031
   },
   "agents": [
     {
@@ -29,13 +29,13 @@
       "icon": "😏",
       "task": "telegram:g-agent-main-main",
       "model": "gemini-2.0-flash",
-      "started": "2026-04-12T20:44:34.307Z",
-      "lastMessage": "Hey Angela — I’m here.   Want me to switch us back to the working cheap model (Sonnet) now?",
+      "started": "2026-04-12T20:48:14.379Z",
+      "lastMessage": "[[reply_to_current]] I’m currently on **google-gemini-cli/gemini-2.0-flash** — but it’s not authenticated (no API key), ",
       "tokens": {
-        "input": 111279,
-        "output": 29
+        "input": 111417,
+        "output": 48
       },
-      "cost": 0.19514425,
+      "cost": 0.02046135,
       "sessionKey": "agent:main:main",
       "kind": "other",
       "channel": "telegram",
@@ -84,10 +84,10 @@
   ],
   "feed": [
     {
-      "time": 1776026667650,
+      "time": 1776026888661,
       "agent": "Smartypants",
       "icon": "😏",
-      "event": "Hey Angela — I’m here.   Want me to switch us back to the working cheap model (Sonnet) now?"
+      "event": "[[reply_to_current]] I’m currently on **google-gemini-cli/gemini-2.0-flash** — but it’s not authenti"
     },
     {
       "time": 1776015146910,
