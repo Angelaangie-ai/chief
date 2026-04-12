@@ -1,13 +1,13 @@
 {
-  "generated": "2026-04-12T12:18:49.767Z",
+  "generated": "2026-04-12T12:23:50.029Z",
   "system": {
     "totalAgents": 2,
     "running": 0,
     "idle": 2,
     "errored": 0,
     "completed": 0,
-    "totalCost": 0.05336555,
-    "totalTokens": 87418
+    "totalCost": 0.05294555,
+    "totalTokens": 87390
   },
   "agents": [
     {
@@ -18,13 +18,13 @@
       "icon": "🤖",
       "task": "Cron: CHIEF Dashboard Refresh",
       "model": "claude-opus-4-6",
-      "started": "2026-04-12T12:18:46.749Z",
+      "started": "2026-04-12T12:23:46.748Z",
       "lastMessage": null,
       "tokens": {
         "input": 14971,
-        "output": 148
+        "output": 120
       },
-      "cost": 0.0082608,
+      "cost": 0.0078408,
       "sessionKey": "agent:main:cron:ae997ae6-5216-4681-925b-b83042a1de6d",
       "kind": "other",
       "channel": "unknown",
@@ -53,7 +53,7 @@
   ],
   "feed": [
     {
-      "time": 1775996326771,
+      "time": 1775996626771,
       "agent": "Cron: CHIEF Dashboard Refresh",
       "icon": "🤖",
       "event": "Activity"
