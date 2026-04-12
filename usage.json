@@ -1,0 +1,4 @@
+{
+  "codex": { "calls": 1, "lastCall": "2026-04-12T14:30:00Z", "tasksClaimed": 0, "tasksCompleted": 0, "history": [{"tool": "get_tasks", "time": "2026-04-12T14:30:00Z"}] },
+  "openclaw": { "calls": 0, "lastCall": null, "tasksClaimed": 0, "tasksCompleted": 0, "history": [] }
+}

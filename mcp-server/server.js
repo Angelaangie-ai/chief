@@ -77,6 +77,7 @@ function registerTools(s) {
     status: z.enum(["pending", "in-progress", "done", "failed", "all"]).optional(),
     assignee: z.string().optional(),
   }, async ({ status, assignee }) => {
+    trackCall(assignee || "unknown", "get_tasks");
     let tasks = loadTasks();
     if (status && status !== "all") tasks = tasks.filter(t => t.status === status);
     if (assignee) tasks = tasks.filter(t => t.assignee === assignee);
