@@ -1,13 +1,13 @@
 {
-  "generated": "2026-04-12T12:38:49.822Z",
+  "generated": "2026-04-12T12:43:50.024Z",
   "system": {
     "totalAgents": 3,
     "running": 0,
     "idle": 3,
     "errored": 0,
     "completed": 0,
-    "totalCost": 0.06677605,
-    "totalTokens": 105811
+    "totalCost": 0.0082908,
+    "totalTokens": 106737
   },
   "agents": [
     {
@@ -18,13 +18,13 @@
       "icon": "🤖",
       "task": "Cron: CHIEF Dashboard Refresh",
       "model": "claude-opus-4-6",
-      "started": "2026-04-12T12:38:46.750Z",
+      "started": "2026-04-12T12:43:46.750Z",
       "lastMessage": null,
       "tokens": {
         "input": 14971,
-        "output": 172
+        "output": 150
       },
-      "cost": 0.0086208,
+      "cost": 0.0082908,
       "sessionKey": "agent:main:cron:ae997ae6-5216-4681-925b-b83042a1de6d",
       "kind": "other",
       "channel": "unknown",
@@ -38,13 +38,13 @@
       "icon": "😏",
       "task": "telegram:g-agent-main-main",
       "model": "claude-opus-4-6",
-      "started": "2026-04-12T12:37:26.759Z",
-      "lastMessage": "OK so Codex through ChatGPT is the UI version — you paste tasks manually. That works, but for true automation we'd need ",
+      "started": "2026-04-12T12:41:30.325Z",
+      "lastMessage": null,
       "tokens": {
-        "input": 74493,
-        "output": 664
+        "input": 76105,
+        "output": 0
       },
-      "cost": 0.058155250000000006,
+      "cost": 0,
       "sessionKey": "agent:main:main",
       "kind": "other",
       "channel": "telegram",
@@ -73,16 +73,10 @@
   ],
   "feed": [
     {
-      "time": 1775997526775,
+      "time": 1775997826774,
       "agent": "Cron: CHIEF Dashboard Refresh",
       "icon": "🤖",
       "event": "Activity"
-    },
-    {
-      "time": 1775997428452,
-      "agent": "Smartypants",
-      "icon": "😏",
-      "event": "OK so Codex through ChatGPT is the UI version — you paste tasks manually. That works, but for true a"
     },
     {
       "time": 1775996986512,
