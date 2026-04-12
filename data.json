@@ -1,13 +1,24 @@
 {
-  "generated": "2026-04-12T13:08:50.847Z",
+  "generated": "2026-04-12T14:55:46.092Z",
   "system": {
-    "totalAgents": 5,
+    "totalAgents": 3,
     "running": 0,
-    "idle": 5,
+    "idle": 3,
     "errored": 0,
     "completed": 0,
-    "totalCost": 0.1551668,
-    "totalTokens": 164332
+    "totalCost": 0.06638585,
+    "totalTokens": 119689,
+    "mainContext": {
+      "used": 104000,
+      "max": 200000,
+      "percent": 52,
+      "compactions": 2,
+      "model": "anthropic/claude-opus-4-6",
+      "tokensIn": "10",
+      "tokensOut": "1.3k"
+    },
+    "contextMax": 400000,
+    "contextUsed": 119440
   },
   "agents": [
     {
@@ -18,14 +29,34 @@
       "icon": "🤖",
       "task": "telegram:g-agent-main-cron-ed5cbdbd-1c30-4c0c-a22a-2baa3e9f75cd",
       "model": "claude-opus-4-6",
-      "started": "2026-04-12T13:08:48.116Z",
+      "started": "2026-04-12T14:55:44.648Z",
       "lastMessage": "A subagent task \"founder-sourcing-agent\" just completed successfully.  Findings: Unfortunately, I'm hitting a wall here.",
       "tokens": {
-        "input": 19175,
+        "input": 0,
         "output": 0
       },
       "cost": 0,
       "sessionKey": "agent:main:cron:ed5cbdbd-1c30-4c0c-a22a-2baa3e9f75cd",
+      "kind": "other",
+      "channel": "telegram",
+      "contextWindow": 0
+    },
+    {
+      "id": "agent:main:main",
+      "name": "Smartypants",
+      "role": "Core Assistant",
+      "status": "idle",
+      "icon": "😏",
+      "task": "telegram:g-agent-main-main",
+      "model": "claude-opus-4-6",
+      "started": "2026-04-12T14:54:29.158Z",
+      "lastMessage": "Good enough — the agent cards already show model + tokens + cost. Now regenerate data and push:",
+      "tokens": {
+        "input": 103826,
+        "output": 95
+      },
+      "cost": 0.05854925,
+      "sessionKey": "agent:main:main",
       "kind": "other",
       "channel": "telegram",
       "contextWindow": 200000
@@ -39,108 +70,36 @@
       "task": "Cron: CHIEF Dashboard Refresh",
       "model": "claude-opus-4-6",
       "started": "2026-04-12T13:08:46.747Z",
-      "lastMessage": null,
+      "lastMessage": "✅ CHIEF data refreshed → /Users/angelabusheska/.openclaw/workspace/chief/data.json    5 sessions | 0 running | $0.16 tot",
       "tokens": {
-        "input": 14971,
-        "output": 156
+        "input": 15614,
+        "output": 154
       },
-      "cost": 0.008380799999999999,
+      "cost": 0.007836599999999999,
       "sessionKey": "agent:main:cron:ae997ae6-5216-4681-925b-b83042a1de6d",
       "kind": "other",
       "channel": "unknown",
-      "contextWindow": 200000
-    },
-    {
-      "id": "agent:main:main",
-      "name": "Smartypants",
-      "role": "Core Assistant",
-      "status": "idle",
-      "icon": "😏",
-      "task": "telegram:g-agent-main-main",
-      "model": "claude-opus-4-6",
-      "started": "2026-04-12T12:46:27.701Z",
-      "lastMessage": "All built. Here's the setup:  **CHIEF MCP Server** — running permanently on port 8899  **Tools available to any MCP clie",
-      "tokens": {
-        "input": 95815,
-        "output": 309
-      },
-      "cost": 0.057632249999999996,
-      "sessionKey": "agent:main:main",
-      "kind": "other",
-      "channel": "telegram",
-      "contextWindow": 200000
-    },
-    {
-      "id": "agent:main:subagent:01923430-d18f-426d-9e3c-cc7b24355704",
-      "name": "DeepDive",
-      "role": "Research Agent",
-      "status": "idle",
-      "icon": "🔬",
-      "task": "telegram:g-agent-main-subagent-01923430-d18f-426d-9e3c-cc7b24355704",
-      "model": "claude-opus-4-6",
-      "started": "2026-04-12T12:45:44.924Z",
-      "lastMessage": "Here is the completed research on iron supplementation protocols for ferritin recovery:  ---  # Iron Supplementation Pro",
-      "tokens": {
-        "input": 14167,
-        "output": 1397
-      },
-      "cost": 0.05670425,
-      "sessionKey": "agent:main:subagent:01923430-d18f-426d-9e3c-cc7b24355704",
-      "kind": "other",
-      "channel": "telegram",
-      "contextWindow": 200000
-    },
-    {
-      "id": "agent:main:subagent:80456709-eb7e-4406-81dd-9e8eda1ad743",
-      "name": "founder-sourcing-agent",
-      "role": "Sub-Agent",
-      "status": "idle",
-      "icon": "🤖",
-      "task": "telegram:g-agent-main-subagent-80456709-eb7e-4406-81dd-9e8eda1ad743",
-      "model": "claude-opus-4-6",
-      "started": "2026-04-12T12:45:27.033Z",
-      "lastMessage": "Unfortunately, I'm hitting a wall here. The Brave Search API key isn't configured, the browser isn't available, and most",
-      "tokens": {
-        "input": 17776,
-        "output": 566
-      },
-      "cost": 0.0324495,
-      "sessionKey": "agent:main:subagent:80456709-eb7e-4406-81dd-9e8eda1ad743",
-      "kind": "other",
-      "channel": "telegram",
       "contextWindow": 200000
     }
   ],
   "feed": [
     {
-      "time": 1775999328137,
+      "time": 1776005744710,
       "agent": "Cron: CHIEF Task Dispatcher",
       "icon": "🤖",
       "event": "A subagent task \"founder-sourcing-agent\" just completed successfully.  Findings: Unfortunately, I'm "
     },
     {
-      "time": 1775999326772,
-      "agent": "Cron: CHIEF Dashboard Refresh",
-      "icon": "🤖",
-      "event": "Activity"
-    },
-    {
-      "time": 1775997978565,
+      "time": 1776005742694,
       "agent": "Smartypants",
       "icon": "😏",
-      "event": "All built. Here's the setup:  **CHIEF MCP Server** — running permanently on port 8899  **Tools avail"
+      "event": "Good enough — the agent cards already show model + tokens + cost. Now regenerate data and push:"
     },
     {
-      "time": 1775997908803,
-      "agent": "founder-sourcing-agent",
+      "time": 1775999331569,
+      "agent": "Cron: CHIEF Dashboard Refresh",
       "icon": "🤖",
-      "event": "Unfortunately, I'm hitting a wall here. The Brave Search API key isn't configured, the browser isn't"
-    },
-    {
-      "time": 1775997877464,
-      "agent": "DeepDive",
-      "icon": "🔬",
-      "event": "Here is the completed research on iron supplementation protocols for ferritin recovery:  ---  # Iron"
+      "event": "✅ CHIEF data refreshed → /Users/angelabusheska/.openclaw/workspace/chief/data.json    5 sessions | 0"
     }
   ]
 }
