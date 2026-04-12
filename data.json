@@ -1,24 +1,24 @@
 {
-  "generated": "2026-04-12T20:19:48.065Z",
+  "generated": "2026-04-12T20:24:49.039Z",
   "system": {
     "totalAgents": 3,
     "running": 0,
     "idle": 3,
     "errored": 0,
     "completed": 0,
-    "totalCost": 0.09110159999999999,
-    "totalTokens": 151273,
+    "totalCost": 0.08297659999999998,
+    "totalTokens": 152643,
     "mainContext": {
-      "used": 135000,
+      "used": 137000,
       "max": 200000,
       "percent": 68,
       "compactions": 2,
-      "model": "openai-codex/gpt-5.1",
-      "tokensIn": "9",
-      "tokensOut": "841"
+      "model": "google-gemini-cli/gemini-2.0-flash",
+      "tokensIn": "4",
+      "tokensOut": "238"
     },
     "contextMax": 400000,
-    "contextUsed": 150931
+    "contextUsed": 152340
   },
   "agents": [
     {
@@ -28,14 +28,14 @@
       "status": "idle",
       "icon": "😏",
       "task": "telegram:g-agent-main-main",
-      "model": "gpt-5.1",
-      "started": "2026-04-12T20:19:43.941Z",
-      "lastMessage": "There it is:  ``` No API key found for provider \"openai-codex\" ```  **It's NOT working on Codex.** It's erroring out on ",
+      "model": "gemini-2.0-flash",
+      "started": "2026-04-12T20:22:07.886Z",
+      "lastMessage": "That's the file. You'd add a Google or OpenAI key here. But you need an **API key** — the free CLI subscriptions don't g",
       "tokens": {
-        "input": 135317,
-        "output": 188
+        "input": 136726,
+        "output": 149
       },
-      "cost": 0.08326499999999999,
+      "cost": 0.07513999999999998,
       "sessionKey": "agent:main:main",
       "kind": "other",
       "channel": "telegram",
@@ -84,10 +84,10 @@
   ],
   "feed": [
     {
-      "time": 1776025175260,
+      "time": 1776025320901,
       "agent": "Smartypants",
       "icon": "😏",
-      "event": "There it is:  ``` No API key found for provider \"openai-codex\" ```  **It's NOT working on Codex.** I"
+      "event": "That's the file. You'd add a Google or OpenAI key here. But you need an **API key** — the free CLI s"
     },
     {
       "time": 1776015146910,
