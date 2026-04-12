@@ -1,13 +1,13 @@
 {
-  "generated": "2026-04-12T12:53:50.048Z",
+  "generated": "2026-04-12T12:58:51.390Z",
   "system": {
     "totalAgents": 5,
     "running": 0,
     "idle": 5,
     "errored": 0,
     "completed": 0,
-    "totalCost": 0.15576679999999998,
-    "totalTokens": 145197
+    "totalCost": 0.1556318,
+    "totalTokens": 145188
   },
   "agents": [
     {
@@ -18,7 +18,7 @@
       "icon": "🤖",
       "task": "telegram:g-agent-main-cron-ed5cbdbd-1c30-4c0c-a22a-2baa3e9f75cd",
       "model": "claude-opus-4-6",
-      "started": "2026-04-12T12:53:48.505Z",
+      "started": "2026-04-12T12:58:49.836Z",
       "lastMessage": "A subagent task \"founder-sourcing-agent\" just completed successfully.  Findings: Unfortunately, I'm hitting a wall here.",
       "tokens": {
         "input": 0,
@@ -38,13 +38,13 @@
       "icon": "🤖",
       "task": "Cron: CHIEF Dashboard Refresh",
       "model": "claude-opus-4-6",
-      "started": "2026-04-12T12:53:46.746Z",
+      "started": "2026-04-12T12:58:46.748Z",
       "lastMessage": null,
       "tokens": {
         "input": 14971,
-        "output": 196
+        "output": 187
       },
-      "cost": 0.008980799999999999,
+      "cost": 0.0088458,
       "sessionKey": "agent:main:cron:ae997ae6-5216-4681-925b-b83042a1de6d",
       "kind": "other",
       "channel": "unknown",
@@ -113,13 +113,13 @@
   ],
   "feed": [
     {
-      "time": 1775998428532,
+      "time": 1775998729870,
       "agent": "Cron: CHIEF Task Dispatcher",
       "icon": "🤖",
       "event": "A subagent task \"founder-sourcing-agent\" just completed successfully.  Findings: Unfortunately, I'm "
     },
     {
-      "time": 1775998426768,
+      "time": 1775998726773,
       "agent": "Cron: CHIEF Dashboard Refresh",
       "icon": "🤖",
       "event": "Activity"
