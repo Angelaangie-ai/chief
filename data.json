@@ -1,24 +1,22 @@
 {
-  "generated": "2026-04-14T03:06:37.365Z",
+  "generated": "2026-04-14T03:11:38.352Z",
   "system": {
     "totalAgents": 3,
     "running": 0,
     "idle": 3,
     "errored": 0,
     "completed": 0,
-    "totalCost": 0.02829795,
-    "totalTokens": 127233,
+    "totalCost": 0.007836599999999999,
+    "totalTokens": 15768,
     "mainContext": {
-      "used": 111000,
-      "max": 272000,
-      "percent": 41,
-      "compactions": 2,
-      "model": "google-gemini-cli/gemini-2.0-flash",
-      "tokensIn": "185",
-      "tokensOut": "48"
+      "used": 0,
+      "max": 0,
+      "percent": 0,
+      "compactions": 0,
+      "model": "openai-codex/gpt-5.3-codex"
     },
-    "contextMax": 472000,
-    "contextUsed": 127031
+    "contextMax": 200000,
+    "contextUsed": 15614
   },
   "agents": [
     {
@@ -27,19 +25,19 @@
       "role": "Core Assistant",
       "status": "idle",
       "icon": "😏",
-      "task": "telegram:g-agent-main-main",
-      "model": "gemini-2.0-flash",
-      "started": "2026-04-12T20:48:14.379Z",
-      "lastMessage": "[[reply_to_current]] I’m currently on **google-gemini-cli/gemini-2.0-flash** — but it’s not authenticated (no API key), ",
+      "task": "Angela Busheska id:7907734285",
+      "model": "gpt-5.3-codex",
+      "started": "2026-04-14T03:11:16.913Z",
+      "lastMessage": null,
       "tokens": {
-        "input": 111417,
-        "output": 48
+        "input": 0,
+        "output": 0
       },
-      "cost": 0.02046135,
+      "cost": 0,
       "sessionKey": "agent:main:main",
       "kind": "other",
       "channel": "telegram",
-      "contextWindow": 272000
+      "contextWindow": 0
     },
     {
       "id": "agent:main:cron:ed5cbdbd-1c30-4c0c-a22a-2baa3e9f75cd",
@@ -83,12 +81,6 @@
     }
   ],
   "feed": [
-    {
-      "time": 1776026888661,
-      "agent": "Smartypants",
-      "icon": "😏",
-      "event": "[[reply_to_current]] I’m currently on **google-gemini-cli/gemini-2.0-flash** — but it’s not authenti"
-    },
     {
       "time": 1776015146910,
       "agent": "Cron: CHIEF Task Dispatcher",
