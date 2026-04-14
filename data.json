@@ -1,22 +1,24 @@
 {
-  "generated": "2026-04-14T03:11:38.352Z",
+  "generated": "2026-04-14T03:16:40.815Z",
   "system": {
     "totalAgents": 3,
     "running": 0,
     "idle": 3,
     "errored": 0,
     "completed": 0,
-    "totalCost": 0.007836599999999999,
-    "totalTokens": 15768,
+    "totalCost": 0.0313643,
+    "totalTokens": 31367,
     "mainContext": {
-      "used": 0,
-      "max": 0,
-      "percent": 0,
+      "used": 15000,
+      "max": 272000,
+      "percent": 6,
       "compactions": 0,
-      "model": "openai-codex/gpt-5.3-codex"
+      "model": "openai-codex/gpt-5.3-codex",
+      "tokensIn": "12k",
+      "tokensOut": "153"
     },
-    "contextMax": 200000,
-    "contextUsed": 15614
+    "contextMax": 472000,
+    "contextUsed": 31060
   },
   "agents": [
     {
@@ -27,17 +29,17 @@
       "icon": "😏",
       "task": "Angela Busheska id:7907734285",
       "model": "gpt-5.3-codex",
-      "started": "2026-04-14T03:11:16.913Z",
-      "lastMessage": null,
+      "started": "2026-04-14T03:15:09.867Z",
+      "lastMessage": "[[reply_to_current]] Perfect — that file now only has the OpenAI Codex profile. Anthropic is fully removed. ✅  One more ",
       "tokens": {
-        "input": 0,
-        "output": 0
+        "input": 15446,
+        "output": 153
       },
-      "cost": 0,
+      "cost": 0.0235277,
       "sessionKey": "agent:main:main",
       "kind": "other",
       "channel": "telegram",
-      "contextWindow": 0
+      "contextWindow": 272000
     },
     {
       "id": "agent:main:cron:ed5cbdbd-1c30-4c0c-a22a-2baa3e9f75cd",
@@ -81,6 +83,12 @@
     }
   ],
   "feed": [
+    {
+      "time": 1776136505946,
+      "agent": "Smartypants",
+      "icon": "😏",
+      "event": "[[reply_to_current]] Perfect — that file now only has the OpenAI Codex profile. Anthropic is fully r"
+    },
     {
       "time": 1776015146910,
       "agent": "Cron: CHIEF Task Dispatcher",
