@@ -1,24 +1,24 @@
 {
-  "generated": "2026-04-14T11:44:42.151Z",
+  "generated": "2026-04-14T11:49:43.700Z",
   "system": {
     "totalAgents": 3,
     "running": 0,
     "idle": 3,
     "errored": 0,
     "completed": 0,
-    "totalCost": 0.0313643,
-    "totalTokens": 31367,
+    "totalCost": 0.03346815,
+    "totalTokens": 31433,
     "mainContext": {
-      "used": 15000,
+      "used": 16000,
       "max": 272000,
       "percent": 6,
       "compactions": 0,
       "model": "openai-codex/gpt-5.3-codex",
-      "tokensIn": "12k",
-      "tokensOut": "153"
+      "tokensIn": "14k",
+      "tokensOut": "52"
     },
     "contextMax": 472000,
-    "contextUsed": 31060
+    "contextUsed": 31227
   },
   "agents": [
     {
@@ -29,13 +29,13 @@
       "icon": "😏",
       "task": "Angela Busheska id:7907734285",
       "model": "gpt-5.3-codex",
-      "started": "2026-04-14T03:15:09.867Z",
-      "lastMessage": "[[reply_to_current]] Perfect — that file now only has the OpenAI Codex profile. Anthropic is fully removed. ✅  One more ",
+      "started": "2026-04-14T11:48:59.317Z",
+      "lastMessage": "[[reply_to_current]] 😏 Cool, your call.  At least Anthropic’s gone, so you’re on a single OpenAI auth profile now. If a",
       "tokens": {
-        "input": 15446,
-        "output": 153
+        "input": 15613,
+        "output": 52
       },
-      "cost": 0.0235277,
+      "cost": 0.02563155,
       "sessionKey": "agent:main:main",
       "kind": "other",
       "channel": "telegram",
@@ -84,10 +84,10 @@
   ],
   "feed": [
     {
-      "time": 1776136505946,
+      "time": 1776167336449,
       "agent": "Smartypants",
       "icon": "😏",
-      "event": "[[reply_to_current]] Perfect — that file now only has the OpenAI Codex profile. Anthropic is fully r"
+      "event": "[[reply_to_current]] 😏 Cool, your call.  At least Anthropic’s gone, so you’re on a single OpenAI au"
     },
     {
       "time": 1776015146910,
