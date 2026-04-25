@@ -1,13 +1,13 @@
 {
-  "generated": "2026-04-25T14:51:21.295Z",
+  "generated": "2026-04-25T14:56:23.078Z",
   "system": {
     "totalAgents": 3,
     "running": 0,
     "idle": 3,
     "errored": 0,
     "completed": 0,
-    "totalCost": 0.02428625,
-    "totalTokens": 52898,
+    "totalCost": 0.007836599999999999,
+    "totalTokens": 52235,
     "mainContext": {
       "used": 36000,
       "max": 272000,
@@ -29,13 +29,13 @@
       "icon": "😏",
       "task": "Angela Busheska id:7907734285",
       "model": "gpt-5.3-codex",
-      "started": "2026-04-25T14:49:47.192Z",
-      "lastMessage": "[[reply_to_current]] Yes. Locking it in:  ## Product flow 1. **Open Continuum** 2. **Upload documents** (labs PDF/CSV, g",
+      "started": "2026-04-25T14:52:18.386Z",
+      "lastMessage": null,
       "tokens": {
         "input": 36467,
-        "output": 663
+        "output": 0
       },
-      "cost": 0.01644965,
+      "cost": 0,
       "sessionKey": "agent:main:main",
       "kind": "other",
       "channel": "telegram",
@@ -83,12 +83,6 @@
     }
   ],
   "feed": [
-    {
-      "time": 1777128571156,
-      "agent": "Smartypants",
-      "icon": "😏",
-      "event": "[[reply_to_current]] Yes. Locking it in:  ## Product flow 1. **Open Continuum** 2. **Upload document"
-    },
     {
       "time": 1776015146910,
       "agent": "Cron: CHIEF Task Dispatcher",
