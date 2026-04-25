@@ -1,24 +1,24 @@
 {
-  "generated": "2026-04-25T14:16:09.558Z",
+  "generated": "2026-04-25T14:21:11.272Z",
   "system": {
     "totalAgents": 3,
     "running": 0,
     "idle": 3,
     "errored": 0,
     "completed": 0,
-    "totalCost": 0.03346815,
-    "totalTokens": 31433,
+    "totalCost": 0.0175309,
+    "totalTokens": 32044,
     "mainContext": {
       "used": 16000,
       "max": 272000,
       "percent": 6,
       "compactions": 0,
       "model": "openai-codex/gpt-5.3-codex",
-      "tokensIn": "14k",
-      "tokensOut": "52"
+      "tokensIn": "186",
+      "tokensOut": "474"
     },
     "contextMax": 472000,
-    "contextUsed": 31227
+    "contextUsed": 31416
   },
   "agents": [
     {
@@ -29,13 +29,13 @@
       "icon": "😏",
       "task": "Angela Busheska id:7907734285",
       "model": "gpt-5.3-codex",
-      "started": "2026-04-14T11:48:59.317Z",
-      "lastMessage": "[[reply_to_current]] 😏 Cool, your call.  At least Anthropic’s gone, so you’re on a single OpenAI auth profile now. If a",
+      "started": "2026-04-25T14:20:48.101Z",
+      "lastMessage": "[[reply_to_current]] Love this direction. You’re basically moving from “personal tool” to **multi-user health intelligen",
       "tokens": {
-        "input": 15613,
-        "output": 52
+        "input": 15802,
+        "output": 474
       },
-      "cost": 0.02563155,
+      "cost": 0.0096943,
       "sessionKey": "agent:main:main",
       "kind": "other",
       "channel": "telegram",
@@ -84,10 +84,10 @@
   ],
   "feed": [
     {
-      "time": 1776167336449,
+      "time": 1777126836542,
       "agent": "Smartypants",
       "icon": "😏",
-      "event": "[[reply_to_current]] 😏 Cool, your call.  At least Anthropic’s gone, so you’re on a single OpenAI au"
+      "event": "[[reply_to_current]] Love this direction. You’re basically moving from “personal tool” to **multi-us"
     },
     {
       "time": 1776015146910,
