@@ -1,24 +1,24 @@
 {
-  "generated": "2026-04-25T17:42:21.736Z",
+  "generated": "2026-04-25T17:47:23.518Z",
   "system": {
     "totalAgents": 3,
     "running": 0,
     "idle": 3,
     "errored": 0,
     "completed": 0,
-    "totalCost": 0.13816925000000002,
-    "totalTokens": 93516,
+    "totalCost": 0.007836599999999999,
+    "totalTokens": 107091,
     "mainContext": {
-      "used": 78000,
+      "used": 91000,
       "max": 272000,
-      "percent": 29,
+      "percent": 34,
       "compactions": 0,
       "model": "openai-codex/gpt-5.3-codex",
-      "tokensIn": "73k",
-      "tokensOut": "125"
+      "tokensIn": "187",
+      "tokensOut": "55"
     },
     "contextMax": 472000,
-    "contextUsed": 93237
+    "contextUsed": 106937
   },
   "agents": [
     {
@@ -29,13 +29,13 @@
       "icon": "😏",
       "task": "Angela Busheska id:7907734285",
       "model": "gpt-5.3-codex",
-      "started": "2026-04-25T17:42:21.691Z",
-      "lastMessage": "[[reply_to_current]] Yep — we moved fast and pushed multiple updates to `main` tonight.  Net result now: - Intake-first ",
+      "started": "2026-04-25T17:47:15.769Z",
+      "lastMessage": "Conversation info (untrusted metadata): ```json {   \"conversation_label\": \"Angela Busheska id:7907734285\" } ```  Remove ",
       "tokens": {
-        "input": 77623,
-        "output": 125
+        "input": 91323,
+        "output": 0
       },
-      "cost": 0.13033265000000002,
+      "cost": 0,
       "sessionKey": "agent:main:main",
       "kind": "other",
       "channel": "telegram",
@@ -84,10 +84,10 @@
   ],
   "feed": [
     {
-      "time": 1777138923259,
+      "time": 1777139236059,
       "agent": "Smartypants",
       "icon": "😏",
-      "event": "[[reply_to_current]] Yep — we moved fast and pushed multiple updates to `main` tonight.  Net result "
+      "event": "Conversation info (untrusted metadata): ```json {   \"conversation_label\": \"Angela Busheska id:790773"
     },
     {
       "time": 1776015146910,
