@@ -1,24 +1,24 @@
 {
-  "generated": "2026-05-02T21:14:25.836Z",
+  "generated": "2026-05-02T21:19:27.527Z",
   "system": {
     "totalAgents": 4,
     "running": 0,
     "idle": 4,
     "errored": 0,
     "completed": 0,
-    "totalCost": 0.04951915,
-    "totalTokens": 157499,
+    "totalCost": 0.0702619,
+    "totalTokens": 158892,
     "mainContext": {
-      "used": 106000,
+      "used": 108000,
       "max": 272000,
-      "percent": 39,
+      "percent": 40,
       "compactions": 0,
       "model": "openai-codex/gpt-5.3-codex",
-      "tokensIn": "1.8k",
-      "tokensOut": "364"
+      "tokensIn": "253",
+      "tokensOut": "106"
     },
     "contextMax": 744000,
-    "contextUsed": 156805
+    "contextUsed": 158092
   },
   "agents": [
     {
@@ -29,13 +29,13 @@
       "icon": "😏",
       "task": "telegram:g-agent-main-main",
       "model": "gpt-5.3-codex",
-      "started": "2026-05-02T21:14:24.869Z",
-      "lastMessage": "Conversation info (untrusted metadata): ```json {   \"conversation_label\": \"Angela Busheska id:7907734285\" } ```  okay le",
+      "started": "2026-05-02T21:18:24.675Z",
+      "lastMessage": "[[reply_to_current]] Got it — tonight is all that matters.  Then I’ll treat this as a **tonight-only trading watch**: - ",
       "tokens": {
-        "input": 106486,
-        "output": 0
+        "input": 107773,
+        "output": 106
       },
-      "cost": 0,
+      "cost": 0.02074275,
       "sessionKey": "agent:main:main",
       "kind": "other",
       "channel": "telegram",
@@ -104,10 +104,10 @@
   ],
   "feed": [
     {
-      "time": 1777756465189,
+      "time": 1777756700788,
       "agent": "Smartypants",
       "icon": "😏",
-      "event": "Conversation info (untrusted metadata): ```json {   \"conversation_label\": \"Angela Busheska id:790773"
+      "event": "[[reply_to_current]] Got it — tonight is all that matters.  Then I’ll treat this as a **tonight-only"
     },
     {
       "time": 1777755835912,
