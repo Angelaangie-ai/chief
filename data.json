@@ -1,24 +1,24 @@
 {
-  "generated": "2026-05-02T20:54:18.330Z",
+  "generated": "2026-05-02T20:59:19.997Z",
   "system": {
-    "totalAgents": 3,
+    "totalAgents": 4,
     "running": 0,
-    "idle": 3,
+    "idle": 4,
     "errored": 0,
     "completed": 0,
-    "totalCost": 0.02817055,
-    "totalTokens": 117255,
+    "totalCost": 0.25200500000000003,
+    "totalTokens": 166683,
     "mainContext": {
-      "used": 101000,
+      "used": 102000,
       "max": 272000,
-      "percent": 37,
+      "percent": 38,
       "compactions": 0,
       "model": "openai-codex/gpt-5.3-codex",
-      "tokensIn": "1.4k",
-      "tokensOut": "338"
+      "tokensIn": "97k",
+      "tokensOut": "82"
     },
-    "contextMax": 472000,
-    "contextUsed": 116971
+    "contextMax": 744000,
+    "contextUsed": 165918
   },
   "agents": [
     {
@@ -27,18 +27,38 @@
       "role": "Core Assistant",
       "status": "idle",
       "icon": "😏",
-      "task": "Angela Busheska id:7907734285",
+      "task": "telegram:g-agent-main-main",
       "model": "gpt-5.3-codex",
-      "started": "2026-05-02T20:53:38.742Z",
-      "lastMessage": "[[reply_to_current]] Done. I switched it to **intensive monitoring every 5 minutes** for the next 24h.  ### Active jobs ",
+      "started": "2026-05-02T20:59:00.076Z",
+      "lastMessage": "[[reply_to_current]] First result is in: no real trade setups yet — BTC/ETH moved, but not in a strong enough “shock” wa",
       "tokens": {
-        "input": 101357,
-        "output": 130
+        "input": 102334,
+        "output": 82
       },
-      "cost": 0.02033395,
+      "cost": 0.17136210000000002,
       "sessionKey": "agent:main:main",
       "kind": "other",
       "channel": "telegram",
+      "contextWindow": 272000
+    },
+    {
+      "id": "agent:main:cron:5e001c36-2cf5-4e95-9dfc-f3d65ecdfb72",
+      "name": "Cron: Polymarket-vs-crypto lag monitor (24h intensive)",
+      "role": "Sub-Agent",
+      "status": "idle",
+      "icon": "🤖",
+      "task": "Cron: Polymarket-vs-crypto lag monitor (24h intensive)",
+      "model": "gpt-5.3-codex",
+      "started": "2026-05-02T20:58:24.756Z",
+      "lastMessage": "[[reply_to_current]] Polymarket ↔ BTC/ETH lag monitor (paper, this run)  Snapshot (last ~24h): - BTC: ~$77.9k → ~$78.4k,",
+      "tokens": {
+        "input": 47970,
+        "output": 529
+      },
+      "cost": 0.07280629999999999,
+      "sessionKey": "agent:main:cron:5e001c36-2cf5-4e95-9dfc-f3d65ecdfb72",
+      "kind": "other",
+      "channel": "unknown",
       "contextWindow": 272000
     },
     {
@@ -84,10 +104,16 @@
   ],
   "feed": [
     {
-      "time": 1777755211884,
+      "time": 1777755535830,
       "agent": "Smartypants",
       "icon": "😏",
-      "event": "[[reply_to_current]] Done. I switched it to **intensive monitoring every 5 minutes** for the next 24"
+      "event": "[[reply_to_current]] First result is in: no real trade setups yet — BTC/ETH moved, but not in a stro"
+    },
+    {
+      "time": 1777755519399,
+      "agent": "Cron: Polymarket-vs-crypto lag monitor (24h intensive)",
+      "icon": "🤖",
+      "event": "[[reply_to_current]] Polymarket ↔ BTC/ETH lag monitor (paper, this run)  Snapshot (last ~24h): - BTC"
     },
     {
       "time": 1776015146910,
