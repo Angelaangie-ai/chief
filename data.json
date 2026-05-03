@@ -1,13 +1,13 @@
 {
-  "generated": "2026-05-03T13:15:12.115Z",
+  "generated": "2026-05-03T13:20:13.796Z",
   "system": {
     "totalAgents": 6,
     "running": 0,
     "idle": 6,
     "errored": 0,
     "completed": 0,
-    "totalCost": 0.052913800000000004,
-    "totalTokens": 178505,
+    "totalCost": 0.029887999999999998,
+    "totalTokens": 178443,
     "mainContext": {
       "used": 120000,
       "max": 272000,
@@ -29,13 +29,13 @@
       "icon": "😏",
       "task": "telegram:g-agent-main-main",
       "model": "gpt-5.3-codex",
-      "started": "2026-05-03T13:04:54.067Z",
-      "lastMessage": "[[reply_to_current]] 9:03 AM check is still flat: no today-expiring crypto contracts found on either venue at that momen",
+      "started": "2026-05-03T13:20:09.358Z",
+      "lastMessage": "Conversation info (untrusted metadata): ```json {   \"conversation_label\": \"Angela Busheska id:7907734285\" } ```  I think",
       "tokens": {
         "input": 120028,
-        "output": 62
+        "output": 0
       },
-      "cost": 0.0230258,
+      "cost": 0,
       "sessionKey": "agent:main:main",
       "kind": "other",
       "channel": "telegram",
@@ -144,10 +144,10 @@
   ],
   "feed": [
     {
-      "time": 1777813488888,
+      "time": 1777814409657,
       "agent": "Smartypants",
       "icon": "😏",
-      "event": "[[reply_to_current]] 9:03 AM check is still flat: no today-expiring crypto contracts found on either"
+      "event": "Conversation info (untrusted metadata): ```json {   \"conversation_label\": \"Angela Busheska id:790773"
     },
     {
       "time": 1777813481734,
