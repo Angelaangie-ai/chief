@@ -1,24 +1,24 @@
 {
-  "generated": "2026-05-03T03:41:48.143Z",
+  "generated": "2026-05-03T03:46:49.910Z",
   "system": {
-    "totalAgents": 4,
+    "totalAgents": 5,
     "running": 0,
-    "idle": 4,
+    "idle": 5,
     "errored": 0,
     "completed": 0,
-    "totalCost": 0.03911435,
-    "totalTokens": 142750,
+    "totalCost": 0.0446909,
+    "totalTokens": 160065,
     "mainContext": {
-      "used": 111000,
+      "used": 112000,
       "max": 272000,
       "percent": 41,
       "compactions": 0,
       "model": "openai-codex/gpt-5.3-codex",
-      "tokensIn": "651",
-      "tokensOut": "42"
+      "tokensIn": "520",
+      "tokensOut": "52"
     },
-    "contextMax": 744000,
-    "contextUsed": 142055
+    "contextMax": 1016000,
+    "contextUsed": 159216
   },
   "agents": [
     {
@@ -29,16 +29,36 @@
       "icon": "😏",
       "task": "telegram:g-agent-main-main",
       "model": "gpt-5.3-codex",
-      "started": "2026-05-03T03:05:05.234Z",
-      "lastMessage": "[[reply_to_current]] Another cycle failed, so no new valid signal from this pass. I’m still tracking the close window an",
+      "started": "2026-05-03T03:46:31.521Z",
+      "lastMessage": "[[reply_to_current]] Close-window update: no actionable lag events tonight. There weren’t matching tonight-expiring cryp",
       "tokens": {
-        "input": 111243,
-        "output": 42
+        "input": 111624,
+        "output": 52
       },
-      "cost": 0.021080849999999998,
+      "cost": 0.0210812,
       "sessionKey": "agent:main:main",
       "kind": "other",
       "channel": "telegram",
+      "contextWindow": 272000
+    },
+    {
+      "id": "agent:main:cron:2f897fff-e194-4ce8-9e93-31745cc34a67",
+      "name": "Cron: Tonight close-window high-cadence monitor (11:45pm-12:05am ET)",
+      "role": "Sub-Agent",
+      "status": "idle",
+      "icon": "🤖",
+      "task": "Cron: Tonight close-window high-cadence monitor (11:45pm-12:05am ET)",
+      "model": "gpt-5.3-codex",
+      "started": "2026-05-03T03:45:00.096Z",
+      "lastMessage": "[[reply_to_current]] No actionable lag events detected in the 11:45pm–12:05am ET close window tonight.  I checked curren",
+      "tokens": {
+        "input": 16780,
+        "output": 144
+      },
+      "cost": 0.0055762,
+      "sessionKey": "agent:main:cron:2f897fff-e194-4ce8-9e93-31745cc34a67",
+      "kind": "other",
+      "channel": "unknown",
       "contextWindow": 272000
     },
     {
@@ -104,10 +124,16 @@
   ],
   "feed": [
     {
-      "time": 1777777502620,
+      "time": 1777779988358,
       "agent": "Smartypants",
       "icon": "😏",
-      "event": "[[reply_to_current]] Another cycle failed, so no new valid signal from this pass. I’m still tracking"
+      "event": "[[reply_to_current]] Close-window update: no actionable lag events tonight. There weren’t matching t"
+    },
+    {
+      "time": 1777779984095,
+      "agent": "Cron: Tonight close-window high-cadence monitor (11:45pm-12:05am ET)",
+      "icon": "🤖",
+      "event": "[[reply_to_current]] No actionable lag events detected in the 11:45pm–12:05am ET close window tonigh"
     },
     {
       "time": 1777777490911,
