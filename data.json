@@ -1,24 +1,24 @@
 {
-  "generated": "2026-05-03T14:00:27.889Z",
+  "generated": "2026-05-03T14:05:29.557Z",
   "system": {
     "totalAgents": 6,
     "running": 0,
     "idle": 6,
     "errored": 0,
     "completed": 0,
-    "totalCost": 0.054854900000000005,
-    "totalTokens": 179081,
+    "totalCost": 0.05016525,
+    "totalTokens": 178822,
     "mainContext": {
-      "used": 120000,
+      "used": 121000,
       "max": 272000,
       "percent": 44,
       "compactions": 0,
       "model": "openai-codex/gpt-5.3-codex",
-      "tokensIn": "654",
-      "tokensOut": "204"
+      "tokensIn": "978",
+      "tokensOut": "41"
     },
     "contextMax": 1288000,
-    "contextUsed": 178144
+    "contextUsed": 178165
   },
   "agents": [
     {
@@ -29,13 +29,13 @@
       "icon": "😏",
       "task": "telegram:g-agent-main-main",
       "model": "gpt-5.3-codex",
-      "started": "2026-05-03T13:20:31.553Z",
-      "lastMessage": "[[reply_to_current]] Yes — 100%. That’s the right move.  Without APIs, this is noisy and brittle.   With APIs, we can do",
+      "started": "2026-05-03T14:04:51.714Z",
+      "lastMessage": "[[reply_to_current]] This latest pass failed again, so no new reliable read from it.   At this point, API hookup is the ",
       "tokens": {
-        "input": 120462,
-        "output": 204
+        "input": 120786,
+        "output": 41
       },
-      "cost": 0.0249669,
+      "cost": 0.0232519,
       "sessionKey": "agent:main:main",
       "kind": "other",
       "channel": "telegram",
@@ -49,13 +49,13 @@
       "icon": "🤖",
       "task": "Cron: Polymarket-vs-crypto lag monitor (24h intensive)",
       "model": "gpt-5.3-codex",
-      "started": "2026-05-03T13:03:54.860Z",
-      "lastMessage": "[[reply_to_current]] Quick monitor update (as of 9:03 AM ET):  I pulled both public market feeds and filtered for **toda",
+      "started": "2026-05-03T14:03:54.862Z",
+      "lastMessage": "[[reply_to_current]] Quick update: I couldn’t reliably pull live Kalshi/Polymarket market + resolution feeds from this r",
       "tokens": {
-        "input": 13501,
-        "output": 346
+        "input": 13198,
+        "output": 229
       },
-      "cost": 0.009117150000000001,
+      "cost": 0.0061425,
       "sessionKey": "agent:main:cron:5e001c36-2cf5-4e95-9dfc-f3d65ecdfb72",
       "kind": "other",
       "channel": "unknown",
@@ -144,16 +144,16 @@
   ],
   "feed": [
     {
-      "time": 1777814423858,
+      "time": 1777817088861,
       "agent": "Smartypants",
       "icon": "😏",
-      "event": "[[reply_to_current]] Yes — 100%. That’s the right move.  Without APIs, this is noisy and brittle.   "
+      "event": "[[reply_to_current]] This latest pass failed again, so no new reliable read from it.   At this point"
     },
     {
-      "time": 1777813481734,
+      "time": 1777817083389,
       "agent": "Cron: Polymarket-vs-crypto lag monitor (24h intensive)",
       "icon": "🤖",
-      "event": "[[reply_to_current]] Quick monitor update (as of 9:03 AM ET):  I pulled both public market feeds and"
+      "event": "[[reply_to_current]] Quick update: I couldn’t reliably pull live Kalshi/Polymarket market + resoluti"
     },
     {
       "time": 1777781097943,
