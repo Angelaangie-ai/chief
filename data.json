@@ -1,24 +1,24 @@
 {
-  "generated": "2026-05-03T15:00:50.823Z",
+  "generated": "2026-05-03T15:05:52.596Z",
   "system": {
     "totalAgents": 6,
     "running": 0,
     "idle": 6,
     "errored": 0,
     "completed": 0,
-    "totalCost": 0.05016525,
-    "totalTokens": 178822,
+    "totalCost": 0.053491649999999995,
+    "totalTokens": 179520,
     "mainContext": {
       "used": 121000,
       "max": 272000,
-      "percent": 44,
+      "percent": 45,
       "compactions": 0,
       "model": "openai-codex/gpt-5.3-codex",
-      "tokensIn": "978",
-      "tokensOut": "41"
+      "tokensIn": "821",
+      "tokensOut": "38"
     },
     "contextMax": 1288000,
-    "contextUsed": 178165
+    "contextUsed": 178757
   },
   "agents": [
     {
@@ -29,13 +29,13 @@
       "icon": "😏",
       "task": "telegram:g-agent-main-main",
       "model": "gpt-5.3-codex",
-      "started": "2026-05-03T14:04:51.714Z",
-      "lastMessage": "[[reply_to_current]] This latest pass failed again, so no new reliable read from it.   At this point, API hookup is the ",
+      "started": "2026-05-03T15:04:45.386Z",
+      "lastMessage": "[[reply_to_current]] This check failed too, so still no trustworthy market read from that cycle.   We should pause these",
       "tokens": {
-        "input": 120786,
-        "output": 41
+        "input": 121141,
+        "output": 38
       },
-      "cost": 0.0232519,
+      "cost": 0.023024749999999997,
       "sessionKey": "agent:main:main",
       "kind": "other",
       "channel": "telegram",
@@ -49,13 +49,13 @@
       "icon": "🤖",
       "task": "Cron: Polymarket-vs-crypto lag monitor (24h intensive)",
       "model": "gpt-5.3-codex",
-      "started": "2026-05-03T14:03:54.862Z",
-      "lastMessage": "[[reply_to_current]] Quick update: I couldn’t reliably pull live Kalshi/Polymarket market + resolution feeds from this r",
+      "started": "2026-05-03T15:03:54.862Z",
+      "lastMessage": "[[reply_to_current]] Quick update: I could not produce a reliable all-market lag/P&L table this run because both exchang",
       "tokens": {
-        "input": 13198,
-        "output": 229
+        "input": 13435,
+        "output": 338
       },
-      "cost": 0.0061425,
+      "cost": 0.00969605,
       "sessionKey": "agent:main:cron:5e001c36-2cf5-4e95-9dfc-f3d65ecdfb72",
       "kind": "other",
       "channel": "unknown",
@@ -144,16 +144,16 @@
   ],
   "feed": [
     {
-      "time": 1777817088861,
+      "time": 1777820682328,
       "agent": "Smartypants",
       "icon": "😏",
-      "event": "[[reply_to_current]] This latest pass failed again, so no new reliable read from it.   At this point"
+      "event": "[[reply_to_current]] This check failed too, so still no trustworthy market read from that cycle.   W"
     },
     {
-      "time": 1777817083389,
+      "time": 1777820675402,
       "agent": "Cron: Polymarket-vs-crypto lag monitor (24h intensive)",
       "icon": "🤖",
-      "event": "[[reply_to_current]] Quick update: I couldn’t reliably pull live Kalshi/Polymarket market + resoluti"
+      "event": "[[reply_to_current]] Quick update: I could not produce a reliable all-market lag/P&L table this run "
     },
     {
       "time": 1777781097943,
