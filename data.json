@@ -1,24 +1,24 @@
 {
-  "generated": "2026-05-03T08:03:20.956Z",
+  "generated": "2026-05-03T08:08:22.724Z",
   "system": {
     "totalAgents": 6,
     "running": 0,
     "idle": 6,
     "errored": 0,
     "completed": 0,
-    "totalCost": 0.055077499999999995,
-    "totalTokens": 176357,
+    "totalCost": 0.054448199999999995,
+    "totalTokens": 187801,
     "mainContext": {
       "used": 117000,
       "max": 272000,
       "percent": 43,
       "compactions": 0,
       "model": "openai-codex/gpt-5.3-codex",
-      "tokensIn": "616",
-      "tokensOut": "44"
+      "tokensIn": "755",
+      "tokensOut": "65"
     },
     "contextMax": 1288000,
-    "contextUsed": 175276
+    "contextUsed": 186958
   },
   "agents": [
     {
@@ -29,13 +29,13 @@
       "icon": "😏",
       "task": "telegram:g-agent-main-main",
       "model": "gpt-5.3-codex",
-      "started": "2026-05-03T07:05:06.777Z",
-      "lastMessage": "[[reply_to_current]] Quick heads-up: this latest pass failed while parsing Polymarket data, so no fresh read from that c",
+      "started": "2026-05-03T08:05:28.551Z",
+      "lastMessage": "[[reply_to_current]] 4:03 AM snapshot: still no qualifying today-expiring crypto contracts on Polymarket and no confirme",
       "tokens": {
-        "input": 116840,
-        "output": 44
+        "input": 117491,
+        "output": 65
       },
-      "cost": 0.0220332,
+      "cost": 0.02266005,
       "sessionKey": "agent:main:main",
       "kind": "other",
       "channel": "telegram",
@@ -49,13 +49,13 @@
       "icon": "🤖",
       "task": "Cron: Polymarket-vs-crypto lag monitor (24h intensive)",
       "model": "gpt-5.3-codex",
-      "started": "2026-05-03T07:03:54.858Z",
-      "lastMessage": "[[reply_to_current]] All-crypto today monitor (Kalshi + Polymarket) — **03:03 AM ET snapshot (May 3, 2026)**  I checked ",
+      "started": "2026-05-03T08:03:54.858Z",
+      "lastMessage": "[[reply_to_current]] Crypto lag monitor (today, Sun May 3, 2026, 4:03 AM ET)  Quick status: - **Polymarket:** Scanned ac",
       "tokens": {
-        "input": 14255,
-        "output": 650
+        "input": 25286,
+        "output": 391
       },
-      "cost": 0.01227345,
+      "cost": 0.011017299999999999,
       "sessionKey": "agent:main:cron:5e001c36-2cf5-4e95-9dfc-f3d65ecdfb72",
       "kind": "other",
       "channel": "unknown",
@@ -144,16 +144,16 @@
   ],
   "feed": [
     {
-      "time": 1777791902344,
+      "time": 1777795521508,
       "agent": "Smartypants",
       "icon": "😏",
-      "event": "[[reply_to_current]] Quick heads-up: this latest pass failed while parsing Polymarket data, so no fr"
+      "event": "[[reply_to_current]] 4:03 AM snapshot: still no qualifying today-expiring crypto contracts on Polyma"
     },
     {
-      "time": 1777791889621,
+      "time": 1777795513232,
       "agent": "Cron: Polymarket-vs-crypto lag monitor (24h intensive)",
       "icon": "🤖",
-      "event": "[[reply_to_current]] All-crypto today monitor (Kalshi + Polymarket) — **03:03 AM ET snapshot (May 3,"
+      "event": "[[reply_to_current]] Crypto lag monitor (today, Sun May 3, 2026, 4:03 AM ET)  Quick status: - **Poly"
     },
     {
       "time": 1777781097943,
