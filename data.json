@@ -1,24 +1,24 @@
 {
-  "generated": "2026-05-04T06:01:26.985Z",
+  "generated": "2026-05-04T06:06:28.765Z",
   "system": {
     "totalAgents": 6,
     "running": 0,
     "idle": 6,
     "errored": 0,
     "completed": 0,
-    "totalCost": 0.05501729999999999,
-    "totalTokens": 193111,
+    "totalCost": 0.056814899999999995,
+    "totalTokens": 201238,
     "mainContext": {
       "used": 135000,
       "max": 272000,
-      "percent": 49,
+      "percent": 50,
       "compactions": 0,
       "model": "openai-codex/gpt-5.3-codex",
-      "tokensIn": "924",
-      "tokensOut": "52"
+      "tokensIn": "767",
+      "tokensOut": "32"
     },
     "contextMax": 1288000,
-    "contextUsed": 192256
+    "contextUsed": 200344
   },
   "agents": [
     {
@@ -29,13 +29,13 @@
       "icon": "😏",
       "task": "telegram:g-agent-main-main",
       "model": "gpt-5.3-codex",
-      "started": "2026-05-04T05:05:18.277Z",
-      "lastMessage": "[[reply_to_current]] 1:03 AM update: still no qualifying same-day crypto expiry events found yet, so there’s nothing to ",
+      "started": "2026-05-04T06:05:05.483Z",
+      "lastMessage": "[[reply_to_current]] This cycle errored, so no fresh verified read from it.   Status is unchanged until the next clean p",
       "tokens": {
-        "input": 134556,
-        "output": 52
+        "input": 134911,
+        "output": 32
       },
-      "cost": 0.0257306,
+      "cost": 0.02526545,
       "sessionKey": "agent:main:main",
       "kind": "other",
       "channel": "telegram",
@@ -49,13 +49,13 @@
       "icon": "🤖",
       "task": "Cron: Polymarket-vs-crypto lag monitor (24h intensive)",
       "model": "gpt-5.3-codex",
-      "started": "2026-05-04T05:03:54.856Z",
-      "lastMessage": "[[reply_to_current]] Crypto lag monitor (Kalshi + Polymarket) — **Mon May 4, 2026 @ 1:03 AM ET**  I checked both venues’",
+      "started": "2026-05-04T06:03:54.862Z",
+      "lastMessage": "[[reply_to_current]] Crypto lag monitor — **Mon May 4, 2026 @ 2:03 AM ET**  I checked live public market feeds and, at t",
       "tokens": {
-        "input": 14725,
-        "output": 364
+        "input": 22458,
+        "output": 423
       },
-      "cost": 0.00828555,
+      "cost": 0.0105483,
       "sessionKey": "agent:main:cron:5e001c36-2cf5-4e95-9dfc-f3d65ecdfb72",
       "kind": "other",
       "channel": "unknown",
@@ -144,16 +144,16 @@
   ],
   "feed": [
     {
-      "time": 1777871115267,
+      "time": 1777874693862,
       "agent": "Smartypants",
       "icon": "😏",
-      "event": "[[reply_to_current]] 1:03 AM update: still no qualifying same-day crypto expiry events found yet, so"
+      "event": "[[reply_to_current]] This cycle errored, so no fresh verified read from it.   Status is unchanged un"
     },
     {
-      "time": 1777871106885,
+      "time": 1777874685274,
       "agent": "Cron: Polymarket-vs-crypto lag monitor (24h intensive)",
       "icon": "🤖",
-      "event": "[[reply_to_current]] Crypto lag monitor (Kalshi + Polymarket) — **Mon May 4, 2026 @ 1:03 AM ET**  I "
+      "event": "[[reply_to_current]] Crypto lag monitor — **Mon May 4, 2026 @ 2:03 AM ET**  I checked live public ma"
     },
     {
       "time": 1777867555591,
