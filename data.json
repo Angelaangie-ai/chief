@@ -1,13 +1,13 @@
 {
-  "generated": "2026-05-04T12:59:03.621Z",
+  "generated": "2026-05-04T13:04:05.824Z",
   "system": {
     "totalAgents": 6,
     "running": 0,
     "idle": 6,
     "errored": 0,
     "completed": 0,
-    "totalCost": 0.05637705,
-    "totalTokens": 195562,
+    "totalCost": 0.0472823,
+    "totalTokens": 181960,
     "mainContext": {
       "used": 138000,
       "max": 272000,
@@ -18,9 +18,29 @@
       "tokensOut": "61"
     },
     "contextMax": 1288000,
-    "contextUsed": 194617
+    "contextUsed": 181460
   },
   "agents": [
+    {
+      "id": "agent:main:cron:5e001c36-2cf5-4e95-9dfc-f3d65ecdfb72",
+      "name": "Cron: Polymarket-vs-crypto lag monitor (24h intensive)",
+      "role": "Sub-Agent",
+      "status": "idle",
+      "icon": "🤖",
+      "task": "Cron: Polymarket-vs-crypto lag monitor (24h intensive)",
+      "model": "gpt-5.3-codex",
+      "started": "2026-05-04T13:03:54.865Z",
+      "lastMessage": null,
+      "tokens": {
+        "input": 0,
+        "output": 0
+      },
+      "cost": 0,
+      "sessionKey": "agent:main:cron:5e001c36-2cf5-4e95-9dfc-f3d65ecdfb72",
+      "kind": "other",
+      "channel": "unknown",
+      "contextWindow": 272000
+    },
     {
       "id": "agent:main:main",
       "name": "Smartypants",
@@ -39,26 +59,6 @@
       "sessionKey": "agent:main:main",
       "kind": "other",
       "channel": "telegram",
-      "contextWindow": 272000
-    },
-    {
-      "id": "agent:main:cron:5e001c36-2cf5-4e95-9dfc-f3d65ecdfb72",
-      "name": "Cron: Polymarket-vs-crypto lag monitor (24h intensive)",
-      "role": "Sub-Agent",
-      "status": "idle",
-      "icon": "🤖",
-      "task": "Cron: Polymarket-vs-crypto lag monitor (24h intensive)",
-      "model": "gpt-5.3-codex",
-      "started": "2026-05-04T12:03:54.857Z",
-      "lastMessage": "[[reply_to_current]] Crypto monitor snapshot (Mon May 4, 2026, 8:03 AM ET)  Status: **No actionable lag-arb trades yet**",
-      "tokens": {
-        "input": 13157,
-        "output": 445
-      },
-      "cost": 0.00909475,
-      "sessionKey": "agent:main:cron:5e001c36-2cf5-4e95-9dfc-f3d65ecdfb72",
-      "kind": "other",
-      "channel": "unknown",
       "contextWindow": 272000
     },
     {
@@ -148,12 +148,6 @@
       "agent": "Smartypants",
       "icon": "😏",
       "event": "[[reply_to_current]] 8:03 AM checkpoint is still no-trade: no confirmed cross-exchange decision-lag "
-    },
-    {
-      "time": 1777896282616,
-      "agent": "Cron: Polymarket-vs-crypto lag monitor (24h intensive)",
-      "icon": "🤖",
-      "event": "[[reply_to_current]] Crypto monitor snapshot (Mon May 4, 2026, 8:03 AM ET)  Status: **No actionable "
     },
     {
       "time": 1777867555591,
