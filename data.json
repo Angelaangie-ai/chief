@@ -1,13 +1,13 @@
 {
-  "generated": "2026-05-04T22:58:57.927Z",
+  "generated": "2026-05-04T23:03:59.671Z",
   "system": {
     "totalAgents": 6,
     "running": 0,
     "idle": 6,
     "errored": 0,
     "completed": 0,
-    "totalCost": 0.07217255,
-    "totalTokens": 211577,
+    "totalCost": 0.048694549999999996,
+    "totalTokens": 187424,
     "mainContext": {
       "used": 144000,
       "max": 272000,
@@ -18,9 +18,29 @@
       "tokensOut": "54"
     },
     "contextMax": 1288000,
-    "contextUsed": 210643
+    "contextUsed": 186931
   },
   "agents": [
+    {
+      "id": "agent:main:cron:5e001c36-2cf5-4e95-9dfc-f3d65ecdfb72",
+      "name": "Cron: Polymarket-vs-crypto lag monitor (24h intensive)",
+      "role": "Sub-Agent",
+      "status": "idle",
+      "icon": "🤖",
+      "task": "Cron: Polymarket-vs-crypto lag monitor (24h intensive)",
+      "model": "gpt-5.3-codex",
+      "started": "2026-05-04T23:03:54.862Z",
+      "lastMessage": null,
+      "tokens": {
+        "input": 0,
+        "output": 0
+      },
+      "cost": 0,
+      "sessionKey": "agent:main:cron:5e001c36-2cf5-4e95-9dfc-f3d65ecdfb72",
+      "kind": "other",
+      "channel": "unknown",
+      "contextWindow": 272000
+    },
     {
       "id": "agent:main:main",
       "name": "Smartypants",
@@ -39,26 +59,6 @@
       "sessionKey": "agent:main:main",
       "kind": "other",
       "channel": "telegram",
-      "contextWindow": 272000
-    },
-    {
-      "id": "agent:main:cron:5e001c36-2cf5-4e95-9dfc-f3d65ecdfb72",
-      "name": "Cron: Polymarket-vs-crypto lag monitor (24h intensive)",
-      "role": "Sub-Agent",
-      "status": "idle",
-      "icon": "🤖",
-      "task": "Cron: Polymarket-vs-crypto lag monitor (24h intensive)",
-      "model": "gpt-5.3-codex",
-      "started": "2026-05-04T22:03:54.858Z",
-      "lastMessage": "[[reply_to_current]] Crypto lag monitor (Kalshi + Polymarket) — **Mon May 4, 2026, 6:03 PM ET snapshot**  I checked live",
-      "tokens": {
-        "input": 23712,
-        "output": 441
-      },
-      "cost": 0.023478,
-      "sessionKey": "agent:main:cron:5e001c36-2cf5-4e95-9dfc-f3d65ecdfb72",
-      "kind": "other",
-      "channel": "unknown",
       "contextWindow": 272000
     },
     {
@@ -148,12 +148,6 @@
       "agent": "Smartypants",
       "icon": "😏",
       "event": "[[reply_to_current]] 6:03 PM snapshot is still no-trade across BTC/ETH/XRP/SOL — no confirmed resolv"
-    },
-    {
-      "time": 1777932339822,
-      "agent": "Cron: Polymarket-vs-crypto lag monitor (24h intensive)",
-      "icon": "🤖",
-      "event": "[[reply_to_current]] Crypto lag monitor (Kalshi + Polymarket) — **Mon May 4, 2026, 6:03 PM ET snapsh"
     },
     {
       "time": 1777867555591,
