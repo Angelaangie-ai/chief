@@ -1,24 +1,24 @@
 {
-  "generated": "2026-05-05T17:11:20.440Z",
+  "generated": "2026-05-05T17:16:22.516Z",
   "system": {
     "totalAgents": 6,
     "running": 0,
     "idle": 6,
     "errored": 0,
     "completed": 0,
-    "totalCost": 0.0620782,
-    "totalTokens": 216455,
+    "totalCost": 0.061787,
+    "totalTokens": 217531,
     "mainContext": {
-      "used": 158000,
+      "used": 159000,
       "max": 272000,
-      "percent": 58,
+      "percent": 59,
       "compactions": 0,
       "model": "openai-codex/gpt-5.3-codex",
-      "tokensIn": "1.2k",
-      "tokensOut": "59"
+      "tokensIn": "1.3k",
+      "tokensOut": "324"
     },
     "contextMax": 1288000,
-    "contextUsed": 215462
+    "contextUsed": 216518
   },
   "agents": [
     {
@@ -29,13 +29,13 @@
       "icon": "😏",
       "task": "telegram:g-agent-main-main",
       "model": "gpt-5.3-codex",
-      "started": "2026-05-05T17:05:19.314Z",
-      "lastMessage": "[[reply_to_current]] 1:03 PM update is still no-trade — no confirmed dual-venue resolved crypto events yet to compute re",
+      "started": "2026-05-05T17:13:26.339Z",
+      "lastMessage": "[[reply_to_current]] Agreed — I switched the monitor to use **`https://data-api.polymarket.com` as the primary Polymarke",
       "tokens": {
-        "input": 158388,
-        "output": 59
+        "input": 159444,
+        "output": 79
       },
-      "cost": 0.0304402,
+      "cost": 0.030149,
       "sessionKey": "agent:main:main",
       "kind": "other",
       "channel": "telegram",
@@ -144,10 +144,10 @@
   ],
   "feed": [
     {
-      "time": 1778000713021,
+      "time": 1778001202063,
       "agent": "Smartypants",
       "icon": "😏",
-      "event": "[[reply_to_current]] 1:03 PM update is still no-trade — no confirmed dual-venue resolved crypto even"
+      "event": "[[reply_to_current]] Agreed — I switched the monitor to use **`https://data-api.polymarket.com` as t"
     },
     {
       "time": 1778000702759,
