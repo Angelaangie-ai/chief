@@ -1,24 +1,24 @@
 {
-  "generated": "2026-05-05T19:02:07.480Z",
+  "generated": "2026-05-05T19:07:09.488Z",
   "system": {
     "totalAgents": 6,
     "running": 0,
     "idle": 6,
     "errored": 0,
     "completed": 0,
-    "totalCost": 0.06451945,
-    "totalTokens": 219776,
+    "totalCost": 0.05065525,
+    "totalTokens": 317122,
     "mainContext": {
       "used": 160000,
       "max": 272000,
       "percent": 59,
       "compactions": 0,
       "model": "openai-codex/gpt-5.3-codex",
-      "tokensIn": "1.7k",
-      "tokensOut": "93"
+      "tokensIn": "631",
+      "tokensOut": "44"
     },
     "contextMax": 1288000,
-    "contextUsed": 218729
+    "contextUsed": 316638
   },
   "agents": [
     {
@@ -29,13 +29,13 @@
       "icon": "😏",
       "task": "telegram:g-agent-main-main",
       "model": "gpt-5.3-codex",
-      "started": "2026-05-05T18:06:03.588Z",
-      "lastMessage": "[[reply_to_current]] Quick update: this run was partial — the Polymarket data API was reachable but didn’t expose a usab",
+      "started": "2026-05-05T19:07:05.163Z",
+      "lastMessage": "[[reply_to_current]] Quick heads-up: this run hit a temporary processing error, so there’s no new market read from that ",
       "tokens": {
-        "input": 159925,
-        "output": 93
+        "input": 160375,
+        "output": 44
       },
-      "cost": 0.03199315,
+      "cost": 0.02967545,
       "sessionKey": "agent:main:main",
       "kind": "other",
       "channel": "telegram",
@@ -49,13 +49,13 @@
       "icon": "🤖",
       "task": "Cron: Polymarket-vs-crypto lag monitor (24h intensive)",
       "model": "gpt-5.3-codex",
-      "started": "2026-05-05T18:03:54.856Z",
-      "lastMessage": "[[reply_to_current]] All-crypto today monitor (Tue May 5, 2026, 2:03 PM ET) — **partial run**  **Polymarket (primary: `d",
+      "started": "2026-05-05T19:03:54.864Z",
+      "lastMessage": null,
       "tokens": {
-        "input": 16310,
-        "output": 514
+        "input": 113769,
+        "output": 0
       },
-      "cost": 0.0115465,
+      "cost": 0,
       "sessionKey": "agent:main:cron:5e001c36-2cf5-4e95-9dfc-f3d65ecdfb72",
       "kind": "other",
       "channel": "unknown",
@@ -144,16 +144,16 @@
   ],
   "feed": [
     {
-      "time": 1778004358426,
+      "time": 1778008021257,
       "agent": "Smartypants",
       "icon": "😏",
-      "event": "[[reply_to_current]] Quick update: this run was partial — the Polymarket data API was reachable but "
+      "event": "[[reply_to_current]] Quick heads-up: this run hit a temporary processing error, so there’s no new ma"
     },
     {
-      "time": 1778004347382,
+      "time": 1778007960045,
       "agent": "Cron: Polymarket-vs-crypto lag monitor (24h intensive)",
       "icon": "🤖",
-      "event": "[[reply_to_current]] All-crypto today monitor (Tue May 5, 2026, 2:03 PM ET) — **partial run**  **Pol"
+      "event": "Activity"
     },
     {
       "time": 1777953826173,
