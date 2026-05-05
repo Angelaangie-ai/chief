@@ -1,24 +1,24 @@
 {
-  "generated": "2026-05-05T18:01:42.796Z",
+  "generated": "2026-05-05T18:06:44.781Z",
   "system": {
     "totalAgents": 6,
     "running": 0,
     "idle": 6,
     "errored": 0,
     "completed": 0,
-    "totalCost": 0.061787,
-    "totalTokens": 217531,
+    "totalCost": 0.06451945,
+    "totalTokens": 219776,
     "mainContext": {
-      "used": 159000,
+      "used": 160000,
       "max": 272000,
       "percent": 59,
       "compactions": 0,
       "model": "openai-codex/gpt-5.3-codex",
-      "tokensIn": "1.3k",
-      "tokensOut": "324"
+      "tokensIn": "1.7k",
+      "tokensOut": "93"
     },
     "contextMax": 1288000,
-    "contextUsed": 216518
+    "contextUsed": 218729
   },
   "agents": [
     {
@@ -29,13 +29,13 @@
       "icon": "😏",
       "task": "telegram:g-agent-main-main",
       "model": "gpt-5.3-codex",
-      "started": "2026-05-05T17:13:26.339Z",
-      "lastMessage": "[[reply_to_current]] Agreed — I switched the monitor to use **`https://data-api.polymarket.com` as the primary Polymarke",
+      "started": "2026-05-05T18:06:03.588Z",
+      "lastMessage": "[[reply_to_current]] Quick update: this run was partial — the Polymarket data API was reachable but didn’t expose a usab",
       "tokens": {
-        "input": 159444,
-        "output": 79
+        "input": 159925,
+        "output": 93
       },
-      "cost": 0.030149,
+      "cost": 0.03199315,
       "sessionKey": "agent:main:main",
       "kind": "other",
       "channel": "telegram",
@@ -49,13 +49,13 @@
       "icon": "🤖",
       "task": "Cron: Polymarket-vs-crypto lag monitor (24h intensive)",
       "model": "gpt-5.3-codex",
-      "started": "2026-05-05T17:03:54.863Z",
-      "lastMessage": "[[reply_to_current]] Quick reality check: I could not reliably pull full live market catalogs + resolution timestamps fr",
+      "started": "2026-05-05T18:03:54.856Z",
+      "lastMessage": "[[reply_to_current]] All-crypto today monitor (Tue May 5, 2026, 2:03 PM ET) — **partial run**  **Polymarket (primary: `d",
       "tokens": {
-        "input": 14580,
-        "output": 494
+        "input": 16310,
+        "output": 514
       },
-      "cost": 0.0106582,
+      "cost": 0.0115465,
       "sessionKey": "agent:main:cron:5e001c36-2cf5-4e95-9dfc-f3d65ecdfb72",
       "kind": "other",
       "channel": "unknown",
@@ -144,16 +144,16 @@
   ],
   "feed": [
     {
-      "time": 1778001202063,
+      "time": 1778004358426,
       "agent": "Smartypants",
       "icon": "😏",
-      "event": "[[reply_to_current]] Agreed — I switched the monitor to use **`https://data-api.polymarket.com` as t"
+      "event": "[[reply_to_current]] Quick update: this run was partial — the Polymarket data API was reachable but "
     },
     {
-      "time": 1778000702759,
+      "time": 1778004347382,
       "agent": "Cron: Polymarket-vs-crypto lag monitor (24h intensive)",
       "icon": "🤖",
-      "event": "[[reply_to_current]] Quick reality check: I could not reliably pull full live market catalogs + reso"
+      "event": "[[reply_to_current]] All-crypto today monitor (Tue May 5, 2026, 2:03 PM ET) — **partial run**  **Pol"
     },
     {
       "time": 1777953826173,
