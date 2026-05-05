@@ -1,24 +1,24 @@
 {
-  "generated": "2026-05-05T20:02:33.082Z",
+  "generated": "2026-05-05T20:07:35.163Z",
   "system": {
     "totalAgents": 6,
     "running": 0,
     "idle": 6,
     "errored": 0,
     "completed": 0,
-    "totalCost": 0.05065525,
-    "totalTokens": 317122,
+    "totalCost": 0.06224025,
+    "totalTokens": 224905,
     "mainContext": {
-      "used": 160000,
+      "used": 161000,
       "max": 272000,
       "percent": 59,
       "compactions": 0,
       "model": "openai-codex/gpt-5.3-codex",
-      "tokensIn": "631",
-      "tokensOut": "44"
+      "tokensIn": "818",
+      "tokensOut": "76"
     },
     "contextMax": 1288000,
-    "contextUsed": 316638
+    "contextUsed": 223921
   },
   "agents": [
     {
@@ -29,13 +29,13 @@
       "icon": "😏",
       "task": "telegram:g-agent-main-main",
       "model": "gpt-5.3-codex",
-      "started": "2026-05-05T19:07:05.163Z",
-      "lastMessage": "[[reply_to_current]] Quick heads-up: this run hit a temporary processing error, so there’s no new market read from that ",
+      "started": "2026-05-05T20:06:57.656Z",
+      "lastMessage": "[[reply_to_current]] Good news: Polymarket feed is now yielding usable crypto activity (31 contracts with today trades, ",
       "tokens": {
-        "input": 160375,
-        "output": 44
+        "input": 161074,
+        "output": 76
       },
-      "cost": 0.02967545,
+      "cost": 0.0305403,
       "sessionKey": "agent:main:main",
       "kind": "other",
       "channel": "telegram",
@@ -49,13 +49,13 @@
       "icon": "🤖",
       "task": "Cron: Polymarket-vs-crypto lag monitor (24h intensive)",
       "model": "gpt-5.3-codex",
-      "started": "2026-05-05T19:03:54.864Z",
-      "lastMessage": null,
+      "started": "2026-05-05T20:03:54.856Z",
+      "lastMessage": "[[reply_to_current]] Crypto monitor (May 5, 4:03 PM ET)  Polymarket (primary via `data-api.polymarket.com`): - Found **3",
       "tokens": {
-        "input": 113769,
-        "output": 0
+        "input": 20353,
+        "output": 468
       },
-      "cost": 0,
+      "cost": 0.01072015,
       "sessionKey": "agent:main:cron:5e001c36-2cf5-4e95-9dfc-f3d65ecdfb72",
       "kind": "other",
       "channel": "unknown",
@@ -144,16 +144,16 @@
   ],
   "feed": [
     {
-      "time": 1778008021257,
+      "time": 1778011611334,
       "agent": "Smartypants",
       "icon": "😏",
-      "event": "[[reply_to_current]] Quick heads-up: this run hit a temporary processing error, so there’s no new ma"
+      "event": "[[reply_to_current]] Good news: Polymarket feed is now yielding usable crypto activity (31 contracts"
     },
     {
-      "time": 1778007960045,
+      "time": 1778011601650,
       "agent": "Cron: Polymarket-vs-crypto lag monitor (24h intensive)",
       "icon": "🤖",
-      "event": "Activity"
+      "event": "[[reply_to_current]] Crypto monitor (May 5, 4:03 PM ET)  Polymarket (primary via `data-api.polymarke"
     },
     {
       "time": 1777953826173,
