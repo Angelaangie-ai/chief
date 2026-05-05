@@ -1,24 +1,24 @@
 {
-  "generated": "2026-05-05T03:00:28.729Z",
+  "generated": "2026-05-05T03:05:31.125Z",
   "system": {
     "totalAgents": 6,
     "running": 0,
     "idle": 6,
     "errored": 0,
     "completed": 0,
-    "totalCost": 0.0654991,
-    "totalTokens": 213873,
+    "totalCost": 0.0575513,
+    "totalTokens": 203698,
     "mainContext": {
-      "used": 146000,
+      "used": 147000,
       "max": 272000,
       "percent": 54,
       "compactions": 0,
       "model": "openai-codex/gpt-5.3-codex",
-      "tokensIn": "470",
-      "tokensOut": "34"
+      "tokensIn": "795",
+      "tokensOut": "36"
     },
     "contextMax": 1288000,
-    "contextUsed": 212956
+    "contextUsed": 202832
   },
   "agents": [
     {
@@ -29,13 +29,13 @@
       "icon": "😏",
       "task": "telegram:g-agent-main-main",
       "model": "gpt-5.3-codex",
-      "started": "2026-05-05T02:05:14.468Z",
-      "lastMessage": "[[reply_to_current]] This cycle errored, so no fresh verified read from that pass.   No change to the current no-trade s",
+      "started": "2026-05-05T03:04:45.441Z",
+      "lastMessage": "[[reply_to_current]] This pass errored again, so there’s no new verified snapshot from it.   Status stays unchanged unti",
       "tokens": {
-        "input": 146390,
-        "output": 34
+        "input": 146715,
+        "output": 36
       },
-      "cost": 0.0268345,
+      "cost": 0.02743125,
       "sessionKey": "agent:main:main",
       "kind": "other",
       "channel": "telegram",
@@ -49,13 +49,13 @@
       "icon": "🤖",
       "task": "Cron: Polymarket-vs-crypto lag monitor (24h intensive)",
       "model": "gpt-5.3-codex",
-      "started": "2026-05-05T02:03:54.860Z",
-      "lastMessage": "Crypto lag monitor — Mon May 4, 2026 (as of 10:03 PM ET)  I could not reliably pull same-day resolved crypto contracts f",
+      "started": "2026-05-05T03:03:54.860Z",
+      "lastMessage": "[[reply_to_current]] Crypto monitor (today, Mon May 4, 2026, 11:03 PM ET) — **provisional**  I could not reliably pull *",
       "tokens": {
-        "input": 23591,
-        "output": 444
+        "input": 13142,
+        "output": 391
       },
-      "cost": 0.01766345,
+      "cost": 0.0091189,
       "sessionKey": "agent:main:cron:5e001c36-2cf5-4e95-9dfc-f3d65ecdfb72",
       "kind": "other",
       "channel": "unknown",
@@ -144,16 +144,16 @@
   ],
   "feed": [
     {
-      "time": 1777946709684,
+      "time": 1777950281007,
       "agent": "Smartypants",
       "icon": "😏",
-      "event": "[[reply_to_current]] This cycle errored, so no fresh verified read from that pass.   No change to th"
+      "event": "[[reply_to_current]] This pass errored again, so there’s no new verified snapshot from it.   Status "
     },
     {
-      "time": 1777946700388,
+      "time": 1777950272071,
       "agent": "Cron: Polymarket-vs-crypto lag monitor (24h intensive)",
       "icon": "🤖",
-      "event": "Crypto lag monitor — Mon May 4, 2026 (as of 10:03 PM ET)  I could not reliably pull same-day resolve"
+      "event": "[[reply_to_current]] Crypto monitor (today, Mon May 4, 2026, 11:03 PM ET) — **provisional**  I could"
     },
     {
       "time": 1777867555591,
