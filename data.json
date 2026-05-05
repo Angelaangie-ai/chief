@@ -1,24 +1,24 @@
 {
-  "generated": "2026-05-05T23:03:45.945Z",
+  "generated": "2026-05-05T23:08:47.679Z",
   "system": {
     "totalAgents": 6,
     "running": 0,
     "idle": 6,
     "errored": 0,
     "completed": 0,
-    "totalCost": 0.05923585,
-    "totalTokens": 220504,
+    "totalCost": 0.06666564999999999,
+    "totalTokens": 225608,
     "mainContext": {
-      "used": 162000,
+      "used": 163000,
       "max": 272000,
       "percent": 60,
       "compactions": 0,
       "model": "openai-codex/gpt-5.3-codex",
-      "tokensIn": "902",
-      "tokensOut": "51"
+      "tokensIn": "1.3k",
+      "tokensOut": "87"
     },
     "contextMax": 1288000,
-    "contextUsed": 219729
+    "contextUsed": 224429
   },
   "agents": [
     {
@@ -29,13 +29,13 @@
       "icon": "😏",
       "task": "telegram:g-agent-main-main",
       "model": "gpt-5.3-codex",
-      "started": "2026-05-05T22:05:26.202Z",
-      "lastMessage": "[[reply_to_current]] This pass failed due to a script formatting bug while checking Polymarket routes, so there’s no fre",
+      "started": "2026-05-05T23:07:28.713Z",
+      "lastMessage": "[[reply_to_current]] 7:03 PM snapshot: Polymarket now clearly has active short-expiry crypto contracts (BTC/ETH/SOL/XRP/",
       "tokens": {
-        "input": 162182,
-        "output": 51
+        "input": 163051,
+        "output": 87
       },
-      "cost": 0.0305165,
+      "cost": 0.031734849999999995,
       "sessionKey": "agent:main:main",
       "kind": "other",
       "channel": "telegram",
@@ -49,13 +49,13 @@
       "icon": "🤖",
       "task": "Cron: Polymarket-vs-crypto lag monitor (24h intensive)",
       "model": "gpt-5.3-codex",
-      "started": "2026-05-05T22:03:54.857Z",
-      "lastMessage": "[[reply_to_current]] Crypto monitor (today, near-expiry) — **run at 6:05 PM ET**  - **Polymarket:** Unavailable from thi",
+      "started": "2026-05-05T23:03:54.857Z",
+      "lastMessage": "[[reply_to_current]] All-crypto today monitor (Polymarket primary + Kalshi check) — 7:03 PM ET snapshot  Polymarket (dat",
       "tokens": {
-        "input": 15053,
-        "output": 284
+        "input": 18884,
+        "output": 652
       },
-      "cost": 0.0077395499999999996,
+      "cost": 0.013951,
       "sessionKey": "agent:main:cron:5e001c36-2cf5-4e95-9dfc-f3d65ecdfb72",
       "kind": "other",
       "channel": "unknown",
@@ -144,16 +144,16 @@
   ],
   "feed": [
     {
-      "time": 1778018720055,
+      "time": 1778022442674,
       "agent": "Smartypants",
       "icon": "😏",
-      "event": "[[reply_to_current]] This pass failed due to a script formatting bug while checking Polymarket route"
+      "event": "[[reply_to_current]] 7:03 PM snapshot: Polymarket now clearly has active short-expiry crypto contrac"
     },
     {
-      "time": 1778018713935,
+      "time": 1778022429445,
       "agent": "Cron: Polymarket-vs-crypto lag monitor (24h intensive)",
       "icon": "🤖",
-      "event": "[[reply_to_current]] Crypto monitor (today, near-expiry) — **run at 6:05 PM ET**  - **Polymarket:** "
+      "event": "[[reply_to_current]] All-crypto today monitor (Polymarket primary + Kalshi check) — 7:03 PM ET snaps"
     },
     {
       "time": 1777953826173,
