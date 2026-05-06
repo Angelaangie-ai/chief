@@ -1,24 +1,24 @@
 {
-  "generated": "2026-05-06T06:01:21.763Z",
+  "generated": "2026-05-06T06:06:24.152Z",
   "system": {
     "totalAgents": 6,
     "running": 0,
     "idle": 6,
     "errored": 0,
     "completed": 0,
-    "totalCost": 0.0632997,
-    "totalTokens": 236530,
+    "totalCost": 0.0589317,
+    "totalTokens": 230196,
     "mainContext": {
       "used": 170000,
       "max": 272000,
       "percent": 63,
       "compactions": 0,
       "model": "openai-codex/gpt-5.3-codex",
-      "tokensIn": "558",
-      "tokensOut": "48"
+      "tokensIn": "908",
+      "tokensOut": "35"
     },
     "contextMax": 1288000,
-    "contextUsed": 235672
+    "contextUsed": 229448
   },
   "agents": [
     {
@@ -29,13 +29,13 @@
       "icon": "😏",
       "task": "telegram:g-agent-main-main",
       "model": "gpt-5.3-codex",
-      "started": "2026-05-06T05:06:32.650Z",
-      "lastMessage": "[[reply_to_current]] This run failed due to a shell formatting bug while probing Polymarket routes, so no new market res",
+      "started": "2026-05-06T06:05:58.208Z",
+      "lastMessage": "[[reply_to_current]] This cycle errored again, so no fresh verified read from that pass.   Status remains unchanged unti",
       "tokens": {
-        "input": 170030,
-        "output": 48
+        "input": 170380,
+        "output": 35
       },
-      "cost": 0.031306099999999996,
+      "cost": 0.0317366,
       "sessionKey": "agent:main:main",
       "kind": "other",
       "channel": "telegram",
@@ -49,13 +49,13 @@
       "icon": "🤖",
       "task": "Cron: Polymarket-vs-crypto lag monitor (24h intensive)",
       "model": "gpt-5.3-codex",
-      "started": "2026-05-06T05:03:54.863Z",
-      "lastMessage": "[[reply_to_current]] Run timestamp: 2026-05-06 01:03 ET  Quick status: **No usable same-day crypto contract set detected",
+      "started": "2026-05-06T06:03:54.864Z",
+      "lastMessage": "[[reply_to_current]] Crypto daily/near-expiry monitor (Polymarket + Kalshi) — **Wed May 6, 2026, 2:03 AM ET**  - **Polym",
       "tokens": {
-        "input": 22853,
-        "output": 394
+        "input": 16279,
+        "output": 297
       },
-      "cost": 0.012446349999999998,
+      "cost": 0.00764785,
       "sessionKey": "agent:main:cron:5e001c36-2cf5-4e95-9dfc-f3d65ecdfb72",
       "kind": "other",
       "channel": "unknown",
@@ -144,16 +144,16 @@
   ],
   "feed": [
     {
-      "time": 1778043987265,
+      "time": 1778047552078,
       "agent": "Smartypants",
       "icon": "😏",
-      "event": "[[reply_to_current]] This run failed due to a shell formatting bug while probing Polymarket routes, "
+      "event": "[[reply_to_current]] This cycle errored again, so no fresh verified read from that pass.   Status re"
     },
     {
-      "time": 1778043979050,
+      "time": 1778047545690,
       "agent": "Cron: Polymarket-vs-crypto lag monitor (24h intensive)",
       "icon": "🤖",
-      "event": "[[reply_to_current]] Run timestamp: 2026-05-06 01:03 ET  Quick status: **No usable same-day crypto c"
+      "event": "[[reply_to_current]] Crypto daily/near-expiry monitor (Polymarket + Kalshi) — **Wed May 6, 2026, 2:0"
     },
     {
       "time": 1778040219509,
