@@ -1,24 +1,24 @@
 {
-  "generated": "2026-05-06T09:02:35.396Z",
+  "generated": "2026-05-06T09:07:37.285Z",
   "system": {
     "totalAgents": 6,
     "running": 0,
     "idle": 6,
     "errored": 0,
     "completed": 0,
-    "totalCost": 0.06543785,
-    "totalTokens": 236178,
+    "totalCost": 0.05888235,
+    "totalTokens": 232102,
     "mainContext": {
       "used": 171000,
       "max": 272000,
       "percent": 63,
       "compactions": 0,
       "model": "openai-codex/gpt-5.3-codex",
-      "tokensIn": "610",
-      "tokensOut": "40"
+      "tokensIn": "426",
+      "tokensOut": "41"
     },
     "contextMax": 1288000,
-    "contextUsed": 235161
+    "contextUsed": 231367
   },
   "agents": [
     {
@@ -29,13 +29,13 @@
       "icon": "😏",
       "task": "telegram:g-agent-main-main",
       "model": "gpt-5.3-codex",
-      "started": "2026-05-06T08:07:07.443Z",
-      "lastMessage": "[[reply_to_current]] This run failed again while parsing the Polymarket trades pull, so no trustworthy update from that ",
+      "started": "2026-05-06T09:06:01.651Z",
+      "lastMessage": "[[reply_to_current]] This cycle errored again, so there’s still no fresh verified result from that pass.   No change to ",
       "tokens": {
-        "input": 171106,
-        "output": 40
+        "input": 171434,
+        "output": 41
       },
-      "cost": 0.0314643,
+      "cost": 0.0312459,
       "sessionKey": "agent:main:main",
       "kind": "other",
       "channel": "telegram",
@@ -49,13 +49,13 @@
       "icon": "🤖",
       "task": "Cron: Polymarket-vs-crypto lag monitor (24h intensive)",
       "model": "gpt-5.3-codex",
-      "started": "2026-05-06T08:03:54.858Z",
-      "lastMessage": "[[reply_to_current]] Crypto monitor (today, near-expiry focus) — 4:03 AM ET run  Polymarket (primary: data-api.polymarke",
+      "started": "2026-05-06T09:03:54.856Z",
+      "lastMessage": "[[reply_to_current]] Crypto daily/near-expiry monitor (run @ 5:03 AM ET):  - **Polymarket (primary API: `data-api.polyma",
       "tokens": {
-        "input": 21266,
-        "output": 561
+        "input": 17144,
+        "output": 278
       },
-      "cost": 0.0144263,
+      "cost": 0.0080892,
       "sessionKey": "agent:main:cron:5e001c36-2cf5-4e95-9dfc-f3d65ecdfb72",
       "kind": "other",
       "channel": "unknown",
@@ -144,16 +144,16 @@
   ],
   "feed": [
     {
-      "time": 1778054821060,
+      "time": 1778058354932,
       "agent": "Smartypants",
       "icon": "😏",
-      "event": "[[reply_to_current]] This run failed again while parsing the Polymarket trades pull, so no trustwort"
+      "event": "[[reply_to_current]] This cycle errored again, so there’s still no fresh verified result from that p"
     },
     {
-      "time": 1778054809560,
+      "time": 1778058348863,
       "agent": "Cron: Polymarket-vs-crypto lag monitor (24h intensive)",
       "icon": "🤖",
-      "event": "[[reply_to_current]] Crypto monitor (today, near-expiry focus) — 4:03 AM ET run  Polymarket (primary"
+      "event": "[[reply_to_current]] Crypto daily/near-expiry monitor (run @ 5:03 AM ET):  - **Polymarket (primary A"
     },
     {
       "time": 1778040219509,
