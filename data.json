@@ -1,24 +1,24 @@
 {
-  "generated": "2026-05-06T12:03:45.964Z",
+  "generated": "2026-05-06T12:08:48.257Z",
   "system": {
     "totalAgents": 6,
     "running": 0,
     "idle": 6,
     "errored": 0,
     "completed": 0,
-    "totalCost": 0.06093685,
-    "totalTokens": 232485,
+    "totalCost": 0.061667650000000004,
+    "totalTokens": 234040,
     "mainContext": {
-      "used": 173000,
+      "used": 174000,
       "max": 272000,
       "percent": 64,
       "compactions": 0,
       "model": "openai-codex/gpt-5.3-codex",
-      "tokensIn": "953",
-      "tokensOut": "69"
+      "tokensIn": "1.1k",
+      "tokensOut": "67"
     },
     "contextMax": 1288000,
-    "contextUsed": 231637
+    "contextUsed": 233157
   },
   "agents": [
     {
@@ -29,13 +29,13 @@
       "icon": "😏",
       "task": "telegram:g-agent-main-main",
       "model": "gpt-5.3-codex",
-      "started": "2026-05-06T11:06:03.925Z",
-      "lastMessage": "[[reply_to_current]] 7:03 AM pass was data-constrained again: no usable Polymarket contract pull from the primary routes",
+      "started": "2026-05-06T12:05:45.462Z",
+      "lastMessage": "[[reply_to_current]] 8:03 AM summary: infrastructure is reachable, but contract discovery is still blocked (Polymarket l",
       "tokens": {
-        "input": 172985,
-        "output": 69
+        "input": 173677,
+        "output": 67
       },
-      "cost": 0.03273935,
+      "cost": 0.03311595,
       "sessionKey": "agent:main:main",
       "kind": "other",
       "channel": "telegram",
@@ -49,13 +49,13 @@
       "icon": "🤖",
       "task": "Cron: Polymarket-vs-crypto lag monitor (24h intensive)",
       "model": "gpt-5.3-codex",
-      "started": "2026-05-06T11:03:54.862Z",
-      "lastMessage": "[[reply_to_current]] Crypto daily/near-expiry monitor (run at 7:03 AM ET)  Status - **Polymarket primary (`data-api.poly",
+      "started": "2026-05-06T12:03:54.858Z",
+      "lastMessage": "[[reply_to_current]] All-crypto today monitor (May 6, 2026 08:03 ET) — quick run summary  Polymarket (primary: https://d",
       "tokens": {
-        "input": 15863,
-        "output": 363
+        "input": 16691,
+        "output": 400
       },
-      "cost": 0.00865025,
+      "cost": 0.00900445,
       "sessionKey": "agent:main:cron:5e001c36-2cf5-4e95-9dfc-f3d65ecdfb72",
       "kind": "other",
       "channel": "unknown",
@@ -144,16 +144,16 @@
   ],
   "feed": [
     {
-      "time": 1778065559778,
+      "time": 1778069139200,
       "agent": "Smartypants",
       "icon": "😏",
-      "event": "[[reply_to_current]] 7:03 AM pass was data-constrained again: no usable Polymarket contract pull fro"
+      "event": "[[reply_to_current]] 8:03 AM summary: infrastructure is reachable, but contract discovery is still b"
     },
     {
-      "time": 1778065551750,
+      "time": 1778069130992,
       "agent": "Cron: Polymarket-vs-crypto lag monitor (24h intensive)",
       "icon": "🤖",
-      "event": "[[reply_to_current]] Crypto daily/near-expiry monitor (run at 7:03 AM ET)  Status - **Polymarket pri"
+      "event": "[[reply_to_current]] All-crypto today monitor (May 6, 2026 08:03 ET) — quick run summary  Polymarket"
     },
     {
       "time": 1778040219509,
