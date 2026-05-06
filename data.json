@@ -1,24 +1,24 @@
 {
-  "generated": "2026-05-06T07:01:45.628Z",
+  "generated": "2026-05-06T07:06:47.843Z",
   "system": {
     "totalAgents": 6,
     "running": 0,
     "idle": 6,
     "errored": 0,
     "completed": 0,
-    "totalCost": 0.0589317,
-    "totalTokens": 230196,
+    "totalCost": 0.06034675,
+    "totalTokens": 229229,
     "mainContext": {
-      "used": 170000,
+      "used": 171000,
       "max": 272000,
       "percent": 63,
       "compactions": 0,
       "model": "openai-codex/gpt-5.3-codex",
-      "tokensIn": "908",
-      "tokensOut": "35"
+      "tokensIn": "743",
+      "tokensOut": "44"
     },
     "contextMax": 1288000,
-    "contextUsed": 229448
+    "contextUsed": 228359
   },
   "agents": [
     {
@@ -29,13 +29,13 @@
       "icon": "😏",
       "task": "telegram:g-agent-main-main",
       "model": "gpt-5.3-codex",
-      "started": "2026-05-06T06:05:58.208Z",
-      "lastMessage": "[[reply_to_current]] This cycle errored again, so no fresh verified read from that pass.   Status remains unchanged unti",
+      "started": "2026-05-06T07:05:44.091Z",
+      "lastMessage": "[[reply_to_current]] This pass couldn’t reach the Kalshi API endpoint, so there’s no fresh cross-venue read from that cy",
       "tokens": {
-        "input": 170380,
-        "output": 35
+        "input": 170727,
+        "output": 44
       },
-      "cost": 0.0317366,
+      "cost": 0.031663449999999996,
       "sessionKey": "agent:main:main",
       "kind": "other",
       "channel": "telegram",
@@ -49,13 +49,13 @@
       "icon": "🤖",
       "task": "Cron: Polymarket-vs-crypto lag monitor (24h intensive)",
       "model": "gpt-5.3-codex",
-      "started": "2026-05-06T06:03:54.864Z",
-      "lastMessage": "[[reply_to_current]] Crypto daily/near-expiry monitor (Polymarket + Kalshi) — **Wed May 6, 2026, 2:03 AM ET**  - **Polym",
+      "started": "2026-05-06T07:03:54.864Z",
+      "lastMessage": "[[reply_to_current]] All-crypto today monitor (Polymarket + Kalshi) — **May 6, 2026 03:03 ET**  - **Polymarket:** I coul",
       "tokens": {
-        "input": 16279,
-        "output": 297
+        "input": 14843,
+        "output": 410
       },
-      "cost": 0.00764785,
+      "cost": 0.00913605,
       "sessionKey": "agent:main:cron:5e001c36-2cf5-4e95-9dfc-f3d65ecdfb72",
       "kind": "other",
       "channel": "unknown",
@@ -144,16 +144,16 @@
   ],
   "feed": [
     {
-      "time": 1778047552078,
+      "time": 1778051138063,
       "agent": "Smartypants",
       "icon": "😏",
-      "event": "[[reply_to_current]] This cycle errored again, so no fresh verified read from that pass.   Status re"
+      "event": "[[reply_to_current]] This pass couldn’t reach the Kalshi API endpoint, so there’s no fresh cross-ven"
     },
     {
-      "time": 1778047545690,
+      "time": 1778051129541,
       "agent": "Cron: Polymarket-vs-crypto lag monitor (24h intensive)",
       "icon": "🤖",
-      "event": "[[reply_to_current]] Crypto daily/near-expiry monitor (Polymarket + Kalshi) — **Wed May 6, 2026, 2:0"
+      "event": "[[reply_to_current]] All-crypto today monitor (Polymarket + Kalshi) — **May 6, 2026 03:03 ET**  - **"
     },
     {
       "time": 1778040219509,
