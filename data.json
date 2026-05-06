@@ -1,24 +1,24 @@
 {
-  "generated": "2026-05-06T18:01:26.005Z",
+  "generated": "2026-05-06T18:06:28.189Z",
   "system": {
     "totalAgents": 6,
     "running": 0,
     "idle": 6,
     "errored": 0,
     "completed": 0,
-    "totalCost": 0.0647459,
-    "totalTokens": 237214,
+    "totalCost": 0.0680597,
+    "totalTokens": 239629,
     "mainContext": {
-      "used": 177000,
+      "used": 178000,
       "max": 272000,
       "percent": 65,
       "compactions": 0,
       "model": "openai-codex/gpt-5.3-codex",
-      "tokensIn": "1.0k",
-      "tokensOut": "70"
+      "tokensIn": "1.4k",
+      "tokensOut": "84"
     },
     "contextMax": 1288000,
-    "contextUsed": 236204
+    "contextUsed": 238496
   },
   "agents": [
     {
@@ -29,13 +29,13 @@
       "icon": "😏",
       "task": "telegram:g-agent-main-main",
       "model": "gpt-5.3-codex",
-      "started": "2026-05-06T17:05:53.962Z",
-      "lastMessage": "[[reply_to_current]] 1:03 PM update: we can hit Polymarket health/trades, but not a usable market metadata route in this",
+      "started": "2026-05-06T18:05:47.382Z",
+      "lastMessage": "[[reply_to_current]] 2:03 PM update: Polymarket is clearly active with short-expiry crypto contracts (mostly 5m/15m BTC/",
       "tokens": {
-        "input": 177153,
-        "output": 70
+        "input": 178047,
+        "output": 84
       },
-      "cost": 0.03359615,
+      "cost": 0.03455025,
       "sessionKey": "agent:main:main",
       "kind": "other",
       "channel": "telegram",
@@ -49,13 +49,13 @@
       "icon": "🤖",
       "task": "Cron: Polymarket-vs-crypto lag monitor (24h intensive)",
       "model": "gpt-5.3-codex",
-      "started": "2026-05-06T17:03:54.861Z",
-      "lastMessage": "[[reply_to_current]] Crypto monitor (run @ 1:03 PM ET) — concise update:  1) **Polymarket (primary: `data-api.polymarket",
+      "started": "2026-05-06T18:03:54.864Z",
+      "lastMessage": "[[reply_to_current]] Crypto daily monitor (Polymarket + Kalshi) — **May 6, 2026, 2:03 PM ET**  **Polymarket (primary sou",
       "tokens": {
-        "input": 16262,
-        "output": 524
+        "input": 17660,
+        "output": 633
       },
-      "cost": 0.011602499999999998,
+      "cost": 0.013962200000000001,
       "sessionKey": "agent:main:cron:5e001c36-2cf5-4e95-9dfc-f3d65ecdfb72",
       "kind": "other",
       "channel": "unknown",
@@ -144,16 +144,16 @@
   ],
   "feed": [
     {
-      "time": 1778087147411,
+      "time": 1778090734818,
       "agent": "Smartypants",
       "icon": "😏",
-      "event": "[[reply_to_current]] 1:03 PM update: we can hit Polymarket health/trades, but not a usable market me"
+      "event": "[[reply_to_current]] 2:03 PM update: Polymarket is clearly active with short-expiry crypto contracts"
     },
     {
-      "time": 1778087135740,
+      "time": 1778090722165,
       "agent": "Cron: Polymarket-vs-crypto lag monitor (24h intensive)",
       "icon": "🤖",
-      "event": "[[reply_to_current]] Crypto monitor (run @ 1:03 PM ET) — concise update:  1) **Polymarket (primary: "
+      "event": "[[reply_to_current]] Crypto daily monitor (Polymarket + Kalshi) — **May 6, 2026, 2:03 PM ET**  **Pol"
     },
     {
       "time": 1778040219509,
