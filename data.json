@@ -1,24 +1,24 @@
 {
-  "generated": "2026-05-06T19:01:51.912Z",
+  "generated": "2026-05-06T19:06:54.097Z",
   "system": {
     "totalAgents": 6,
     "running": 0,
     "idle": 6,
     "errored": 0,
     "completed": 0,
-    "totalCost": 0.0680597,
-    "totalTokens": 239629,
+    "totalCost": 0.0675011,
+    "totalTokens": 239619,
     "mainContext": {
-      "used": 178000,
+      "used": 179000,
       "max": 272000,
-      "percent": 65,
+      "percent": 66,
       "compactions": 0,
       "model": "openai-codex/gpt-5.3-codex",
-      "tokensIn": "1.4k",
+      "tokensIn": "1.2k",
       "tokensOut": "84"
     },
     "contextMax": 1288000,
-    "contextUsed": 238496
+    "contextUsed": 238596
   },
   "agents": [
     {
@@ -29,13 +29,13 @@
       "icon": "😏",
       "task": "telegram:g-agent-main-main",
       "model": "gpt-5.3-codex",
-      "started": "2026-05-06T18:05:47.382Z",
-      "lastMessage": "[[reply_to_current]] 2:03 PM update: Polymarket is clearly active with short-expiry crypto contracts (mostly 5m/15m BTC/",
+      "started": "2026-05-06T19:05:42.183Z",
+      "lastMessage": "[[reply_to_current]] 3:03 PM run shows Polymarket actively trading near-expiry crypto windows (especially BTC/ETH 5m/15m",
       "tokens": {
-        "input": 178047,
+        "input": 178854,
         "output": 84
       },
-      "cost": 0.03455025,
+      "cost": 0.0343497,
       "sessionKey": "agent:main:main",
       "kind": "other",
       "channel": "telegram",
@@ -49,13 +49,13 @@
       "icon": "🤖",
       "task": "Cron: Polymarket-vs-crypto lag monitor (24h intensive)",
       "model": "gpt-5.3-codex",
-      "started": "2026-05-06T18:03:54.864Z",
-      "lastMessage": "[[reply_to_current]] Crypto daily monitor (Polymarket + Kalshi) — **May 6, 2026, 2:03 PM ET**  **Polymarket (primary sou",
+      "started": "2026-05-06T19:03:54.863Z",
+      "lastMessage": "[[reply_to_current]] Crypto monitor (today / near-expiry) — 3:03 PM ET run  Polymarket (primary API: `data-api.polymarke",
       "tokens": {
-        "input": 17660,
-        "output": 633
+        "input": 16953,
+        "output": 523
       },
-      "cost": 0.013962200000000001,
+      "cost": 0.013604149999999999,
       "sessionKey": "agent:main:cron:5e001c36-2cf5-4e95-9dfc-f3d65ecdfb72",
       "kind": "other",
       "channel": "unknown",
@@ -144,16 +144,16 @@
   ],
   "feed": [
     {
-      "time": 1778090734818,
+      "time": 1778094335259,
       "agent": "Smartypants",
       "icon": "😏",
-      "event": "[[reply_to_current]] 2:03 PM update: Polymarket is clearly active with short-expiry crypto contracts"
+      "event": "[[reply_to_current]] 3:03 PM run shows Polymarket actively trading near-expiry crypto windows (espec"
     },
     {
-      "time": 1778090722165,
+      "time": 1778094324614,
       "agent": "Cron: Polymarket-vs-crypto lag monitor (24h intensive)",
       "icon": "🤖",
-      "event": "[[reply_to_current]] Crypto daily monitor (Polymarket + Kalshi) — **May 6, 2026, 2:03 PM ET**  **Pol"
+      "event": "[[reply_to_current]] Crypto monitor (today / near-expiry) — 3:03 PM ET run  Polymarket (primary API:"
     },
     {
       "time": 1778040219509,
