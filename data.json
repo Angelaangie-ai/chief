@@ -1,26 +1,46 @@
 {
-  "generated": "2026-05-06T02:04:54.992Z",
+  "generated": "2026-05-06T02:09:56.818Z",
   "system": {
     "totalAgents": 6,
     "running": 0,
     "idle": 6,
     "errored": 0,
     "completed": 0,
-    "totalCost": 0.05506874999999999,
-    "totalTokens": 218992,
+    "totalCost": 0.06471194999999999,
+    "totalTokens": 224977,
     "mainContext": {
       "used": 164000,
       "max": 272000,
       "percent": 60,
       "compactions": 0,
       "model": "openai-codex/gpt-5.3-codex",
-      "tokensIn": "478",
-      "tokensOut": "39"
+      "tokensIn": "825",
+      "tokensOut": "40"
     },
     "contextMax": 1288000,
-    "contextUsed": 218407
+    "contextUsed": 223999
   },
   "agents": [
+    {
+      "id": "agent:main:main",
+      "name": "Smartypants",
+      "role": "Core Assistant",
+      "status": "idle",
+      "icon": "😏",
+      "task": "telegram:g-agent-main-main",
+      "model": "gpt-5.3-codex",
+      "started": "2026-05-06T02:05:57.081Z",
+      "lastMessage": "[[reply_to_current]] This pass failed while parsing the Polymarket trades call, so no fresh trusted read from that cycle",
+      "tokens": {
+        "input": 164153,
+        "output": 40
+      },
+      "cost": 0.030586149999999996,
+      "sessionKey": "agent:main:main",
+      "kind": "other",
+      "channel": "telegram",
+      "contextWindow": 272000
+    },
     {
       "id": "agent:main:cron:5e001c36-2cf5-4e95-9dfc-f3d65ecdfb72",
       "name": "Cron: Polymarket-vs-crypto lag monitor (24h intensive)",
@@ -30,35 +50,15 @@
       "task": "Cron: Polymarket-vs-crypto lag monitor (24h intensive)",
       "model": "gpt-5.3-codex",
       "started": "2026-05-06T02:03:54.862Z",
-      "lastMessage": null,
+      "lastMessage": "[[reply_to_current]] Crypto monitor (Polymarket + Kalshi) — Tue May 5, 2026, 10:03 PM ET  Polymarket (primary via `data-",
       "tokens": {
-        "input": 12107,
-        "output": 106
+        "input": 17352,
+        "output": 498
       },
-      "cost": 0.00412405,
+      "cost": 0.013146,
       "sessionKey": "agent:main:cron:5e001c36-2cf5-4e95-9dfc-f3d65ecdfb72",
       "kind": "other",
       "channel": "unknown",
-      "contextWindow": 272000
-    },
-    {
-      "id": "agent:main:main",
-      "name": "Smartypants",
-      "role": "Core Assistant",
-      "status": "idle",
-      "icon": "😏",
-      "task": "telegram:g-agent-main-main",
-      "model": "gpt-5.3-codex",
-      "started": "2026-05-06T01:04:57.064Z",
-      "lastMessage": "[[reply_to_current]] This cycle errored again, so there’s no fresh verified result from it.   No change to the current n",
-      "tokens": {
-        "input": 163806,
-        "output": 39
-      },
-      "cost": 0.029964899999999996,
-      "sessionKey": "agent:main:main",
-      "kind": "other",
-      "channel": "telegram",
       "contextWindow": 272000
     },
     {
@@ -144,16 +144,16 @@
   ],
   "feed": [
     {
-      "time": 1778033089769,
-      "agent": "Cron: Polymarket-vs-crypto lag monitor (24h intensive)",
-      "icon": "🤖",
-      "event": "Activity"
-    },
-    {
-      "time": 1778029493552,
+      "time": 1778033153213,
       "agent": "Smartypants",
       "icon": "😏",
-      "event": "[[reply_to_current]] This cycle errored again, so there’s no fresh verified result from it.   No cha"
+      "event": "[[reply_to_current]] This pass failed while parsing the Polymarket trades call, so no fresh trusted "
+    },
+    {
+      "time": 1778033140604,
+      "agent": "Cron: Polymarket-vs-crypto lag monitor (24h intensive)",
+      "icon": "🤖",
+      "event": "[[reply_to_current]] Crypto monitor (Polymarket + Kalshi) — Tue May 5, 2026, 10:03 PM ET  Polymarket"
     },
     {
       "time": 1777953826173,
