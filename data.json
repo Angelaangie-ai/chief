@@ -1,24 +1,24 @@
 {
-  "generated": "2026-05-06T11:03:22.200Z",
+  "generated": "2026-05-06T11:08:24.077Z",
   "system": {
     "totalAgents": 6,
     "running": 0,
     "idle": 6,
     "errored": 0,
     "completed": 0,
-    "totalCost": 0.06782695,
-    "totalTokens": 235077,
+    "totalCost": 0.06093685,
+    "totalTokens": 232485,
     "mainContext": {
-      "used": 172000,
+      "used": 173000,
       "max": 272000,
-      "percent": 63,
+      "percent": 64,
       "compactions": 0,
       "model": "openai-codex/gpt-5.3-codex",
-      "tokensIn": "1.3k",
-      "tokensOut": "85"
+      "tokensIn": "953",
+      "tokensOut": "69"
     },
     "contextMax": 1288000,
-    "contextUsed": 233971
+    "contextUsed": 231637
   },
   "agents": [
     {
@@ -29,13 +29,13 @@
       "icon": "😏",
       "task": "telegram:g-agent-main-main",
       "model": "gpt-5.3-codex",
-      "started": "2026-05-06T10:05:35.748Z",
-      "lastMessage": "[[reply_to_current]] 6:03 AM read is finally clean on Polymarket: heavy near-expiry crypto activity is live (lots of 5m/",
+      "started": "2026-05-06T11:06:03.925Z",
+      "lastMessage": "[[reply_to_current]] 7:03 AM pass was data-constrained again: no usable Polymarket contract pull from the primary routes",
       "tokens": {
-        "input": 172298,
-        "output": 85
+        "input": 172985,
+        "output": 69
       },
-      "cost": 0.0333739,
+      "cost": 0.03273935,
       "sessionKey": "agent:main:main",
       "kind": "other",
       "channel": "telegram",
@@ -49,13 +49,13 @@
       "icon": "🤖",
       "task": "Cron: Polymarket-vs-crypto lag monitor (24h intensive)",
       "model": "gpt-5.3-codex",
-      "started": "2026-05-06T10:03:54.859Z",
-      "lastMessage": "[[reply_to_current]] Crypto monitor (run time: Wed May 6, 2026, 6:03 AM ET)  Polymarket (primary: data-api.polymarket.co",
+      "started": "2026-05-06T11:03:54.862Z",
+      "lastMessage": "[[reply_to_current]] Crypto daily/near-expiry monitor (run at 7:03 AM ET)  Status - **Polymarket primary (`data-api.poly",
       "tokens": {
-        "input": 18884,
-        "output": 605
+        "input": 15863,
+        "output": 363
       },
-      "cost": 0.0149058,
+      "cost": 0.00865025,
       "sessionKey": "agent:main:cron:5e001c36-2cf5-4e95-9dfc-f3d65ecdfb72",
       "kind": "other",
       "channel": "unknown",
@@ -144,16 +144,16 @@
   ],
   "feed": [
     {
-      "time": 1778061929835,
+      "time": 1778065559778,
       "agent": "Smartypants",
       "icon": "😏",
-      "event": "[[reply_to_current]] 6:03 AM read is finally clean on Polymarket: heavy near-expiry crypto activity "
+      "event": "[[reply_to_current]] 7:03 AM pass was data-constrained again: no usable Polymarket contract pull fro"
     },
     {
-      "time": 1778061917923,
+      "time": 1778065551750,
       "agent": "Cron: Polymarket-vs-crypto lag monitor (24h intensive)",
       "icon": "🤖",
-      "event": "[[reply_to_current]] Crypto monitor (run time: Wed May 6, 2026, 6:03 AM ET)  Polymarket (primary: da"
+      "event": "[[reply_to_current]] Crypto daily/near-expiry monitor (run at 7:03 AM ET)  Status - **Polymarket pri"
     },
     {
       "time": 1778040219509,
