@@ -1,13 +1,13 @@
 {
-  "generated": "2026-05-06T12:59:09.889Z",
+  "generated": "2026-05-06T13:04:11.721Z",
   "system": {
     "totalAgents": 6,
     "running": 0,
     "idle": 6,
     "errored": 0,
     "completed": 0,
-    "totalCost": 0.061667650000000004,
-    "totalTokens": 234040,
+    "totalCost": 0.0526632,
+    "totalTokens": 216949,
     "mainContext": {
       "used": 174000,
       "max": 272000,
@@ -18,9 +18,29 @@
       "tokensOut": "67"
     },
     "contextMax": 1288000,
-    "contextUsed": 233157
+    "contextUsed": 216466
   },
   "agents": [
+    {
+      "id": "agent:main:cron:5e001c36-2cf5-4e95-9dfc-f3d65ecdfb72",
+      "name": "Cron: Polymarket-vs-crypto lag monitor (24h intensive)",
+      "role": "Sub-Agent",
+      "status": "idle",
+      "icon": "🤖",
+      "task": "Cron: Polymarket-vs-crypto lag monitor (24h intensive)",
+      "model": "gpt-5.3-codex",
+      "started": "2026-05-06T13:03:54.866Z",
+      "lastMessage": null,
+      "tokens": {
+        "input": 0,
+        "output": 0
+      },
+      "cost": 0,
+      "sessionKey": "agent:main:cron:5e001c36-2cf5-4e95-9dfc-f3d65ecdfb72",
+      "kind": "other",
+      "channel": "unknown",
+      "contextWindow": 272000
+    },
     {
       "id": "agent:main:main",
       "name": "Smartypants",
@@ -39,26 +59,6 @@
       "sessionKey": "agent:main:main",
       "kind": "other",
       "channel": "telegram",
-      "contextWindow": 272000
-    },
-    {
-      "id": "agent:main:cron:5e001c36-2cf5-4e95-9dfc-f3d65ecdfb72",
-      "name": "Cron: Polymarket-vs-crypto lag monitor (24h intensive)",
-      "role": "Sub-Agent",
-      "status": "idle",
-      "icon": "🤖",
-      "task": "Cron: Polymarket-vs-crypto lag monitor (24h intensive)",
-      "model": "gpt-5.3-codex",
-      "started": "2026-05-06T12:03:54.858Z",
-      "lastMessage": "[[reply_to_current]] All-crypto today monitor (May 6, 2026 08:03 ET) — quick run summary  Polymarket (primary: https://d",
-      "tokens": {
-        "input": 16691,
-        "output": 400
-      },
-      "cost": 0.00900445,
-      "sessionKey": "agent:main:cron:5e001c36-2cf5-4e95-9dfc-f3d65ecdfb72",
-      "kind": "other",
-      "channel": "unknown",
       "contextWindow": 272000
     },
     {
@@ -148,12 +148,6 @@
       "agent": "Smartypants",
       "icon": "😏",
       "event": "[[reply_to_current]] 8:03 AM summary: infrastructure is reachable, but contract discovery is still b"
-    },
-    {
-      "time": 1778069130992,
-      "agent": "Cron: Polymarket-vs-crypto lag monitor (24h intensive)",
-      "icon": "🤖",
-      "event": "[[reply_to_current]] All-crypto today monitor (May 6, 2026 08:03 ET) — quick run summary  Polymarket"
     },
     {
       "time": 1778040219509,
