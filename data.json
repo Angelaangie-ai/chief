@@ -1,13 +1,13 @@
 {
-  "generated": "2026-05-06T01:59:52.857Z",
+  "generated": "2026-05-06T02:04:54.992Z",
   "system": {
     "totalAgents": 6,
     "running": 0,
     "idle": 6,
     "errored": 0,
     "completed": 0,
-    "totalCost": 0.0605326,
-    "totalTokens": 225601,
+    "totalCost": 0.05506874999999999,
+    "totalTokens": 218992,
     "mainContext": {
       "used": 164000,
       "max": 272000,
@@ -18,9 +18,29 @@
       "tokensOut": "39"
     },
     "contextMax": 1288000,
-    "contextUsed": 224790
+    "contextUsed": 218407
   },
   "agents": [
+    {
+      "id": "agent:main:cron:5e001c36-2cf5-4e95-9dfc-f3d65ecdfb72",
+      "name": "Cron: Polymarket-vs-crypto lag monitor (24h intensive)",
+      "role": "Sub-Agent",
+      "status": "idle",
+      "icon": "🤖",
+      "task": "Cron: Polymarket-vs-crypto lag monitor (24h intensive)",
+      "model": "gpt-5.3-codex",
+      "started": "2026-05-06T02:03:54.862Z",
+      "lastMessage": null,
+      "tokens": {
+        "input": 12107,
+        "output": 106
+      },
+      "cost": 0.00412405,
+      "sessionKey": "agent:main:cron:5e001c36-2cf5-4e95-9dfc-f3d65ecdfb72",
+      "kind": "other",
+      "channel": "unknown",
+      "contextWindow": 272000
+    },
     {
       "id": "agent:main:main",
       "name": "Smartypants",
@@ -39,26 +59,6 @@
       "sessionKey": "agent:main:main",
       "kind": "other",
       "channel": "telegram",
-      "contextWindow": 272000
-    },
-    {
-      "id": "agent:main:cron:5e001c36-2cf5-4e95-9dfc-f3d65ecdfb72",
-      "name": "Cron: Polymarket-vs-crypto lag monitor (24h intensive)",
-      "role": "Sub-Agent",
-      "status": "idle",
-      "icon": "🤖",
-      "task": "Cron: Polymarket-vs-crypto lag monitor (24h intensive)",
-      "model": "gpt-5.3-codex",
-      "started": "2026-05-06T01:03:54.862Z",
-      "lastMessage": "Crypto monitor run (Tue May 5, 9:03 PM ET):  Polymarket (primary: `data-api.polymarket.com`) - Status: **Unavailable fro",
-      "tokens": {
-        "input": 18490,
-        "output": 332
-      },
-      "cost": 0.0095879,
-      "sessionKey": "agent:main:cron:5e001c36-2cf5-4e95-9dfc-f3d65ecdfb72",
-      "kind": "other",
-      "channel": "unknown",
       "contextWindow": 272000
     },
     {
@@ -144,16 +144,16 @@
   ],
   "feed": [
     {
+      "time": 1778033089769,
+      "agent": "Cron: Polymarket-vs-crypto lag monitor (24h intensive)",
+      "icon": "🤖",
+      "event": "Activity"
+    },
+    {
       "time": 1778029493552,
       "agent": "Smartypants",
       "icon": "😏",
       "event": "[[reply_to_current]] This cycle errored again, so there’s no fresh verified result from it.   No cha"
-    },
-    {
-      "time": 1778029486201,
-      "agent": "Cron: Polymarket-vs-crypto lag monitor (24h intensive)",
-      "icon": "🤖",
-      "event": "Crypto monitor run (Tue May 5, 9:03 PM ET):  Polymarket (primary: `data-api.polymarket.com`) - Statu"
     },
     {
       "time": 1777953826173,
