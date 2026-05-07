@@ -1,13 +1,13 @@
 {
-  "generated": "2026-05-07T03:40:44.643Z",
+  "generated": "2026-05-07T03:45:46.928Z",
   "system": {
     "totalAgents": 6,
     "running": 0,
     "idle": 6,
     "errored": 0,
     "completed": 0,
-    "totalCost": 0.08172229999999998,
-    "totalTokens": 251749,
+    "totalCost": 0.07686744999999999,
+    "totalTokens": 237750,
     "mainContext": {
       "used": 183000,
       "max": 272000,
@@ -18,9 +18,29 @@
       "tokensOut": "37"
     },
     "contextMax": 1288000,
-    "contextUsed": 250508
+    "contextUsed": 236617
   },
   "agents": [
+    {
+      "id": "agent:main:cron:2f897fff-e194-4ce8-9e93-31745cc34a67",
+      "name": "Cron: Tonight close-window high-cadence monitor (11:45pm-12:05am ET)",
+      "role": "Sub-Agent",
+      "status": "idle",
+      "icon": "🤖",
+      "task": "Cron: Tonight close-window high-cadence monitor (11:45pm-12:05am ET)",
+      "model": "gpt-5.3-codex",
+      "started": "2026-05-07T03:45:00.029Z",
+      "lastMessage": null,
+      "tokens": {
+        "input": 0,
+        "output": 0
+      },
+      "cost": 0,
+      "sessionKey": "agent:main:cron:2f897fff-e194-4ce8-9e93-31745cc34a67",
+      "kind": "other",
+      "channel": "unknown",
+      "contextWindow": 272000
+    },
     {
       "id": "agent:main:main",
       "name": "Smartypants",
@@ -77,26 +97,6 @@
       },
       "cost": 0.0068558,
       "sessionKey": "agent:main:cron:556cff28-9226-4281-a580-a9ecc84b24fb",
-      "kind": "other",
-      "channel": "unknown",
-      "contextWindow": 272000
-    },
-    {
-      "id": "agent:main:cron:2f897fff-e194-4ce8-9e93-31745cc34a67",
-      "name": "Cron: Tonight close-window high-cadence monitor (11:45pm-12:05am ET)",
-      "role": "Sub-Agent",
-      "status": "idle",
-      "icon": "🤖",
-      "task": "Cron: Tonight close-window high-cadence monitor (11:45pm-12:05am ET)",
-      "model": "gpt-5.3-codex",
-      "started": "2026-05-06T03:57:00.028Z",
-      "lastMessage": "[[reply_to_current]] No actionable lag events detected in the 11:45pm–12:05am ET close window tonight.  Kalshi: no tonig",
-      "tokens": {
-        "input": 13891,
-        "output": 108
-      },
-      "cost": 0.004854849999999999,
-      "sessionKey": "agent:main:cron:2f897fff-e194-4ce8-9e93-31745cc34a67",
       "kind": "other",
       "channel": "unknown",
       "contextWindow": 272000
@@ -160,12 +160,6 @@
       "agent": "Cron: Tonight close-window high-cadence monitor (12:00am-12:05am ET)",
       "icon": "🤖",
       "event": "No actionable lag events detected in this 12:00–12:05am ET close-window check (TONIGHT-only scope). "
-    },
-    {
-      "time": 1778039985809,
-      "agent": "Cron: Tonight close-window high-cadence monitor (11:45pm-12:05am ET)",
-      "icon": "🤖",
-      "event": "[[reply_to_current]] No actionable lag events detected in the 11:45pm–12:05am ET close window tonigh"
     },
     {
       "time": 1776015146910,
