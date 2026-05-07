@@ -1,26 +1,46 @@
 {
-  "generated": "2026-05-07T14:05:03.373Z",
+  "generated": "2026-05-07T14:10:05.548Z",
   "system": {
     "totalAgents": 6,
     "running": 0,
     "idle": 6,
     "errored": 0,
     "completed": 0,
-    "totalCost": 0.05719535,
-    "totalTokens": 243813,
+    "totalCost": 0.06376099999999998,
+    "totalTokens": 259024,
     "mainContext": {
-      "used": 193000,
+      "used": 194000,
       "max": 272000,
       "percent": 71,
       "compactions": 0,
       "model": "openai-codex/gpt-5.3-codex",
-      "tokensIn": "1.1k",
-      "tokensOut": "69"
+      "tokensIn": "676",
+      "tokensOut": "60"
     },
     "contextMax": 1288000,
-    "contextUsed": 243243
+    "contextUsed": 258182
   },
   "agents": [
+    {
+      "id": "agent:main:main",
+      "name": "Smartypants",
+      "role": "Core Assistant",
+      "status": "idle",
+      "icon": "😏",
+      "task": "telegram:g-agent-main-main",
+      "model": "gpt-5.3-codex",
+      "started": "2026-05-07T14:05:20.370Z",
+      "lastMessage": "[[reply_to_current]] 10:03 ET run was a data-access outage pass (Polymarket endpoint path blocked in this runtime + Kals",
+      "tokens": {
+        "input": 193700,
+        "output": 60
+      },
+      "cost": 0.03580219999999999,
+      "sessionKey": "agent:main:main",
+      "kind": "other",
+      "channel": "telegram",
+      "contextWindow": 272000
+    },
     {
       "id": "agent:main:cron:5e001c36-2cf5-4e95-9dfc-f3d65ecdfb72",
       "name": "Cron: Polymarket-vs-crypto lag monitor (24h intensive)",
@@ -30,35 +50,15 @@
       "task": "Cron: Polymarket-vs-crypto lag monitor (24h intensive)",
       "model": "gpt-5.3-codex",
       "started": "2026-05-07T14:03:54.861Z",
-      "lastMessage": null,
+      "lastMessage": "[[reply_to_current]] Crypto monitor run (Thu May 7, 2026, 10:03 ET)  Status: - **Polymarket (primary: `data-api.polymark",
       "tokens": {
-        "input": 0,
-        "output": 0
+        "input": 14370,
+        "output": 281
       },
-      "cost": 0,
+      "cost": 0.0073087,
       "sessionKey": "agent:main:cron:5e001c36-2cf5-4e95-9dfc-f3d65ecdfb72",
       "kind": "other",
       "channel": "unknown",
-      "contextWindow": 272000
-    },
-    {
-      "id": "agent:main:main",
-      "name": "Smartypants",
-      "role": "Core Assistant",
-      "status": "idle",
-      "icon": "😏",
-      "task": "telegram:g-agent-main-main",
-      "model": "gpt-5.3-codex",
-      "started": "2026-05-07T13:05:38.131Z",
-      "lastMessage": "[[reply_to_current]] 9:03 AM run is effectively data-unavailable for cross-venue analysis: Polymarket market listings st",
-      "tokens": {
-        "input": 193131,
-        "output": 69
-      },
-      "cost": 0.03654525,
-      "sessionKey": "agent:main:main",
-      "kind": "other",
-      "channel": "telegram",
       "contextWindow": 272000
     },
     {
@@ -144,10 +144,16 @@
   ],
   "feed": [
     {
-      "time": 1778159130321,
+      "time": 1778162710598,
       "agent": "Smartypants",
       "icon": "😏",
-      "event": "[[reply_to_current]] 9:03 AM run is effectively data-unavailable for cross-venue analysis: Polymarke"
+      "event": "[[reply_to_current]] 10:03 ET run was a data-access outage pass (Polymarket endpoint path blocked in"
+    },
+    {
+      "time": 1778162704443,
+      "agent": "Cron: Polymarket-vs-crypto lag monitor (24h intensive)",
+      "icon": "🤖",
+      "event": "[[reply_to_current]] Crypto monitor run (Thu May 7, 2026, 10:03 ET)  Status: - **Polymarket (primary"
     },
     {
       "time": 1778126572848,
