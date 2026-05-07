@@ -1,26 +1,46 @@
 {
-  "generated": "2026-05-07T04:00:52.356Z",
+  "generated": "2026-05-07T04:05:54.230Z",
   "system": {
     "totalAgents": 6,
     "running": 0,
     "idle": 6,
     "errored": 0,
     "completed": 0,
-    "totalCost": 0.08259485,
-    "totalTokens": 260780,
+    "totalCost": 0.05519684999999999,
+    "totalTokens": 238210,
     "mainContext": {
-      "used": 187000,
+      "used": 188000,
       "max": 272000,
       "percent": 69,
       "compactions": 0,
       "model": "openai-codex/gpt-5.3-codex",
-      "tokensIn": "440",
-      "tokensOut": "32"
+      "tokensIn": "669",
+      "tokensOut": "48"
     },
     "contextMax": 1288000,
-    "contextUsed": 259573
+    "contextUsed": 237661
   },
   "agents": [
+    {
+      "id": "agent:main:cron:5e001c36-2cf5-4e95-9dfc-f3d65ecdfb72",
+      "name": "Cron: Polymarket-vs-crypto lag monitor (24h intensive)",
+      "role": "Sub-Agent",
+      "status": "idle",
+      "icon": "🤖",
+      "task": "Cron: Polymarket-vs-crypto lag monitor (24h intensive)",
+      "model": "gpt-5.3-codex",
+      "started": "2026-05-07T04:03:54.857Z",
+      "lastMessage": null,
+      "tokens": {
+        "input": 0,
+        "output": 0
+      },
+      "cost": 0,
+      "sessionKey": "agent:main:cron:5e001c36-2cf5-4e95-9dfc-f3d65ecdfb72",
+      "kind": "other",
+      "channel": "unknown",
+      "contextWindow": 272000
+    },
     {
       "id": "agent:main:main",
       "name": "Smartypants",
@@ -29,16 +49,36 @@
       "icon": "😏",
       "task": "telegram:g-agent-main-main",
       "model": "gpt-5.3-codex",
-      "started": "2026-05-07T04:00:03.041Z",
-      "lastMessage": "[[reply_to_current]] This minute check errored, so no fresh signal from that pass.   No change to the close-window statu",
+      "started": "2026-05-07T04:03:05.623Z",
+      "lastMessage": "[[reply_to_current]] 12:00–12:05 AM close-window check remains no-trade — no actionable lag events across Kalshi + Polym",
       "tokens": {
-        "input": 186808,
-        "output": 32
+        "input": 187549,
+        "output": 48
       },
-      "cost": 0.0338324,
+      "cost": 0.034546749999999994,
       "sessionKey": "agent:main:main",
       "kind": "other",
       "channel": "telegram",
+      "contextWindow": 272000
+    },
+    {
+      "id": "agent:main:cron:556cff28-9226-4281-a580-a9ecc84b24fb",
+      "name": "Cron: Tonight close-window high-cadence monitor (12:00am-12:05am ET)",
+      "role": "Sub-Agent",
+      "status": "idle",
+      "icon": "🤖",
+      "task": "Cron: Tonight close-window high-cadence monitor (12:00am-12:05am ET)",
+      "model": "gpt-5.3-codex",
+      "started": "2026-05-07T04:02:00.018Z",
+      "lastMessage": "[[reply_to_current]] No actionable lag events detected in the 12:00–12:05am ET close window for tonight-expiring **crypt",
+      "tokens": {
+        "input": 15523,
+        "output": 268
+      },
+      "cost": 0.00753165,
+      "sessionKey": "agent:main:cron:556cff28-9226-4281-a580-a9ecc84b24fb",
+      "kind": "other",
+      "channel": "unknown",
       "contextWindow": 272000
     },
     {
@@ -57,46 +97,6 @@
       },
       "cost": 0.005281849999999999,
       "sessionKey": "agent:main:cron:2f897fff-e194-4ce8-9e93-31745cc34a67",
-      "kind": "other",
-      "channel": "unknown",
-      "contextWindow": 272000
-    },
-    {
-      "id": "agent:main:cron:5e001c36-2cf5-4e95-9dfc-f3d65ecdfb72",
-      "name": "Cron: Polymarket-vs-crypto lag monitor (24h intensive)",
-      "role": "Sub-Agent",
-      "status": "idle",
-      "icon": "🤖",
-      "task": "Cron: Polymarket-vs-crypto lag monitor (24h intensive)",
-      "model": "gpt-5.3-codex",
-      "started": "2026-05-07T03:03:54.863Z",
-      "lastMessage": "[[reply_to_current]] Crypto monitor (Polymarket + Kalshi) — Wed May 6, 11:03 PM ET run  Polymarket (primary API: data-ap",
-      "tokens": {
-        "input": 24892,
-        "output": 788
-      },
-      "cost": 0.0287882,
-      "sessionKey": "agent:main:cron:5e001c36-2cf5-4e95-9dfc-f3d65ecdfb72",
-      "kind": "other",
-      "channel": "unknown",
-      "contextWindow": 272000
-    },
-    {
-      "id": "agent:main:cron:556cff28-9226-4281-a580-a9ecc84b24fb",
-      "name": "Cron: Tonight close-window high-cadence monitor (12:00am-12:05am ET)",
-      "role": "Sub-Agent",
-      "status": "idle",
-      "icon": "🤖",
-      "task": "Cron: Tonight close-window high-cadence monitor (12:00am-12:05am ET)",
-      "model": "gpt-5.3-codex",
-      "started": "2026-05-06T04:03:00.022Z",
-      "lastMessage": "No actionable lag events detected in this 12:00–12:05am ET close-window check (TONIGHT-only scope).   Data endpoints for",
-      "tokens": {
-        "input": 13284,
-        "output": 154
-      },
-      "cost": 0.0068558,
-      "sessionKey": "agent:main:cron:556cff28-9226-4281-a580-a9ecc84b24fb",
       "kind": "other",
       "channel": "unknown",
       "contextWindow": 272000
@@ -144,28 +144,22 @@
   ],
   "feed": [
     {
-      "time": 1778126397165,
+      "time": 1778126580510,
       "agent": "Smartypants",
       "icon": "😏",
-      "event": "[[reply_to_current]] This minute check errored, so no fresh signal from that pass.   No change to th"
+      "event": "[[reply_to_current]] 12:00–12:05 AM close-window check remains no-trade — no actionable lag events a"
+    },
+    {
+      "time": 1778126572848,
+      "agent": "Cron: Tonight close-window high-cadence monitor (12:00am-12:05am ET)",
+      "icon": "🤖",
+      "event": "[[reply_to_current]] No actionable lag events detected in the 12:00–12:05am ET close window for toni"
     },
     {
       "time": 1778126394473,
       "agent": "Cron: Tonight close-window high-cadence monitor (11:45pm-12:05am ET)",
       "icon": "🤖",
       "event": "[[reply_to_current]] No actionable lag events detected in the 11:45pm–12:05am ET close window tonigh"
-    },
-    {
-      "time": 1778123121591,
-      "agent": "Cron: Polymarket-vs-crypto lag monitor (24h intensive)",
-      "icon": "🤖",
-      "event": "[[reply_to_current]] Crypto monitor (Polymarket + Kalshi) — Wed May 6, 11:03 PM ET run  Polymarket ("
-    },
-    {
-      "time": 1778040219509,
-      "agent": "Cron: Tonight close-window high-cadence monitor (12:00am-12:05am ET)",
-      "icon": "🤖",
-      "event": "No actionable lag events detected in this 12:00–12:05am ET close-window check (TONIGHT-only scope). "
     },
     {
       "time": 1776015146910,
