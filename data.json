@@ -1,24 +1,24 @@
 {
-  "generated": "2026-05-07T17:01:21.979Z",
+  "generated": "2026-05-07T17:06:23.968Z",
   "system": {
     "totalAgents": 6,
     "running": 0,
     "idle": 6,
     "errored": 0,
     "completed": 0,
-    "totalCost": 0.06514980000000001,
-    "totalTokens": 260941,
+    "totalCost": 0.06522785,
+    "totalTokens": 262382,
     "mainContext": {
       "used": 195000,
       "max": 272000,
       "percent": 72,
       "compactions": 0,
       "model": "openai-codex/gpt-5.3-codex",
-      "tokensIn": "912",
-      "tokensOut": "67"
+      "tokensIn": "805",
+      "tokensOut": "50"
     },
     "contextMax": 1288000,
-    "contextUsed": 260062
+    "contextUsed": 261505
   },
   "agents": [
     {
@@ -29,13 +29,13 @@
       "icon": "😏",
       "task": "telegram:g-agent-main-main",
       "model": "gpt-5.3-codex",
-      "started": "2026-05-07T16:05:29.675Z",
-      "lastMessage": "[[reply_to_current]] 12:03 PM run was data-limited again: Polymarket primary endpoint was blocked in this pass and Kalsh",
+      "started": "2026-05-07T17:05:47.038Z",
+      "lastMessage": "[[reply_to_current]] This pass failed due to a shell formatting bug while probing Polymarket routes, so there’s no fresh",
       "tokens": {
-        "input": 194960,
-        "output": 67
+        "input": 195365,
+        "output": 50
       },
-      "cost": 0.0364924,
+      "cost": 0.03615675,
       "sessionKey": "agent:main:main",
       "kind": "other",
       "channel": "telegram",
@@ -49,13 +49,13 @@
       "icon": "🤖",
       "task": "Cron: Polymarket-vs-crypto lag monitor (24h intensive)",
       "model": "gpt-5.3-codex",
-      "started": "2026-05-07T16:03:54.863Z",
-      "lastMessage": "[[reply_to_current]] Crypto monitor run (today, near-expiry focus) — **12:03 PM ET snapshot**  **Status** - **Polymarket",
+      "started": "2026-05-07T17:03:54.861Z",
+      "lastMessage": "[[reply_to_current]] Crypto monitor (today / near-expiry) — **run at 1:03 PM ET**  - **Polymarket (primary: `data-api.po",
       "tokens": {
-        "input": 14990,
-        "output": 311
+        "input": 16028,
+        "output": 326
       },
-      "cost": 0.0080073,
+      "cost": 0.008421,
       "sessionKey": "agent:main:cron:5e001c36-2cf5-4e95-9dfc-f3d65ecdfb72",
       "kind": "other",
       "channel": "unknown",
@@ -144,16 +144,16 @@
   ],
   "feed": [
     {
-      "time": 1778169922431,
+      "time": 1778173542510,
       "agent": "Smartypants",
       "icon": "😏",
-      "event": "[[reply_to_current]] 12:03 PM run was data-limited again: Polymarket primary endpoint was blocked in"
+      "event": "[[reply_to_current]] This pass failed due to a shell formatting bug while probing Polymarket routes,"
     },
     {
-      "time": 1778169915649,
+      "time": 1778173535349,
       "agent": "Cron: Polymarket-vs-crypto lag monitor (24h intensive)",
       "icon": "🤖",
-      "event": "[[reply_to_current]] Crypto monitor run (today, near-expiry focus) — **12:03 PM ET snapshot**  **Sta"
+      "event": "[[reply_to_current]] Crypto monitor (today / near-expiry) — **run at 1:03 PM ET**  - **Polymarket (p"
     },
     {
       "time": 1778126572848,
