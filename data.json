@@ -1,24 +1,24 @@
 {
-  "generated": "2026-05-07T18:01:46.876Z",
+  "generated": "2026-05-07T18:06:49.468Z",
   "system": {
     "totalAgents": 6,
     "running": 0,
     "idle": 6,
     "errored": 0,
     "completed": 0,
-    "totalCost": 0.06522785,
-    "totalTokens": 262382,
+    "totalCost": 0.06645285,
+    "totalTokens": 262571,
     "mainContext": {
-      "used": 195000,
+      "used": 196000,
       "max": 272000,
       "percent": 72,
       "compactions": 0,
       "model": "openai-codex/gpt-5.3-codex",
-      "tokensIn": "805",
-      "tokensOut": "50"
+      "tokensIn": "926",
+      "tokensOut": "66"
     },
     "contextMax": 1288000,
-    "contextUsed": 261505
+    "contextUsed": 261621
   },
   "agents": [
     {
@@ -29,13 +29,13 @@
       "icon": "😏",
       "task": "telegram:g-agent-main-main",
       "model": "gpt-5.3-codex",
-      "started": "2026-05-07T17:05:47.038Z",
-      "lastMessage": "[[reply_to_current]] This pass failed due to a shell formatting bug while probing Polymarket routes, so there’s no fresh",
+      "started": "2026-05-07T18:05:36.875Z",
+      "lastMessage": "[[reply_to_current]] 2:03 PM update: Polymarket data-api root is up but market discovery routes were unavailable in this",
       "tokens": {
-        "input": 195365,
-        "output": 50
+        "input": 195998,
+        "output": 66
       },
-      "cost": 0.03615675,
+      "cost": 0.036682099999999995,
       "sessionKey": "agent:main:main",
       "kind": "other",
       "channel": "telegram",
@@ -49,13 +49,13 @@
       "icon": "🤖",
       "task": "Cron: Polymarket-vs-crypto lag monitor (24h intensive)",
       "model": "gpt-5.3-codex",
-      "started": "2026-05-07T17:03:54.861Z",
-      "lastMessage": "[[reply_to_current]] Crypto monitor (today / near-expiry) — **run at 1:03 PM ET**  - **Polymarket (primary: `data-api.po",
+      "started": "2026-05-07T18:03:54.857Z",
+      "lastMessage": "[[reply_to_current]] Crypto monitor run (Thu May 7, 2:03 PM ET)  Polymarket (primary source: `https://data-api.polymarke",
       "tokens": {
-        "input": 16028,
-        "output": 326
+        "input": 15511,
+        "output": 383
       },
-      "cost": 0.008421,
+      "cost": 0.00912065,
       "sessionKey": "agent:main:cron:5e001c36-2cf5-4e95-9dfc-f3d65ecdfb72",
       "kind": "other",
       "channel": "unknown",
@@ -144,16 +144,16 @@
   ],
   "feed": [
     {
-      "time": 1778173542510,
+      "time": 1778177132186,
       "agent": "Smartypants",
       "icon": "😏",
-      "event": "[[reply_to_current]] This pass failed due to a shell formatting bug while probing Polymarket routes,"
+      "event": "[[reply_to_current]] 2:03 PM update: Polymarket data-api root is up but market discovery routes were"
     },
     {
-      "time": 1778173535349,
+      "time": 1778177124046,
       "agent": "Cron: Polymarket-vs-crypto lag monitor (24h intensive)",
       "icon": "🤖",
-      "event": "[[reply_to_current]] Crypto monitor (today / near-expiry) — **run at 1:03 PM ET**  - **Polymarket (p"
+      "event": "[[reply_to_current]] Crypto monitor run (Thu May 7, 2:03 PM ET)  Polymarket (primary source: `https:"
     },
     {
       "time": 1778126572848,
