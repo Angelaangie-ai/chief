@@ -1,24 +1,24 @@
 {
-  "generated": "2026-05-07T20:02:39.203Z",
+  "generated": "2026-05-07T20:07:41.597Z",
   "system": {
     "totalAgents": 6,
     "running": 0,
     "idle": 6,
     "errored": 0,
     "completed": 0,
-    "totalCost": 0.0704705,
-    "totalTokens": 269750,
+    "totalCost": 0.06801945000000001,
+    "totalTokens": 263444,
     "mainContext": {
-      "used": 196000,
+      "used": 197000,
       "max": 272000,
       "percent": 72,
       "compactions": 0,
       "model": "openai-codex/gpt-5.3-codex",
-      "tokensIn": "813",
-      "tokensOut": "46"
+      "tokensIn": "996",
+      "tokensOut": "69"
     },
     "contextMax": 1288000,
-    "contextUsed": 268576
+    "contextUsed": 262425
   },
   "agents": [
     {
@@ -29,13 +29,13 @@
       "icon": "😏",
       "task": "telegram:g-agent-main-main",
       "model": "gpt-5.3-codex",
-      "started": "2026-05-07T19:06:07.603Z",
-      "lastMessage": "[[reply_to_current]] This pass failed due to a shell formatting bug in the Kalshi query loop, so there’s no fresh market",
+      "started": "2026-05-07T20:05:41.513Z",
+      "lastMessage": "[[reply_to_current]] 4:03 PM run was degraded on both legs (Polymarket contract listing inaccessible from this environme",
       "tokens": {
-        "input": 196397,
-        "output": 46
+        "input": 197092,
+        "output": 69
       },
-      "cost": 0.03629395,
+      "cost": 0.037025800000000005,
       "sessionKey": "agent:main:main",
       "kind": "other",
       "channel": "telegram",
@@ -49,13 +49,13 @@
       "icon": "🤖",
       "task": "Cron: Polymarket-vs-crypto lag monitor (24h intensive)",
       "model": "gpt-5.3-codex",
-      "started": "2026-05-07T19:03:54.864Z",
-      "lastMessage": "[[reply_to_current]] Crypto monitor (Polymarket + Kalshi) — Thu May 7, 2026 3:03 PM ET  Polymarket (primary API: data-ap",
+      "started": "2026-05-07T20:03:54.864Z",
+      "lastMessage": "All-crypto today monitor (Thu May 7, 2026, 4:03 PM ET)  Status - Polymarket: **Unavailable from this runner** via `https",
       "tokens": {
-        "input": 22067,
-        "output": 627
+        "input": 15221,
+        "output": 449
       },
-      "cost": 0.013526449999999999,
+      "cost": 0.01034355,
       "sessionKey": "agent:main:cron:5e001c36-2cf5-4e95-9dfc-f3d65ecdfb72",
       "kind": "other",
       "channel": "unknown",
@@ -144,16 +144,16 @@
   ],
   "feed": [
     {
-      "time": 1778180761376,
+      "time": 1778184333061,
       "agent": "Smartypants",
       "icon": "😏",
-      "event": "[[reply_to_current]] This pass failed due to a shell formatting bug in the Kalshi query loop, so the"
+      "event": "[[reply_to_current]] 4:03 PM run was degraded on both legs (Polymarket contract listing inaccessible"
     },
     {
-      "time": 1778180748785,
+      "time": 1778184319926,
       "agent": "Cron: Polymarket-vs-crypto lag monitor (24h intensive)",
       "icon": "🤖",
-      "event": "[[reply_to_current]] Crypto monitor (Polymarket + Kalshi) — Thu May 7, 2026 3:03 PM ET  Polymarket ("
+      "event": "All-crypto today monitor (Thu May 7, 2026, 4:03 PM ET)  Status - Polymarket: **Unavailable from this"
     },
     {
       "time": 1778126572848,
