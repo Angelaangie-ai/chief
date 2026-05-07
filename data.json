@@ -1,26 +1,46 @@
 {
-  "generated": "2026-05-07T01:04:43.978Z",
+  "generated": "2026-05-07T01:09:45.905Z",
   "system": {
     "totalAgents": 6,
     "running": 0,
     "idle": 6,
     "errored": 0,
     "completed": 0,
-    "totalCost": 0.33524830000000005,
-    "totalTokens": 224736,
+    "totalCost": 0.062333700000000006,
+    "totalTokens": 240957,
     "mainContext": {
-      "used": 181000,
+      "used": 182000,
       "max": 272000,
       "percent": 67,
       "compactions": 0,
       "model": "openai-codex/gpt-5.3-codex",
-      "tokensIn": "180k",
-      "tokensOut": "36"
+      "tokensIn": "838",
+      "tokensOut": "57"
     },
     "contextMax": 1288000,
-    "contextUsed": 224284
+    "contextUsed": 240152
   },
   "agents": [
+    {
+      "id": "agent:main:main",
+      "name": "Smartypants",
+      "role": "Core Assistant",
+      "status": "idle",
+      "icon": "😏",
+      "task": "telegram:g-agent-main-main",
+      "model": "gpt-5.3-codex",
+      "started": "2026-05-07T01:05:27.978Z",
+      "lastMessage": "[[reply_to_current]] 9:03 PM run found no actionable same-day/near-expiry crypto contracts to match across venues, so th",
+      "tokens": {
+        "input": 182086,
+        "output": 57
+      },
+      "cost": 0.0339829,
+      "sessionKey": "agent:main:main",
+      "kind": "other",
+      "channel": "telegram",
+      "contextWindow": 272000
+    },
     {
       "id": "agent:main:cron:5e001c36-2cf5-4e95-9dfc-f3d65ecdfb72",
       "name": "Cron: Polymarket-vs-crypto lag monitor (24h intensive)",
@@ -30,35 +50,15 @@
       "task": "Cron: Polymarket-vs-crypto lag monitor (24h intensive)",
       "model": "gpt-5.3-codex",
       "started": "2026-05-07T01:03:54.861Z",
-      "lastMessage": null,
+      "lastMessage": "[[reply_to_current]] Crypto monitor run (Wed May 6, 2026, 9:03 PM ET)  Polymarket (primary API): - Source `data-api.poly",
       "tokens": {
-        "input": 0,
-        "output": 0
+        "input": 15277,
+        "output": 332
       },
-      "cost": 0,
+      "cost": 0.00880355,
       "sessionKey": "agent:main:cron:5e001c36-2cf5-4e95-9dfc-f3d65ecdfb72",
       "kind": "other",
       "channel": "unknown",
-      "contextWindow": 272000
-    },
-    {
-      "id": "agent:main:main",
-      "name": "Smartypants",
-      "role": "Core Assistant",
-      "status": "idle",
-      "icon": "😏",
-      "task": "telegram:g-agent-main-main",
-      "model": "gpt-5.3-codex",
-      "started": "2026-05-07T00:06:01.733Z",
-      "lastMessage": "[[reply_to_current]] This cycle errored, so there’s no fresh verified market read from that pass.   No status change unt",
-      "tokens": {
-        "input": 181495,
-        "output": 36
-      },
-      "cost": 0.31570105000000004,
-      "sessionKey": "agent:main:main",
-      "kind": "other",
-      "channel": "telegram",
       "contextWindow": 272000
     },
     {
@@ -144,10 +144,16 @@
   ],
   "feed": [
     {
-      "time": 1778112356106,
+      "time": 1778115921825,
       "agent": "Smartypants",
       "icon": "😏",
-      "event": "[[reply_to_current]] This cycle errored, so there’s no fresh verified market read from that pass.   "
+      "event": "[[reply_to_current]] 9:03 PM run found no actionable same-day/near-expiry crypto contracts to match "
+    },
+    {
+      "time": 1778115913336,
+      "agent": "Cron: Polymarket-vs-crypto lag monitor (24h intensive)",
+      "icon": "🤖",
+      "event": "[[reply_to_current]] Crypto monitor run (Wed May 6, 2026, 9:03 PM ET)  Polymarket (primary API): - S"
     },
     {
       "time": 1778040219509,
