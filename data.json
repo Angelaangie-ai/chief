@@ -1,24 +1,24 @@
 {
-  "generated": "2026-05-07T09:02:53.822Z",
+  "generated": "2026-05-07T09:07:55.700Z",
   "system": {
     "totalAgents": 6,
     "running": 0,
     "idle": 6,
     "errored": 0,
     "completed": 0,
-    "totalCost": 0.0657133,
-    "totalTokens": 261053,
+    "totalCost": 0.071272,
+    "totalTokens": 271966,
     "mainContext": {
-      "used": 190000,
+      "used": 191000,
       "max": 272000,
       "percent": 70,
       "compactions": 0,
       "model": "openai-codex/gpt-5.3-codex",
-      "tokensIn": "729",
-      "tokensOut": "65"
+      "tokensIn": "639",
+      "tokensOut": "41"
     },
     "contextMax": 1288000,
-    "contextUsed": 260144
+    "contextUsed": 270714
   },
   "agents": [
     {
@@ -29,13 +29,13 @@
       "icon": "😏",
       "task": "telegram:g-agent-main-main",
       "model": "gpt-5.3-codex",
-      "started": "2026-05-07T08:06:44.883Z",
-      "lastMessage": "[[reply_to_current]] 4:03 AM update: still no actionable same-day crypto cross-venue setup — Polymarket data-api market ",
+      "started": "2026-05-07T09:05:30.328Z",
+      "lastMessage": "[[reply_to_current]] This cycle failed while parsing Kalshi event data, so no fresh verified cross-venue read from that ",
       "tokens": {
-        "input": 190169,
-        "output": 65
+        "input": 190591,
+        "output": 41
       },
-      "cost": 0.03533775,
+      "cost": 0.034933849999999995,
       "sessionKey": "agent:main:main",
       "kind": "other",
       "channel": "telegram",
@@ -49,13 +49,13 @@
       "icon": "🤖",
       "task": "Cron: Polymarket-vs-crypto lag monitor (24h intensive)",
       "model": "gpt-5.3-codex",
-      "started": "2026-05-07T08:03:54.856Z",
-      "lastMessage": "[[reply_to_current]] Crypto monitor (today / near-expiry) — **May 7, 2026 4:03 AM ET**  - **Polymarket (primary requeste",
+      "started": "2026-05-07T09:03:54.856Z",
+      "lastMessage": "[[reply_to_current]] Crypto monitor (May 7, 2026, 5:03 AM ET)  Polymarket (primary: data-api.polymarket.com) - Source us",
       "tokens": {
-        "input": 19863,
-        "output": 343
+        "input": 30011,
+        "output": 710
       },
-      "cost": 0.00972545,
+      "cost": 0.01568805,
       "sessionKey": "agent:main:cron:5e001c36-2cf5-4e95-9dfc-f3d65ecdfb72",
       "kind": "other",
       "channel": "unknown",
@@ -144,16 +144,16 @@
   ],
   "feed": [
     {
-      "time": 1778141199567,
+      "time": 1778144724621,
       "agent": "Smartypants",
       "icon": "😏",
-      "event": "[[reply_to_current]] 4:03 AM update: still no actionable same-day crypto cross-venue setup — Polymar"
+      "event": "[[reply_to_current]] This cycle failed while parsing Kalshi event data, so no fresh verified cross-v"
     },
     {
-      "time": 1778141192021,
+      "time": 1778144710843,
       "agent": "Cron: Polymarket-vs-crypto lag monitor (24h intensive)",
       "icon": "🤖",
-      "event": "[[reply_to_current]] Crypto monitor (today / near-expiry) — **May 7, 2026 4:03 AM ET**  - **Polymark"
+      "event": "[[reply_to_current]] Crypto monitor (May 7, 2026, 5:03 AM ET)  Polymarket (primary: data-api.polymar"
     },
     {
       "time": 1778126572848,
