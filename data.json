@@ -1,24 +1,24 @@
 {
-  "generated": "2026-05-07T11:03:44.200Z",
+  "generated": "2026-05-07T11:08:46.186Z",
   "system": {
     "totalAgents": 6,
     "running": 0,
     "idle": 6,
     "errored": 0,
     "completed": 0,
-    "totalCost": 0.06583685,
-    "totalTokens": 257639,
+    "totalCost": 0.0738809,
+    "totalTokens": 265719,
     "mainContext": {
-      "used": 191000,
+      "used": 192000,
       "max": 272000,
-      "percent": 70,
+      "percent": 71,
       "compactions": 0,
       "model": "openai-codex/gpt-5.3-codex",
-      "tokensIn": "718",
-      "tokensOut": "68"
+      "tokensIn": "899",
+      "tokensOut": "59"
     },
     "contextMax": 1288000,
-    "contextUsed": 256693
+    "contextUsed": 264744
   },
   "agents": [
     {
@@ -29,13 +29,13 @@
       "icon": "😏",
       "task": "telegram:g-agent-main-main",
       "model": "gpt-5.3-codex",
-      "started": "2026-05-07T10:05:10.098Z",
-      "lastMessage": "[[reply_to_current]] 6:03 AM run is still data-constrained: Polymarket host is up but usable market-list routes weren’t ",
+      "started": "2026-05-07T11:06:27.491Z",
+      "lastMessage": "[[reply_to_current]] 7:06 AM scan found no clear same-day/near-expiry crypto overlap between Polymarket and Kalshi, so n",
       "tokens": {
-        "input": 191182,
-        "output": 68
+        "input": 191875,
+        "output": 59
       },
-      "cost": 0.0355397,
+      "cost": 0.03582005,
       "sessionKey": "agent:main:main",
       "kind": "other",
       "channel": "telegram",
@@ -49,13 +49,13 @@
       "icon": "🤖",
       "task": "Cron: Polymarket-vs-crypto lag monitor (24h intensive)",
       "model": "gpt-5.3-codex",
-      "started": "2026-05-07T10:03:54.856Z",
-      "lastMessage": "[[reply_to_current]] Crypto daily monitor (run at 6:03 AM ET)  - **Polymarket (primary: `data-api.polymarket.com`)**: AP",
+      "started": "2026-05-07T11:03:54.856Z",
+      "lastMessage": "[[reply_to_current]] Today’s crypto monitor (Polymarket primary via API + Kalshi API):  - **Polymarket source used:** `g",
       "tokens": {
-        "input": 15399,
-        "output": 377
+        "input": 22757,
+        "output": 415
       },
-      "cost": 0.009647049999999999,
+      "cost": 0.01741075,
       "sessionKey": "agent:main:cron:5e001c36-2cf5-4e95-9dfc-f3d65ecdfb72",
       "kind": "other",
       "channel": "unknown",
@@ -144,16 +144,16 @@
   ],
   "feed": [
     {
-      "time": 1778148305079,
+      "time": 1778151982338,
       "agent": "Smartypants",
       "icon": "😏",
-      "event": "[[reply_to_current]] 6:03 AM run is still data-constrained: Polymarket host is up but usable market-"
+      "event": "[[reply_to_current]] 7:06 AM scan found no clear same-day/near-expiry crypto overlap between Polymar"
     },
     {
-      "time": 1778148297035,
+      "time": 1778151973527,
       "agent": "Cron: Polymarket-vs-crypto lag monitor (24h intensive)",
       "icon": "🤖",
-      "event": "[[reply_to_current]] Crypto daily monitor (run at 6:03 AM ET)  - **Polymarket (primary: `data-api.po"
+      "event": "[[reply_to_current]] Today’s crypto monitor (Polymarket primary via API + Kalshi API):  - **Polymark"
     },
     {
       "time": 1778126572848,
