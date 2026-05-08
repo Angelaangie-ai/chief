@@ -1,24 +1,24 @@
 {
-  "generated": "2026-05-08T20:22:27.929Z",
+  "generated": "2026-05-08T20:27:29.561Z",
   "system": {
-    "totalAgents": 1,
+    "totalAgents": 2,
     "running": 0,
-    "idle": 1,
+    "idle": 2,
     "errored": 0,
     "completed": 0,
-    "totalCost": 0,
-    "totalTokens": 25410,
+    "totalCost": 0.0148939,
+    "totalTokens": 44642,
     "mainContext": {
-      "used": 25000,
+      "used": 28000,
       "max": 272000,
-      "percent": 9,
+      "percent": 10,
       "compactions": 0,
       "model": "openai-codex/gpt-5.3-codex",
-      "tokensIn": "1.9k",
-      "tokensOut": "452"
+      "tokensIn": "777",
+      "tokensOut": "6"
     },
-    "contextMax": 272000,
-    "contextUsed": 25410
+    "contextMax": 544000,
+    "contextUsed": 44274
   },
   "agents": [
     {
@@ -27,27 +27,53 @@
       "role": "Core Assistant",
       "status": "idle",
       "icon": "😏",
-      "task": "Angela Busheska id:7907734285",
+      "task": "telegram:g-agent-main-main",
       "model": "gpt-5.3-codex",
-      "started": "2026-05-08T20:22:27.060Z",
-      "lastMessage": "Conversation info (untrusted metadata): ```json {   \"conversation_label\": \"Angela Busheska id:7907734285\" } ```  Open up",
+      "started": "2026-05-08T20:25:41.407Z",
+      "lastMessage": "NO_REPLY",
       "tokens": {
-        "input": 25410,
-        "output": 0
+        "input": 28425,
+        "output": 6
       },
-      "cost": 0,
+      "cost": 0.00628215,
       "sessionKey": "agent:main:main",
       "kind": "other",
       "channel": "telegram",
+      "contextWindow": 272000
+    },
+    {
+      "id": "agent:main:cron:e534cd39-b893-48b1-b411-dab971e2a868",
+      "name": "Cron: Daily people briefing from calendar",
+      "role": "Sub-Agent",
+      "status": "idle",
+      "icon": "🤖",
+      "task": "Cron: Daily people briefing from calendar",
+      "model": "gpt-5.3-codex",
+      "started": "2026-05-08T20:23:15.501Z",
+      "lastMessage": "Daily people briefing run (2026-05-08, America/New_York): **partially blocked**.  - I found **3 calendar events** today:",
+      "tokens": {
+        "input": 15849,
+        "output": 362
+      },
+      "cost": 0.00861175,
+      "sessionKey": "agent:main:cron:e534cd39-b893-48b1-b411-dab971e2a868",
+      "kind": "other",
+      "channel": "unknown",
       "contextWindow": 272000
     }
   ],
   "feed": [
     {
-      "time": 1778271747580,
+      "time": 1778271939963,
       "agent": "Smartypants",
       "icon": "😏",
-      "event": "Conversation info (untrusted metadata): ```json {   \"conversation_label\": \"Angela Busheska id:790773"
+      "event": "NO_REPLY"
+    },
+    {
+      "time": 1778271820779,
+      "agent": "Cron: Daily people briefing from calendar",
+      "icon": "🤖",
+      "event": "Daily people briefing run (2026-05-08, America/New_York): **partially blocked**.  - I found **3 cale"
     }
   ],
   "mcpUsage": {
