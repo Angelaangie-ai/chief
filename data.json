@@ -1,24 +1,24 @@
 {
-  "generated": "2026-05-08T14:55:16.666Z",
+  "generated": "2026-05-08T15:00:18.620Z",
   "system": {
     "totalAgents": 1,
     "running": 0,
     "idle": 1,
     "errored": 0,
     "completed": 0,
-    "totalCost": 0,
-    "totalTokens": 18224,
+    "totalCost": 0.0076692,
+    "totalTokens": 19493,
     "mainContext": {
-      "used": 18000,
+      "used": 19000,
       "max": 272000,
       "percent": 7,
       "compactions": 0,
       "model": "openai-codex/gpt-5.3-codex",
-      "tokensIn": "982",
-      "tokensOut": "195"
+      "tokensIn": "916",
+      "tokensOut": "340"
     },
     "contextMax": 272000,
-    "contextUsed": 18224
+    "contextUsed": 19216
   },
   "agents": [
     {
@@ -29,13 +29,13 @@
       "icon": "😏",
       "task": "Angela Busheska id:7907734285",
       "model": "gpt-5.3-codex",
-      "started": "2026-05-08T14:54:43.568Z",
-      "lastMessage": "Conversation info (untrusted metadata): ```json {   \"conversation_label\": \"Angela Busheska id:7907734285\" } ```  retry c",
+      "started": "2026-05-08T14:58:51.105Z",
+      "lastMessage": "Still failing with the same `aes.KeyUnwrap(): integrity check failed` error.  That means gog is still trying to decrypt ",
       "tokens": {
-        "input": 18224,
-        "output": 0
+        "input": 19216,
+        "output": 277
       },
-      "cost": 0,
+      "cost": 0.0076692,
       "sessionKey": "agent:main:main",
       "kind": "other",
       "channel": "telegram",
@@ -44,10 +44,10 @@
   ],
   "feed": [
     {
-      "time": 1778252083911,
+      "time": 1778252324993,
       "agent": "Smartypants",
       "icon": "😏",
-      "event": "Conversation info (untrusted metadata): ```json {   \"conversation_label\": \"Angela Busheska id:790773"
+      "event": "Still failing with the same `aes.KeyUnwrap(): integrity check failed` error.  That means gog is stil"
     }
   ],
   "mcpUsage": {
