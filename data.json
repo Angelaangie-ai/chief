@@ -1,24 +1,22 @@
 {
-  "generated": "2026-05-08T03:40:42.563Z",
+  "generated": "2026-05-08T03:45:44.746Z",
   "system": {
     "totalAgents": 6,
     "running": 0,
     "idle": 6,
     "errored": 0,
     "completed": 0,
-    "totalCost": 0.38087114999999994,
-    "totalTokens": 269218,
+    "totalCost": 0.03490455,
+    "totalTokens": 62203,
     "mainContext": {
-      "used": 201000,
-      "max": 272000,
-      "percent": 74,
+      "used": 0,
+      "max": 0,
+      "percent": 0,
       "compactions": 0,
-      "model": "openai-codex/gpt-5.3-codex",
-      "tokensIn": "196k",
-      "tokensOut": "80"
+      "model": "openai-codex/gpt-5.3-codex"
     },
-    "contextMax": 1288000,
-    "contextUsed": 268039
+    "contextMax": 1016000,
+    "contextUsed": 61075
   },
   "agents": [
     {
@@ -29,16 +27,36 @@
       "icon": "😏",
       "task": "telegram:g-agent-main-main",
       "model": "gpt-5.3-codex",
-      "started": "2026-05-08T03:05:54.455Z",
-      "lastMessage": "[[reply_to_current]] 11:03 PM run confirms heavy Polymarket micro-expiry crypto activity (especially BTC/ETH 5m/15m wind",
+      "started": "2026-05-08T03:45:44.333Z",
+      "lastMessage": "A cron job \"Tonight close-window high-cadence monitor (11:45pm-12:05am ET)\" just completed successfully.  Findings: ⚠️ \ud83d",
       "tokens": {
-        "input": 200900,
-        "output": 80
+        "input": 0,
+        "output": 0
       },
-      "cost": 0.3454374,
+      "cost": 0,
       "sessionKey": "agent:main:main",
       "kind": "other",
       "channel": "telegram",
+      "contextWindow": 0
+    },
+    {
+      "id": "agent:main:cron:2f897fff-e194-4ce8-9e93-31745cc34a67",
+      "name": "Cron: Tonight close-window high-cadence monitor (11:45pm-12:05am ET)",
+      "role": "Sub-Agent",
+      "status": "idle",
+      "icon": "🤖",
+      "task": "Cron: Tonight close-window high-cadence monitor (11:45pm-12:05am ET)",
+      "model": "gpt-5.3-codex",
+      "started": "2026-05-08T03:45:00.028Z",
+      "lastMessage": "No actionable lag events detected in the 11:45pm–12:05am ET close window tonight across tonight-expiring crypto markets ",
+      "tokens": {
+        "input": 12911,
+        "output": 108
+      },
+      "cost": 0.00475265,
+      "sessionKey": "agent:main:cron:2f897fff-e194-4ce8-9e93-31745cc34a67",
+      "kind": "other",
+      "channel": "unknown",
       "contextWindow": 272000
     },
     {
@@ -77,26 +95,6 @@
       },
       "cost": 0.00753165,
       "sessionKey": "agent:main:cron:556cff28-9226-4281-a580-a9ecc84b24fb",
-      "kind": "other",
-      "channel": "unknown",
-      "contextWindow": 272000
-    },
-    {
-      "id": "agent:main:cron:2f897fff-e194-4ce8-9e93-31745cc34a67",
-      "name": "Cron: Tonight close-window high-cadence monitor (11:45pm-12:05am ET)",
-      "role": "Sub-Agent",
-      "status": "idle",
-      "icon": "🤖",
-      "task": "Cron: Tonight close-window high-cadence monitor (11:45pm-12:05am ET)",
-      "model": "gpt-5.3-codex",
-      "started": "2026-05-07T03:59:00.019Z",
-      "lastMessage": "[[reply_to_current]] No actionable lag events detected in the 11:45pm–12:05am ET close window tonight (Kalshi + Polymark",
-      "tokens": {
-        "input": 18975,
-        "output": 79
-      },
-      "cost": 0.005281849999999999,
-      "sessionKey": "agent:main:cron:2f897fff-e194-4ce8-9e93-31745cc34a67",
       "kind": "other",
       "channel": "unknown",
       "contextWindow": 272000
@@ -144,10 +142,16 @@
   ],
   "feed": [
     {
-      "time": 1778209548444,
+      "time": 1778211944360,
       "agent": "Smartypants",
       "icon": "😏",
-      "event": "[[reply_to_current]] 11:03 PM run confirms heavy Polymarket micro-expiry crypto activity (especially"
+      "event": "A cron job \"Tonight close-window high-cadence monitor (11:45pm-12:05am ET)\" just completed successfu"
+    },
+    {
+      "time": 1778211939915,
+      "agent": "Cron: Tonight close-window high-cadence monitor (11:45pm-12:05am ET)",
+      "icon": "🤖",
+      "event": "No actionable lag events detected in the 11:45pm–12:05am ET close window tonight across tonight-expi"
     },
     {
       "time": 1778209535078,
@@ -160,12 +164,6 @@
       "agent": "Cron: Tonight close-window high-cadence monitor (12:00am-12:05am ET)",
       "icon": "🤖",
       "event": "[[reply_to_current]] No actionable lag events detected in the 12:00–12:05am ET close window for toni"
-    },
-    {
-      "time": 1778126394473,
-      "agent": "Cron: Tonight close-window high-cadence monitor (11:45pm-12:05am ET)",
-      "icon": "🤖",
-      "event": "[[reply_to_current]] No actionable lag events detected in the 11:45pm–12:05am ET close window tonigh"
     },
     {
       "time": 1776015146910,
