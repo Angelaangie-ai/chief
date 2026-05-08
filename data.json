@@ -1,24 +1,24 @@
 {
-  "generated": "2026-05-08T15:25:28.453Z",
+  "generated": "2026-05-08T15:30:30.264Z",
   "system": {
     "totalAgents": 1,
     "running": 0,
     "idle": 1,
     "errored": 0,
     "completed": 0,
-    "totalCost": 0.009629549999999999,
-    "totalTokens": 21942,
+    "totalCost": 0.00974155,
+    "totalTokens": 22041,
     "mainContext": {
       "used": 22000,
       "max": 272000,
       "percent": 8,
       "compactions": 0,
       "model": "openai-codex/gpt-5.3-codex",
-      "tokensIn": "3.2k",
-      "tokensOut": "240"
+      "tokensIn": "2.4k",
+      "tokensOut": "148"
     },
     "contextMax": 272000,
-    "contextUsed": 21789
+    "contextUsed": 21893
   },
   "agents": [
     {
@@ -29,13 +29,13 @@
       "icon": "😏",
       "task": "Angela Busheska id:7907734285",
       "model": "gpt-5.3-codex",
-      "started": "2026-05-08T15:15:16.848Z",
-      "lastMessage": "Today you’ve got:  - **12:30 PM – 1:00 PM** — *Angela Busheska and Zach Steffl*     📞 +1 484-542-1227 - **6:00 PM – 6:3",
+      "started": "2026-05-08T15:26:22.445Z",
+      "lastMessage": "Yep — absolutely. You can connect multiple Google accounts.  Use this for each additional account:  ```bash gog auth add",
       "tokens": {
-        "input": 21789,
-        "output": 153
+        "input": 21893,
+        "output": 148
       },
-      "cost": 0.009629549999999999,
+      "cost": 0.00974155,
       "sessionKey": "agent:main:main",
       "kind": "other",
       "channel": "telegram",
@@ -44,10 +44,10 @@
   ],
   "feed": [
     {
-      "time": 1778253311280,
+      "time": 1778253977955,
       "agent": "Smartypants",
       "icon": "😏",
-      "event": "Today you’ve got:  - **12:30 PM – 1:00 PM** — *Angela Busheska and Zach Steffl*     📞 +1 484-542-12"
+      "event": "Yep — absolutely. You can connect multiple Google accounts.  Use this for each additional account:  "
     }
   ],
   "mcpUsage": {
