@@ -1,13 +1,13 @@
 {
-  "generated": "2026-05-08T09:02:51.644Z",
+  "generated": "2026-05-08T09:07:53.511Z",
   "system": {
     "totalAgents": 6,
     "running": 0,
     "idle": 6,
     "errored": 0,
     "completed": 0,
-    "totalCost": 0.3869716499999999,
-    "totalTokens": 269804,
+    "totalCost": 0.404829,
+    "totalTokens": 276086,
     "mainContext": {
       "used": 208000,
       "max": 272000,
@@ -15,10 +15,10 @@
       "compactions": 0,
       "model": "openai-codex/gpt-5.3-codex",
       "tokensIn": "203k",
-      "tokensOut": "56"
+      "tokensOut": "36"
     },
     "contextMax": 1288000,
-    "contextUsed": 268869
+    "contextUsed": 274854
   },
   "agents": [
     {
@@ -29,13 +29,13 @@
       "icon": "😏",
       "task": "telegram:g-agent-main-main",
       "model": "gpt-5.3-codex",
-      "started": "2026-05-08T08:06:01.430Z",
-      "lastMessage": "[[reply_to_current]] 4:03 AM update: still no near-expiry crypto overlap found on either venue in this pass (even with f",
+      "started": "2026-05-08T09:05:31.625Z",
+      "lastMessage": "[[reply_to_current]] This cycle errored again, so there’s no fresh verified read from that pass.   No status change unti",
       "tokens": {
-        "input": 207712,
-        "output": 56
+        "input": 208073,
+        "output": 36
       },
-      "cost": 0.35702239999999996,
+      "cost": 0.35737415,
       "sessionKey": "agent:main:main",
       "kind": "other",
       "channel": "telegram",
@@ -49,13 +49,13 @@
       "icon": "🤖",
       "task": "Cron: Polymarket-vs-crypto lag monitor (24h intensive)",
       "model": "gpt-5.3-codex",
-      "started": "2026-05-08T08:03:54.866Z",
-      "lastMessage": "[[reply_to_current]] Crypto daily/near-expiry monitor (Polymarket + Kalshi) — **May 8, 2026 4:03 AM ET**  - **Polymarket",
+      "started": "2026-05-08T09:03:54.855Z",
+      "lastMessage": "[[reply_to_current]] Crypto monitor run (Polymarket primary via `data-api.polymarket.com` + Kalshi)  Snapshot (Fri May 8",
       "tokens": {
-        "input": 18066,
-        "output": 383
+        "input": 23690,
+        "output": 700
       },
-      "cost": 0.010366299999999998,
+      "cost": 0.027871899999999998,
       "sessionKey": "agent:main:cron:5e001c36-2cf5-4e95-9dfc-f3d65ecdfb72",
       "kind": "other",
       "channel": "unknown",
@@ -144,16 +144,16 @@
   ],
   "feed": [
     {
-      "time": 1778227553227,
+      "time": 1778231126096,
       "agent": "Smartypants",
       "icon": "😏",
-      "event": "[[reply_to_current]] 4:03 AM update: still no near-expiry crypto overlap found on either venue in th"
+      "event": "[[reply_to_current]] This cycle errored again, so there’s no fresh verified read from that pass.   N"
     },
     {
-      "time": 1778227545071,
+      "time": 1778231112177,
       "agent": "Cron: Polymarket-vs-crypto lag monitor (24h intensive)",
       "icon": "🤖",
-      "event": "[[reply_to_current]] Crypto daily/near-expiry monitor (Polymarket + Kalshi) — **May 8, 2026 4:03 AM "
+      "event": "[[reply_to_current]] Crypto monitor run (Polymarket primary via `data-api.polymarket.com` + Kalshi) "
     },
     {
       "time": 1778213160666,
