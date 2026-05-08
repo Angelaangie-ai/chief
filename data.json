@@ -1,26 +1,46 @@
 {
-  "generated": "2026-05-08T00:04:19.205Z",
+  "generated": "2026-05-08T00:09:21.273Z",
   "system": {
     "totalAgents": 6,
     "running": 0,
     "idle": 6,
     "errored": 0,
     "completed": 0,
-    "totalCost": 0.0571817,
-    "totalTokens": 249035,
+    "totalCost": 0.37070015,
+    "totalTokens": 265282,
     "mainContext": {
-      "used": 198000,
+      "used": 199000,
       "max": 272000,
       "percent": 73,
       "compactions": 0,
       "model": "openai-codex/gpt-5.3-codex",
-      "tokensIn": "744",
-      "tokensOut": "46"
+      "tokensIn": "194k",
+      "tokensOut": "41"
     },
     "contextMax": 1288000,
-    "contextUsed": 248488
+    "contextUsed": 264371
   },
   "agents": [
+    {
+      "id": "agent:main:main",
+      "name": "Smartypants",
+      "role": "Core Assistant",
+      "status": "idle",
+      "icon": "😏",
+      "task": "telegram:g-agent-main-main",
+      "model": "gpt-5.3-codex",
+      "started": "2026-05-08T00:05:45.471Z",
+      "lastMessage": "[[reply_to_current]] This cycle failed due to another shell wildcard/path quoting issue while probing Polymarket routes,",
+      "tokens": {
+        "input": 198781,
+        "output": 41
+      },
+      "cost": 0.34118315,
+      "sessionKey": "agent:main:main",
+      "kind": "other",
+      "channel": "telegram",
+      "contextWindow": 272000
+    },
     {
       "id": "agent:main:cron:5e001c36-2cf5-4e95-9dfc-f3d65ecdfb72",
       "name": "Cron: Polymarket-vs-crypto lag monitor (24h intensive)",
@@ -30,35 +50,15 @@
       "task": "Cron: Polymarket-vs-crypto lag monitor (24h intensive)",
       "model": "gpt-5.3-codex",
       "started": "2026-05-08T00:03:54.868Z",
-      "lastMessage": null,
+      "lastMessage": "[[reply_to_current]] Crypto monitor (Thu May 7, 8:03 PM ET) — concise run  Polymarket (primary: `data-api.polymarket.com",
       "tokens": {
-        "input": 0,
-        "output": 0
+        "input": 15478,
+        "output": 369
       },
-      "cost": 0,
+      "cost": 0.0088669,
       "sessionKey": "agent:main:cron:5e001c36-2cf5-4e95-9dfc-f3d65ecdfb72",
       "kind": "other",
       "channel": "unknown",
-      "contextWindow": 272000
-    },
-    {
-      "id": "agent:main:main",
-      "name": "Smartypants",
-      "role": "Core Assistant",
-      "status": "idle",
-      "icon": "😏",
-      "task": "telegram:g-agent-main-main",
-      "model": "gpt-5.3-codex",
-      "started": "2026-05-07T23:12:10.929Z",
-      "lastMessage": "[[reply_to_current]] This pass failed due to a quoting bug in the route-discovery command, so there’s no fresh market re",
-      "tokens": {
-        "input": 198376,
-        "output": 46
-      },
-      "cost": 0.036531600000000004,
-      "sessionKey": "agent:main:main",
-      "kind": "other",
-      "channel": "telegram",
       "contextWindow": 272000
     },
     {
@@ -144,10 +144,16 @@
   ],
   "feed": [
     {
-      "time": 1778195519645,
+      "time": 1778198739161,
       "agent": "Smartypants",
       "icon": "😏",
-      "event": "[[reply_to_current]] This pass failed due to a quoting bug in the route-discovery command, so there’"
+      "event": "[[reply_to_current]] This cycle failed due to another shell wildcard/path quoting issue while probin"
+    },
+    {
+      "time": 1778198731438,
+      "agent": "Cron: Polymarket-vs-crypto lag monitor (24h intensive)",
+      "icon": "🤖",
+      "event": "[[reply_to_current]] Crypto monitor (Thu May 7, 8:03 PM ET) — concise run  Polymarket (primary: `dat"
     },
     {
       "time": 1778126572848,
