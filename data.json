@@ -1,24 +1,24 @@
 {
-  "generated": "2026-05-08T14:45:12.529Z",
+  "generated": "2026-05-08T14:50:14.688Z",
   "system": {
     "totalAgents": 1,
     "running": 0,
     "idle": 1,
     "errored": 0,
     "completed": 0,
-    "totalCost": 0.00555835,
-    "totalTokens": 11621,
+    "totalCost": 0,
+    "totalTokens": 14839,
     "mainContext": {
-      "used": 11000,
+      "used": 15000,
       "max": 272000,
-      "percent": 4,
+      "percent": 5,
       "compactions": 0,
       "model": "openai-codex/gpt-5.3-codex",
-      "tokensIn": "7.9k",
-      "tokensOut": "378"
+      "tokensIn": "1.4k",
+      "tokensOut": "156"
     },
     "contextMax": 272000,
-    "contextUsed": 11445
+    "contextUsed": 14839
   },
   "agents": [
     {
@@ -29,27 +29,20 @@
       "icon": "😏",
       "task": "Angela Busheska id:7907734285",
       "model": "gpt-5.3-codex",
-      "started": "2026-05-08T14:44:24.988Z",
-      "lastMessage": "I can’t read it yet from here — your Google token is locked behind a local keyring password prompt, and this session has",
+      "started": "2026-05-08T14:49:16.872Z",
+      "lastMessage": null,
       "tokens": {
-        "input": 11445,
-        "output": 176
+        "input": 14839,
+        "output": 0
       },
-      "cost": 0.00555835,
+      "cost": 0,
       "sessionKey": "agent:main:main",
       "kind": "other",
       "channel": "telegram",
       "contextWindow": 272000
     }
   ],
-  "feed": [
-    {
-      "time": 1778251460867,
-      "agent": "Smartypants",
-      "icon": "😏",
-      "event": "I can’t read it yet from here — your Google token is locked behind a local keyring password prompt, "
-    }
-  ],
+  "feed": [],
   "mcpUsage": {
     "codex": {
       "calls": 1,
