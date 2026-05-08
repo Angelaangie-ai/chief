@@ -1,24 +1,24 @@
 {
-  "generated": "2026-05-08T12:59:27.467Z",
+  "generated": "2026-05-08T13:04:29.190Z",
   "system": {
     "totalAgents": 6,
     "running": 0,
     "idle": 6,
     "errored": 0,
     "completed": 0,
-    "totalCost": 0.07729235,
-    "totalTokens": 276742,
+    "totalCost": 0.037998199999999996,
+    "totalTokens": 278344,
     "mainContext": {
-      "used": 212000,
+      "used": 214000,
       "max": 272000,
-      "percent": 78,
+      "percent": 79,
       "compactions": 0,
       "model": "openai-codex/gpt-5.3-codex",
-      "tokensIn": "417",
-      "tokensOut": "105"
+      "tokensIn": "588",
+      "tokensOut": "144"
     },
     "contextMax": 1288000,
-    "contextUsed": 275615
+    "contextUsed": 277322
   },
   "agents": [
     {
@@ -29,13 +29,13 @@
       "icon": "😏",
       "task": "telegram:g-agent-main-main",
       "model": "gpt-5.3-codex",
-      "started": "2026-05-08T12:57:46.740Z",
-      "lastMessage": "[[reply_to_current]] Perfect — that means you can remote in anytime via Tailscale.  Use: ```bash ssh angelabusheska@100.",
+      "started": "2026-05-08T13:04:25.714Z",
+      "lastMessage": "Conversation info (untrusted metadata): ```json {   \"conversation_label\": \"Angela Busheska id:7907734285\" } ```  Source ",
       "tokens": {
-        "input": 212385,
-        "output": 105
+        "input": 214092,
+        "output": 0
       },
-      "cost": 0.03929415,
+      "cost": 0,
       "sessionKey": "agent:main:main",
       "kind": "other",
       "channel": "telegram",
@@ -144,10 +144,10 @@
   ],
   "feed": [
     {
-      "time": 1778245059671,
+      "time": 1778245466080,
       "agent": "Smartypants",
       "icon": "😏",
-      "event": "[[reply_to_current]] Perfect — that means you can remote in anytime via Tailscale.  Use: ```bash ssh"
+      "event": "Conversation info (untrusted metadata): ```json {   \"conversation_label\": \"Angela Busheska id:790773"
     },
     {
       "time": 1778241884711,
