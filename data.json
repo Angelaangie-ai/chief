@@ -1,26 +1,46 @@
 {
-  "generated": "2026-05-08T12:04:05.061Z",
+  "generated": "2026-05-08T12:09:06.940Z",
   "system": {
     "totalAgents": 6,
     "running": 0,
     "idle": 6,
     "errored": 0,
     "completed": 0,
-    "totalCost": 0.3706697,
-    "totalTokens": 252948,
+    "totalCost": 0.07636625,
+    "totalTokens": 273931,
     "mainContext": {
-      "used": 209000,
+      "used": 210000,
       "max": 272000,
       "percent": 77,
       "compactions": 0,
       "model": "openai-codex/gpt-5.3-codex",
-      "tokensIn": "199k",
-      "tokensOut": "68"
+      "tokensIn": "747",
+      "tokensOut": "36"
     },
     "contextMax": 1288000,
-    "contextUsed": 252384
+    "contextUsed": 272873
   },
   "agents": [
+    {
+      "id": "agent:main:main",
+      "name": "Smartypants",
+      "role": "Core Assistant",
+      "status": "idle",
+      "icon": "😏",
+      "task": "telegram:g-agent-main-main",
+      "model": "gpt-5.3-codex",
+      "started": "2026-05-08T12:05:00.033Z",
+      "lastMessage": "[[reply_to_current]] This cycle errored, so there’s no fresh verified update from that pass.   No change to status until",
+      "tokens": {
+        "input": 209643,
+        "output": 36
+      },
+      "cost": 0.03836805,
+      "sessionKey": "agent:main:main",
+      "kind": "other",
+      "channel": "telegram",
+      "contextWindow": 272000
+    },
     {
       "id": "agent:main:cron:5e001c36-2cf5-4e95-9dfc-f3d65ecdfb72",
       "name": "Cron: Polymarket-vs-crypto lag monitor (24h intensive)",
@@ -30,35 +50,15 @@
       "task": "Cron: Polymarket-vs-crypto lag monitor (24h intensive)",
       "model": "gpt-5.3-codex",
       "started": "2026-05-08T12:03:54.860Z",
-      "lastMessage": null,
+      "lastMessage": "[[reply_to_current]] All-crypto today monitor (Polymarket + Kalshi) — 2026-05-08 08:03 ET  Polymarket (primary = data-ap",
       "tokens": {
-        "input": 0,
-        "output": 0
+        "input": 20139,
+        "output": 526
       },
-      "cost": 0,
+      "cost": 0.018415249999999998,
       "sessionKey": "agent:main:cron:5e001c36-2cf5-4e95-9dfc-f3d65ecdfb72",
       "kind": "other",
       "channel": "unknown",
-      "contextWindow": 272000
-    },
-    {
-      "id": "agent:main:main",
-      "name": "Smartypants",
-      "role": "Core Assistant",
-      "status": "idle",
-      "icon": "😏",
-      "task": "telegram:g-agent-main-main",
-      "model": "gpt-5.3-codex",
-      "started": "2026-05-08T11:05:52.432Z",
-      "lastMessage": "[[reply_to_current]] 7:03 AM snapshot is still a data-availability/empty-universe no-op: no today/near-expiry crypto con",
-      "tokens": {
-        "input": 209293,
-        "output": 68
-      },
-      "cost": 0.35108675,
-      "sessionKey": "agent:main:main",
-      "kind": "other",
-      "channel": "telegram",
       "contextWindow": 272000
     },
     {
@@ -144,10 +144,16 @@
   ],
   "feed": [
     {
-      "time": 1778238347035,
+      "time": 1778241895181,
       "agent": "Smartypants",
       "icon": "😏",
-      "event": "[[reply_to_current]] 7:03 AM snapshot is still a data-availability/empty-universe no-op: no today/ne"
+      "event": "[[reply_to_current]] This cycle errored, so there’s no fresh verified update from that pass.   No ch"
+    },
+    {
+      "time": 1778241884711,
+      "agent": "Cron: Polymarket-vs-crypto lag monitor (24h intensive)",
+      "icon": "🤖",
+      "event": "[[reply_to_current]] All-crypto today monitor (Polymarket + Kalshi) — 2026-05-08 08:03 ET  Polymarke"
     },
     {
       "time": 1778213160666,
