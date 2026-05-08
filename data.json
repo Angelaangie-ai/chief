@@ -1,24 +1,24 @@
 {
-  "generated": "2026-05-08T13:29:39.193Z",
+  "generated": "2026-05-08T13:34:41.619Z",
   "system": {
     "totalAgents": 6,
     "running": 0,
     "idle": 6,
     "errored": 0,
     "completed": 0,
-    "totalCost": 0.0791505,
-    "totalTokens": 281685,
+    "totalCost": 0.0799086,
+    "totalTokens": 282103,
     "mainContext": {
-      "used": 217000,
+      "used": 218000,
       "max": 272000,
       "percent": 80,
       "compactions": 0,
       "model": "openai-codex/gpt-5.3-codex",
-      "tokensIn": "714",
-      "tokensOut": "143"
+      "tokensIn": "552",
+      "tokensOut": "211"
     },
     "contextMax": 1288000,
-    "contextUsed": 280520
+    "contextUsed": 280870
   },
   "agents": [
     {
@@ -29,13 +29,13 @@
       "icon": "😏",
       "task": "telegram:g-agent-main-main",
       "model": "gpt-5.3-codex",
-      "started": "2026-05-08T13:05:45.199Z",
-      "lastMessage": "[[reply_to_current]] Perfect — this confirms it: your current OpenClaw build has **Google OAuth provider plugins only**,",
+      "started": "2026-05-08T13:32:47.710Z",
+      "lastMessage": "[[reply_to_current]] Yes — that’s the right path. Nice find.  You’re looking at Google’s **Calendar MCP API** (`calendar",
       "tokens": {
-        "input": 217290,
-        "output": 143
+        "input": 217640,
+        "output": 211
       },
-      "cost": 0.041152299999999996,
+      "cost": 0.0419104,
       "sessionKey": "agent:main:main",
       "kind": "other",
       "channel": "telegram",
@@ -144,10 +144,10 @@
   ],
   "feed": [
     {
-      "time": 1778245538862,
+      "time": 1778247157427,
       "agent": "Smartypants",
       "icon": "😏",
-      "event": "[[reply_to_current]] Perfect — this confirms it: your current OpenClaw build has **Google OAuth prov"
+      "event": "[[reply_to_current]] Yes — that’s the right path. Nice find.  You’re looking at Google’s **Calendar "
     },
     {
       "time": 1778241884711,
