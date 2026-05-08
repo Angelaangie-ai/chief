@@ -1,13 +1,13 @@
 {
-  "generated": "2026-05-08T20:17:26.161Z",
+  "generated": "2026-05-08T20:22:27.929Z",
   "system": {
     "totalAgents": 1,
     "running": 0,
     "idle": 1,
     "errored": 0,
     "completed": 0,
-    "totalCost": 0.0073927,
-    "totalTokens": 25469,
+    "totalCost": 0,
+    "totalTokens": 25410,
     "mainContext": {
       "used": 25000,
       "max": 272000,
@@ -29,13 +29,13 @@
       "icon": "😏",
       "task": "Angela Busheska id:7907734285",
       "model": "gpt-5.3-codex",
-      "started": "2026-05-08T16:00:03.984Z",
-      "lastMessage": "Done — updated ✅  Now if a meeting is unclear, it will: - research first - then **ask you for context** if still uncerta",
+      "started": "2026-05-08T20:22:27.060Z",
+      "lastMessage": "Conversation info (untrusted metadata): ```json {   \"conversation_label\": \"Angela Busheska id:7907734285\" } ```  Open up",
       "tokens": {
         "input": 25410,
-        "output": 59
+        "output": 0
       },
-      "cost": 0.0073927,
+      "cost": 0,
       "sessionKey": "agent:main:main",
       "kind": "other",
       "channel": "telegram",
@@ -44,10 +44,10 @@
   ],
   "feed": [
     {
-      "time": 1778256000797,
+      "time": 1778271747580,
       "agent": "Smartypants",
       "icon": "😏",
-      "event": "Done — updated ✅  Now if a meeting is unclear, it will: - research first - then **ask you for contex"
+      "event": "Conversation info (untrusted metadata): ```json {   \"conversation_label\": \"Angela Busheska id:790773"
     }
   ],
   "mcpUsage": {
