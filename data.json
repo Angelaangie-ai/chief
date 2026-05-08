@@ -1,24 +1,24 @@
 {
-  "generated": "2026-05-08T13:04:29.190Z",
+  "generated": "2026-05-08T13:09:31.209Z",
   "system": {
     "totalAgents": 6,
     "running": 0,
     "idle": 6,
     "errored": 0,
     "completed": 0,
-    "totalCost": 0.037998199999999996,
-    "totalTokens": 278344,
+    "totalCost": 0.0791505,
+    "totalTokens": 281685,
     "mainContext": {
-      "used": 214000,
+      "used": 217000,
       "max": 272000,
-      "percent": 79,
+      "percent": 80,
       "compactions": 0,
       "model": "openai-codex/gpt-5.3-codex",
-      "tokensIn": "588",
-      "tokensOut": "144"
+      "tokensIn": "714",
+      "tokensOut": "143"
     },
     "contextMax": 1288000,
-    "contextUsed": 277322
+    "contextUsed": 280520
   },
   "agents": [
     {
@@ -29,13 +29,13 @@
       "icon": "😏",
       "task": "telegram:g-agent-main-main",
       "model": "gpt-5.3-codex",
-      "started": "2026-05-08T13:04:25.714Z",
-      "lastMessage": "Conversation info (untrusted metadata): ```json {   \"conversation_label\": \"Angela Busheska id:7907734285\" } ```  Source ",
+      "started": "2026-05-08T13:05:45.199Z",
+      "lastMessage": "[[reply_to_current]] Perfect — this confirms it: your current OpenClaw build has **Google OAuth provider plugins only**,",
       "tokens": {
-        "input": 214092,
-        "output": 0
+        "input": 217290,
+        "output": 143
       },
-      "cost": 0,
+      "cost": 0.041152299999999996,
       "sessionKey": "agent:main:main",
       "kind": "other",
       "channel": "telegram",
@@ -144,10 +144,10 @@
   ],
   "feed": [
     {
-      "time": 1778245466080,
+      "time": 1778245538862,
       "agent": "Smartypants",
       "icon": "😏",
-      "event": "Conversation info (untrusted metadata): ```json {   \"conversation_label\": \"Angela Busheska id:790773"
+      "event": "[[reply_to_current]] Perfect — this confirms it: your current OpenClaw build has **Google OAuth prov"
     },
     {
       "time": 1778241884711,
