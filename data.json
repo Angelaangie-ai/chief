@@ -1,24 +1,24 @@
 {
-  "generated": "2026-05-08T14:40:10.627Z",
+  "generated": "2026-05-08T14:45:12.529Z",
   "system": {
-    "totalAgents": 6,
+    "totalAgents": 1,
     "running": 0,
-    "idle": 6,
+    "idle": 1,
     "errored": 0,
     "completed": 0,
-    "totalCost": 0.0796923,
-    "totalTokens": 283027,
+    "totalCost": 0.00555835,
+    "totalTokens": 11621,
     "mainContext": {
-      "used": 219000,
+      "used": 11000,
       "max": 272000,
-      "percent": 80,
+      "percent": 4,
       "compactions": 0,
       "model": "openai-codex/gpt-5.3-codex",
-      "tokensIn": "470",
-      "tokensOut": "193"
+      "tokensIn": "7.9k",
+      "tokensOut": "378"
     },
-    "contextMax": 1288000,
-    "contextUsed": 281812
+    "contextMax": 272000,
+    "contextUsed": 11445
   },
   "agents": [
     {
@@ -27,157 +27,27 @@
       "role": "Core Assistant",
       "status": "idle",
       "icon": "😏",
-      "task": "telegram:g-agent-main-main",
+      "task": "Angela Busheska id:7907734285",
       "model": "gpt-5.3-codex",
-      "started": "2026-05-08T14:39:36.118Z",
-      "lastMessage": "[[reply_to_current]] Got it — that message means the skill exists, but auth token still needs to be visible to the runni",
+      "started": "2026-05-08T14:44:24.988Z",
+      "lastMessage": "I can’t read it yet from here — your Google token is locked behind a local keyring password prompt, and this session has",
       "tokens": {
-        "input": 218582,
-        "output": 193
+        "input": 11445,
+        "output": 176
       },
-      "cost": 0.0416941,
+      "cost": 0.00555835,
       "sessionKey": "agent:main:main",
       "kind": "other",
       "channel": "telegram",
       "contextWindow": 272000
-    },
-    {
-      "id": "agent:main:cron:5e001c36-2cf5-4e95-9dfc-f3d65ecdfb72",
-      "name": "Cron: Polymarket-vs-crypto lag monitor (24h intensive)",
-      "role": "Sub-Agent",
-      "status": "idle",
-      "icon": "🤖",
-      "task": "Cron: Polymarket-vs-crypto lag monitor (24h intensive)",
-      "model": "gpt-5.3-codex",
-      "started": "2026-05-08T12:03:54.860Z",
-      "lastMessage": "[[reply_to_current]] All-crypto today monitor (Polymarket + Kalshi) — 2026-05-08 08:03 ET  Polymarket (primary = data-ap",
-      "tokens": {
-        "input": 20139,
-        "output": 526
-      },
-      "cost": 0.018415249999999998,
-      "sessionKey": "agent:main:cron:5e001c36-2cf5-4e95-9dfc-f3d65ecdfb72",
-      "kind": "other",
-      "channel": "unknown",
-      "contextWindow": 272000
-    },
-    {
-      "id": "agent:main:cron:556cff28-9226-4281-a580-a9ecc84b24fb",
-      "name": "Cron: Tonight close-window high-cadence monitor (12:00am-12:05am ET)",
-      "role": "Sub-Agent",
-      "status": "idle",
-      "icon": "🤖",
-      "task": "Cron: Tonight close-window high-cadence monitor (12:00am-12:05am ET)",
-      "model": "gpt-5.3-codex",
-      "started": "2026-05-08T04:05:00.020Z",
-      "lastMessage": "[[reply_to_current]] No actionable lag events detected in the 12:00–12:05am ET close window tonight.  Notes: - Polymarke",
-      "tokens": {
-        "input": 13497,
-        "output": 234
-      },
-      "cost": 0.0067357499999999996,
-      "sessionKey": "agent:main:cron:556cff28-9226-4281-a580-a9ecc84b24fb",
-      "kind": "other",
-      "channel": "unknown",
-      "contextWindow": 272000
-    },
-    {
-      "id": "agent:main:cron:2f897fff-e194-4ce8-9e93-31745cc34a67",
-      "name": "Cron: Tonight close-window high-cadence monitor (11:45pm-12:05am ET)",
-      "role": "Sub-Agent",
-      "status": "idle",
-      "icon": "🤖",
-      "task": "Cron: Tonight close-window high-cadence monitor (11:45pm-12:05am ET)",
-      "model": "gpt-5.3-codex",
-      "started": "2026-05-08T03:59:00.029Z",
-      "lastMessage": "[[reply_to_current]] No actionable lag events detected in the 11:45pm–12:05am ET close window tonight.  - Kalshi tonight",
-      "tokens": {
-        "input": 13980,
-        "output": 108
-      },
-      "cost": 0.0050106,
-      "sessionKey": "agent:main:cron:2f897fff-e194-4ce8-9e93-31745cc34a67",
-      "kind": "other",
-      "channel": "unknown",
-      "contextWindow": 272000
-    },
-    {
-      "id": "agent:main:cron:ed5cbdbd-1c30-4c0c-a22a-2baa3e9f75cd",
-      "name": "Cron: CHIEF Task Dispatcher",
-      "role": "Sub-Agent",
-      "status": "idle",
-      "icon": "🤖",
-      "task": "telegram:g-agent-main-cron-ed5cbdbd-1c30-4c0c-a22a-2baa3e9f75cd",
-      "model": "gpt-5.3-codex",
-      "started": "2026-04-12T17:32:26.686Z",
-      "lastMessage": null,
-      "tokens": {
-        "input": 0,
-        "output": 0
-      },
-      "cost": 0,
-      "sessionKey": "agent:main:cron:ed5cbdbd-1c30-4c0c-a22a-2baa3e9f75cd",
-      "kind": "other",
-      "channel": "telegram",
-      "contextWindow": 0
-    },
-    {
-      "id": "agent:main:cron:ae997ae6-5216-4681-925b-b83042a1de6d",
-      "name": "Cron: CHIEF Dashboard Refresh",
-      "role": "Sub-Agent",
-      "status": "idle",
-      "icon": "🤖",
-      "task": "Cron: CHIEF Dashboard Refresh",
-      "model": "gpt-5.3-codex",
-      "started": "2026-04-12T13:08:46.747Z",
-      "lastMessage": "✅ CHIEF data refreshed → /Users/angelabusheska/.openclaw/workspace/chief/data.json    5 sessions | 0 running | $0.16 tot",
-      "tokens": {
-        "input": 15614,
-        "output": 154
-      },
-      "cost": 0.007836599999999999,
-      "sessionKey": "agent:main:cron:ae997ae6-5216-4681-925b-b83042a1de6d",
-      "kind": "other",
-      "channel": "unknown",
-      "contextWindow": 200000
     }
   ],
   "feed": [
     {
-      "time": 1778251166153,
+      "time": 1778251460867,
       "agent": "Smartypants",
       "icon": "😏",
-      "event": "[[reply_to_current]] Got it — that message means the skill exists, but auth token still needs to be "
-    },
-    {
-      "time": 1778241884711,
-      "agent": "Cron: Polymarket-vs-crypto lag monitor (24h intensive)",
-      "icon": "🤖",
-      "event": "[[reply_to_current]] All-crypto today monitor (Polymarket + Kalshi) — 2026-05-08 08:03 ET  Polymarke"
-    },
-    {
-      "time": 1778213160666,
-      "agent": "Cron: Tonight close-window high-cadence monitor (12:00am-12:05am ET)",
-      "icon": "🤖",
-      "event": "[[reply_to_current]] No actionable lag events detected in the 12:00–12:05am ET close window tonight."
-    },
-    {
-      "time": 1778212788376,
-      "agent": "Cron: Tonight close-window high-cadence monitor (11:45pm-12:05am ET)",
-      "icon": "🤖",
-      "event": "[[reply_to_current]] No actionable lag events detected in the 11:45pm–12:05am ET close window tonigh"
-    },
-    {
-      "time": 1776015146910,
-      "agent": "Cron: CHIEF Task Dispatcher",
-      "icon": "🤖",
-      "event": "Activity"
-    },
-    {
-      "time": 1775999331569,
-      "agent": "Cron: CHIEF Dashboard Refresh",
-      "icon": "🤖",
-      "event": "✅ CHIEF data refreshed → /Users/angelabusheska/.openclaw/workspace/chief/data.json    5 sessions | 0"
+      "event": "I can’t read it yet from here — your Google token is locked behind a local keyring password prompt, "
     }
   ],
   "mcpUsage": {
