@@ -1,5 +1,5 @@
 {
-  "generated": "2026-05-08T14:50:14.688Z",
+  "generated": "2026-05-08T14:55:16.666Z",
   "system": {
     "totalAgents": 1,
     "running": 0,
@@ -7,18 +7,18 @@
     "errored": 0,
     "completed": 0,
     "totalCost": 0,
-    "totalTokens": 14839,
+    "totalTokens": 18224,
     "mainContext": {
-      "used": 15000,
+      "used": 18000,
       "max": 272000,
-      "percent": 5,
+      "percent": 7,
       "compactions": 0,
       "model": "openai-codex/gpt-5.3-codex",
-      "tokensIn": "1.4k",
-      "tokensOut": "156"
+      "tokensIn": "982",
+      "tokensOut": "195"
     },
     "contextMax": 272000,
-    "contextUsed": 14839
+    "contextUsed": 18224
   },
   "agents": [
     {
@@ -29,10 +29,10 @@
       "icon": "😏",
       "task": "Angela Busheska id:7907734285",
       "model": "gpt-5.3-codex",
-      "started": "2026-05-08T14:49:16.872Z",
-      "lastMessage": null,
+      "started": "2026-05-08T14:54:43.568Z",
+      "lastMessage": "Conversation info (untrusted metadata): ```json {   \"conversation_label\": \"Angela Busheska id:7907734285\" } ```  retry c",
       "tokens": {
-        "input": 14839,
+        "input": 18224,
         "output": 0
       },
       "cost": 0,
@@ -42,7 +42,14 @@
       "contextWindow": 272000
     }
   ],
-  "feed": [],
+  "feed": [
+    {
+      "time": 1778252083911,
+      "agent": "Smartypants",
+      "icon": "😏",
+      "event": "Conversation info (untrusted metadata): ```json {   \"conversation_label\": \"Angela Busheska id:790773"
+    }
+  ],
   "mcpUsage": {
     "codex": {
       "calls": 1,
