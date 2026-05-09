@@ -1,24 +1,24 @@
 {
-  "generated": "2026-05-09T10:57:36.689Z",
+  "generated": "2026-05-09T11:02:38.357Z",
   "system": {
     "totalAgents": 2,
     "running": 0,
     "idle": 2,
     "errored": 0,
     "completed": 0,
-    "totalCost": 0.01934555,
-    "totalTokens": 48420,
+    "totalCost": 0.05576199999999999,
+    "totalTokens": 46417,
     "mainContext": {
       "used": 32000,
       "max": 272000,
       "percent": 12,
       "compactions": 0,
       "model": "openai-codex/gpt-5.3-codex",
-      "tokensIn": "2.4k",
-      "tokensOut": "93"
+      "tokensIn": "28k",
+      "tokensOut": "56"
     },
     "contextMax": 544000,
-    "contextUsed": 47965
+    "contextUsed": 46192
   },
   "agents": [
     {
@@ -29,13 +29,13 @@
       "icon": "😏",
       "task": "telegram:g-agent-main-main",
       "model": "gpt-5.3-codex",
-      "started": "2026-05-08T22:16:35.974Z",
-      "lastMessage": "Not all winners attend in person.  For The Webby Awards, typically: - many **nominees/winners send reps** (founders, cre",
+      "started": "2026-05-09T11:00:35.926Z",
+      "lastMessage": "Quick heads up: I tried again this morning, but your daily briefing doc still couldn’t be created because Drive access i",
       "tokens": {
-        "input": 32116,
-        "output": 93
+        "input": 32336,
+        "output": 56
       },
-      "cost": 0.0107338,
+      "cost": 0.050114399999999996,
       "sessionKey": "agent:main:main",
       "kind": "other",
       "channel": "telegram",
@@ -49,13 +49,13 @@
       "icon": "🤖",
       "task": "Cron: Daily people briefing from calendar",
       "model": "gpt-5.3-codex",
-      "started": "2026-05-08T20:23:15.501Z",
-      "lastMessage": "Daily people briefing run (2026-05-08, America/New_York): **partially blocked**.  - I found **3 calendar events** today:",
+      "started": "2026-05-09T11:00:00.034Z",
+      "lastMessage": "Daily people briefing run completed for **2026-05-09 (America/New_York)**.  - **Meetings found today:** 0   - Intended d",
       "tokens": {
-        "input": 15849,
-        "output": 362
+        "input": 13856,
+        "output": 169
       },
-      "cost": 0.00861175,
+      "cost": 0.005647599999999999,
       "sessionKey": "agent:main:cron:e534cd39-b893-48b1-b411-dab971e2a868",
       "kind": "other",
       "channel": "unknown",
@@ -64,16 +64,16 @@
   ],
   "feed": [
     {
-      "time": 1778278592728,
+      "time": 1778324433397,
       "agent": "Smartypants",
       "icon": "😏",
-      "event": "Not all winners attend in person.  For The Webby Awards, typically: - many **nominees/winners send r"
+      "event": "Quick heads up: I tried again this morning, but your daily briefing doc still couldn’t be created be"
     },
     {
-      "time": 1778271820779,
+      "time": 1778324421292,
       "agent": "Cron: Daily people briefing from calendar",
       "icon": "🤖",
-      "event": "Daily people briefing run (2026-05-08, America/New_York): **partially blocked**.  - I found **3 cale"
+      "event": "Daily people briefing run completed for **2026-05-09 (America/New_York)**.  - **Meetings found today"
     }
   ],
   "mcpUsage": {
