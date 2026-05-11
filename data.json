@@ -1,13 +1,13 @@
 {
-  "generated": "2026-05-11T10:55:11.742Z",
+  "generated": "2026-05-11T11:00:13.518Z",
   "system": {
     "totalAgents": 2,
     "running": 0,
     "idle": 2,
     "errored": 0,
     "completed": 0,
-    "totalCost": 0.056633499999999996,
-    "totalTokens": 46719,
+    "totalCost": 0.0506149,
+    "totalTokens": 32727,
     "mainContext": {
       "used": 33000,
       "max": 272000,
@@ -18,9 +18,29 @@
       "tokensOut": "49"
     },
     "contextMax": 544000,
-    "contextUsed": 46466
+    "contextUsed": 32678
   },
   "agents": [
+    {
+      "id": "agent:main:cron:e534cd39-b893-48b1-b411-dab971e2a868",
+      "name": "Cron: Daily people briefing from calendar",
+      "role": "Sub-Agent",
+      "status": "idle",
+      "icon": "🤖",
+      "task": "Cron: Daily people briefing from calendar",
+      "model": "gpt-5.3-codex",
+      "started": "2026-05-11T11:00:00.029Z",
+      "lastMessage": null,
+      "tokens": {
+        "input": 0,
+        "output": 0
+      },
+      "cost": 0,
+      "sessionKey": "agent:main:cron:e534cd39-b893-48b1-b411-dab971e2a868",
+      "kind": "other",
+      "channel": "unknown",
+      "contextWindow": 272000
+    },
     {
       "id": "agent:main:main",
       "name": "Smartypants",
@@ -40,26 +60,6 @@
       "kind": "other",
       "channel": "telegram",
       "contextWindow": 272000
-    },
-    {
-      "id": "agent:main:cron:e534cd39-b893-48b1-b411-dab971e2a868",
-      "name": "Cron: Daily people briefing from calendar",
-      "role": "Sub-Agent",
-      "status": "idle",
-      "icon": "🤖",
-      "task": "Cron: Daily people briefing from calendar",
-      "model": "gpt-5.3-codex",
-      "started": "2026-05-10T11:00:00.027Z",
-      "lastMessage": "Daily people briefing run for **2026-05-10 (America/New_York)**:  - **Calendar meetings found:** 0   - Intended doc upda",
-      "tokens": {
-        "input": 13788,
-        "output": 204
-      },
-      "cost": 0.0060186,
-      "sessionKey": "agent:main:cron:e534cd39-b893-48b1-b411-dab971e2a868",
-      "kind": "other",
-      "channel": "unknown",
-      "contextWindow": 272000
     }
   ],
   "feed": [
@@ -68,12 +68,6 @@
       "agent": "Smartypants",
       "icon": "😏",
       "event": "Quick update: I still couldn’t create your Daily Meeting People Brief doc because Drive access for t"
-    },
-    {
-      "time": 1778410820141,
-      "agent": "Cron: Daily people briefing from calendar",
-      "icon": "🤖",
-      "event": "Daily people briefing run for **2026-05-10 (America/New_York)**:  - **Calendar meetings found:** 0  "
     }
   ],
   "mcpUsage": {
