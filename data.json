@@ -1,13 +1,13 @@
 {
-  "generated": "2026-05-14T10:59:15.748Z",
+  "generated": "2026-05-14T11:04:17.397Z",
   "system": {
     "totalAgents": 2,
     "running": 0,
     "idle": 2,
     "errored": 0,
     "completed": 0,
-    "totalCost": 0.0586523,
-    "totalTokens": 49304,
+    "totalCost": 0.06355405,
+    "totalTokens": 49935,
     "mainContext": {
       "used": 34000,
       "max": 272000,
@@ -15,10 +15,10 @@
       "compactions": 0,
       "model": "openai-codex/gpt-5.3-codex",
       "tokensIn": "29k",
-      "tokensOut": "6"
+      "tokensOut": "95"
     },
     "contextMax": 544000,
-    "contextUsed": 49058
+    "contextUsed": 49379
   },
   "agents": [
     {
@@ -29,13 +29,13 @@
       "icon": "😏",
       "task": "telegram:g-agent-main-main",
       "model": "gpt-5.3-codex",
-      "started": "2026-05-13T11:00:47.801Z",
-      "lastMessage": "NO_REPLY",
+      "started": "2026-05-14T11:00:50.295Z",
+      "lastMessage": "Quick update: I still can’t access/create your Daily Meeting People Brief doc because Drive access for this integration ",
       "tokens": {
-        "input": 33670,
-        "output": 6
+        "input": 33989,
+        "output": 95
       },
-      "cost": 0.0517489,
+      "cost": 0.053553149999999994,
       "sessionKey": "agent:main:main",
       "kind": "other",
       "channel": "telegram",
@@ -49,13 +49,13 @@
       "icon": "🤖",
       "task": "Cron: Daily people briefing from calendar",
       "model": "gpt-5.3-codex",
-      "started": "2026-05-13T11:00:00.030Z",
-      "lastMessage": "Daily people briefing run for 2026-05-13 (America/New_York):  - Meetings found today: **0** - Calendar scan completed ac",
+      "started": "2026-05-14T11:00:00.031Z",
+      "lastMessage": "[[reply_to_current]] Daily people briefing run for **2026-05-14 (America/New_York)**:  - **Meetings today:** 1   - **Eve",
       "tokens": {
-        "input": 15388,
-        "output": 240
+        "input": 15390,
+        "output": 461
       },
-      "cost": 0.0069034,
+      "cost": 0.0100009,
       "sessionKey": "agent:main:cron:e534cd39-b893-48b1-b411-dab971e2a868",
       "kind": "other",
       "channel": "unknown",
@@ -64,16 +64,16 @@
   ],
   "feed": [
     {
-      "time": 1778670045356,
+      "time": 1778756446323,
       "agent": "Smartypants",
       "icon": "😏",
-      "event": "NO_REPLY"
+      "event": "Quick update: I still can’t access/create your Daily Meeting People Brief doc because Drive access f"
     },
     {
-      "time": 1778670040032,
+      "time": 1778756436196,
       "agent": "Cron: Daily people briefing from calendar",
       "icon": "🤖",
-      "event": "Daily people briefing run for 2026-05-13 (America/New_York):  - Meetings found today: **0** - Calend"
+      "event": "[[reply_to_current]] Daily people briefing run for **2026-05-14 (America/New_York)**:  - **Meetings "
     }
   ],
   "mcpUsage": {
